@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WeaveSite</title>
+    <title>Weave Playset</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,9 +10,9 @@
 
   <body>
     <div class="container">
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-inverse">
         <a class="navbar-brand" href="#">
-          Weave
+          <%= image_tag "logo.svg" %>
         </a>
       </nav>
       <%= yield %>
