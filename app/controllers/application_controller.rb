@@ -32,7 +32,6 @@ class ApplicationController < ActionController::Base
 
   # Select Card
   def card_get
-    # render html: session[:playset_name]
     render 'card'
   end
 
@@ -41,6 +40,7 @@ class ApplicationController < ActionController::Base
 
   # Select Quality from Card
   def quality_get
+    render 'quality'
   end
 
   def quality_post
