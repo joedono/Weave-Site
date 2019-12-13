@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  @cards = [
+  @@cards = [
     'Dawn', 'Stag', 'Owl', 'Serpent', 'Tortoise', 'Mountain', 'Storm', 'Inferno',
     'River', 'Crown', 'Coin', 'Tome', 'Mask', 'Woods', 'Watchtower', 'Gateway',
     'Gallows', 'Assassin', 'Wanderer', 'Architect', 'Herald', 'Dusk'
@@ -32,15 +32,27 @@ class ApplicationController < ActionController::Base
 
   # Select Card
   def card_get
+    @cards = @@cards
     render 'card'
   end
 
   def card_post
+    session[:current_card] = params[:card]
+    redirect_to :action => 'quality_get'
   end
 
   # Select Quality from Card
   def quality_get
-    render 'quality'
+    # playset = loadPlayset session[:playset_name]
+    # chosenCard = session[:current_card]
+    # currentLevel = session[:current_level]
+    # render 'quality'
+
+    playset = loadPlayset('Iron & Salt')
+    chosenCard = 'Stag'
+    currentLevel = session[:current_level]
+
+    render html: playset[chosenCard]
   end
 
   def quality_post
