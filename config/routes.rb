@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/start', to: 'application#start'
-  post '/start', to: 'application#start'
+  get '/start', to: 'application#start_get'
+  post '/start', to: 'application#start_post'
 
-  get '/suits', to: 'application#suits'
-  post '/suits', to: 'application#suits'
+  get '/suits', to: 'application#suits_get'
+  post '/suits', to: 'application#suits_post'
 
-  get '/card', to: 'application#card'
-  post '/card', to: 'application#card'
+  get '/card', to: 'application#card_get'
+  post '/card', to: 'application#card_post'
 
-  get '/name', to: 'application#name'
-  post '/name', to: 'application#name'
+  get '/name', to: 'application#name_get'
+  post '/name', to: 'application#name_post'
 
   get '/download', to: 'application#download'
 
-  root 'application#start'
+  root 'application#start_get'
 end
