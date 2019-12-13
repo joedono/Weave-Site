@@ -16,3 +16,10 @@
 
 //= require jquery3
 //= require bootstrap
+
+$(function() {
+  $(".selector").change(function() {
+    $(".selector-container").removeClass("selected");
+    $(this).parent().addClass("selected");
+  });
+});
