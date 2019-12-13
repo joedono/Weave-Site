@@ -1,6 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  @cards = [
+    'Dawn', 'Stag', 'Owl', 'Serpent', 'Tortoise', 'Mountain', 'Storm', 'Inferno',
+    'River', 'Crown', 'Coin', 'Tome', 'Mask', 'Woods', 'Watchtower', 'Gateway',
+    'Gallows', 'Assassin', 'Wanderer', 'Architect', 'Herald', 'Dusk'
+  ]
+
   # Playset Selection
   def start_get
     @playsets = YAML.load_file 'data/playsets.yml'
@@ -9,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def start_post
     session[:playset_name] = params[:playset]
-    redirect_to :action => "suits_get"
+    redirect_to :action => 'suits_get'
   end
 
   # Core Suit and Level
@@ -18,14 +24,26 @@ class ApplicationController < ActionController::Base
   end
 
   def suits_post
+    session[:suit] = params[:suit]
+    session[:level] = params[:level]
+    session[:current_level] = 1;
+    redirect_to :action => 'card_get'
   end
 
-  # Cards for selecting qualities
+  # Select Card
   def card_get
+    # render html: session[:playset_name]
     render 'card'
   end
 
   def card_post
+  end
+
+  # Select Quality from Card
+  def quality_get
+  end
+
+  def quality_post
   end
 
   # Character Name

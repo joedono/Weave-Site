@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get '/card', to: 'application#card_get'
   post '/card', to: 'application#card_post'
 
+  get '/quality', to: 'application#quality_get'
+  post '/quality', to: 'application#quality_post'
+
   get '/name', to: 'application#name_get'
   post '/name', to: 'application#name_post'
 

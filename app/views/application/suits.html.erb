@@ -1,1 +1,40 @@
 <h1>Core Suit and Level</h1>
+<%= form_with(url: '/suits', method: 'post', local: true, class: 'form-inline') do %>
+  <div class="row">
+    <div class="col-sm-3">
+      <label class="selector-container">
+        <%= radio_button_tag(:suit, 'Stones', false, class: 'selector', style: 'display: none;') %>
+        Stones
+      </label>
+    </div>
+    <div class="col-sm-3">
+      <label class="selector-container">
+        <%= radio_button_tag(:suit, 'Gales', false, class: 'selector', style: 'display: none;') %>
+        Gales
+      </label>
+    </div>
+    <div class="col-sm-3">
+      <label class="selector-container">
+        <%= radio_button_tag(:suit, 'Flames', false, class: 'selector', style: 'display: none;') %>
+        Flames
+      </label>
+    </div>
+    <div class="col-sm-3">
+      <label class="selector-container">
+        <%= radio_button_tag(:suit, 'Brooks', false, class: 'selector', style: 'display: none;') %>
+        Brooks
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 form-group text-center">
+      <label for="characterLevel">Starting Level</label>
+      <%= number_field_tag(:level, '1', class: 'form-control', min: 1, max: 11) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-right">
+      <input type="submit" class="btn btn-success" value="Choose">
+    </div>
+  </div>
+<% end %>
