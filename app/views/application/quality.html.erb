@@ -2,22 +2,27 @@
 <%= form_with(url: '/quality', method: 'post', local: true) do %>
   <%= hidden_field_tag(:card, @card) %>
   <div class="row">
-    <% @qualities.each do |quality| %>
-      <div class="col-sm-6">
-        <label class="selector-container-quality">
-          <%= radio_button_tag(:quality_id, quality['id'], false, class: 'selector', style: 'display: none;') %>
-          <h2><%= quality['title'] %></h2>
-          <p><%= quality['description'] %></p>
-          <% quality['subQualities'].each do |subQuality| %>
-            <h3><%= subQuality['title'] %></h3>
-            <p><%= subQuality['description'] %></p>
+    <div class="col-sm-11">
+      <div class="row">
+        <% @qualities.each_with_index do |quality, index| %>
+          <div class="col-sm-6">
+            <label class="selector-container-quality">
+              <%= radio_button_tag(:quality_id, quality['id'], false, class: 'selector', style: 'display: none;') %>
+              <h2><%= quality['title'] %></h2>
+              <p><%= quality['description'] %></p>
+              <% quality['subQualities'].each do |subQuality| %>
+                <h3><%= subQuality['title'] %></h3>
+                <p><%= subQuality['description'] %></p>
+              <% end %>
+            </label>
+          </div>
+          <% if index.modulo(2) == 1 %>
+            </div><div class="row">
           <% end %>
-        </label>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 text-right">
+    </div>
+    <div class="col-sm-1">
       <input type="submit" class="btn btn-success" value="Choose">
     </div>
   </div>

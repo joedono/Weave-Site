@@ -1,17 +1,19 @@
 <h1>Pick a Card - Level <%= @level %></h1>
 <%= form_with(url: '/card', method: 'post', local: true) do %>
   <div class="row">
-    <% @cards.each do |card| %>
-      <div class="col-sm-3">
-        <label class="selector-container">
-          <%= radio_button_tag(:card, card, false, class: 'selector', style: 'display: none;') %>
-          <%= card %>
-        </label>
+    <div class="col-sm-11">
+      <div class="row">
+        <% @cards.each do |card| %>
+          <div class="col-sm-3">
+            <label class="selector-container">
+              <%= radio_button_tag(:card, card, false, class: 'selector', style: 'display: none;') %>
+              <%= card %>
+            </label>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 text-right">
+    </div>
+    <div class="col-sm-1">
       <input type="submit" class="btn btn-success" value="Choose">
     </div>
   </div>
