@@ -1,10 +1,2 @@
 - name: Iron & Salt
   file: IronSalt.yml
-- name: Xorte
-  file: Xorte.yml
-- name: Gloomies
-  file: Gloomies.yml
-- name: Solar Age
-  file: SolarAge.yml
-- name: Goblins R Jerks
-  file: GoblinsRJerks.yml
