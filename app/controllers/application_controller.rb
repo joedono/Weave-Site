@@ -128,7 +128,7 @@ class ApplicationController < ActionController::Base
     @character['Inventory'] = []
     
     @characterChoices.each do |choice|
-      selections = choice.split
+      selections = choice.split('-')
       cardName = selections[0]
       qualityType = selections[1]
       qualityId = selections[2]
