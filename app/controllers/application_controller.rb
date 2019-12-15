@@ -150,7 +150,7 @@ class ApplicationController < ActionController::Base
 
   def reset
     reset_session
-    redirect_to :action => 'start'
+    redirect_to :action => 'start_get'
   end
 
   private
