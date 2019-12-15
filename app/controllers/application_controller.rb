@@ -120,7 +120,7 @@ class ApplicationController < ActionController::Base
     @characterChoices = session[:character]
     @playset = loadPlayset session[:playset_name]
     
-    @character = {}
+    @character = []
     @character['Backstories'] = []
     @character['Talents'] = []
     @character['Flaws'] = []
