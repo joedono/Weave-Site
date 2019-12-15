@@ -116,37 +116,38 @@ class ApplicationController < ActionController::Base
     @name = session[:name]
     @level = getCurrentLevel session[:current_level].to_i
     @suit = session[:suit]
-    
+
     @characterChoices = session[:character]
     @playset = loadPlayset session[:playset_name]
-    
-    @character = []
+
+    @character = {}
     @character['Backstories'] = []
     @character['Talents'] = []
     @character['Flaws'] = []
     @character['Signature Move'] = []
     @character['Inventory'] = []
-    
+
     @characterChoices.each do |choice|
       selections = choice.split('-')
       cardName = selections[0]
       qualityType = selections[1]
-      qualityId = selections[2]
-      
+      qualityId = selections[2].to_i
+      quality = {}
+
       qualityPool = @playset[selections[0]][qualityType]
-      
+
       qualityPool.each do |qualityOption|
-        if qualityOption['id'] == qualityId
+        if qualityOption['id'].to_i == qualityId
           quality = qualityOption
         end
       end
-      
+
       @character[qualityType].push(quality)
     end
-    
+
     render 'character'
   end
-  
+
   def reset
     reset_session
     redirect_to :action => 'start'

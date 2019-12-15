@@ -1,6 +1,7 @@
-<%= @name %>
-Level <%= @level %>
-Core Suit <%= @suit %>
+<div class="character-sheet">
+<label>Name:</label> <%= @name %>
+<label>Level:</label> <%= @level %>
+<label>Core Suit:</label> <%= @suit %>
 
 ------------------------------
 # Backstories
@@ -13,8 +14,8 @@ Core Suit <%= @suit %>
 <% backstory['subQualities'].each do |subQuality| %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
-<% end %>
 
+<% end %>
 ------------------------------
 <% end %>
 # Talents
@@ -27,8 +28,8 @@ Core Suit <%= @suit %>
 <% talent['subQualities'].each do |subQuality| %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
-<% end %>
 
+<% end %>
 ------------------------------
 <% end %>
 # Flaws
@@ -41,8 +42,8 @@ Core Suit <%= @suit %>
 <% flaw['subQualities'].each do |subQuality| %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
-<% end %>
 
+<% end %>
 ------------------------------
 <% end %>
 # Signature Move
@@ -55,8 +56,8 @@ Core Suit <%= @suit %>
 <% sigmove['subQualities'].each do |subQuality| %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
-<% end %>
 
+<% end %>
 ------------------------------
 <% end %>
 # Inventory
@@ -69,7 +70,8 @@ Core Suit <%= @suit %>
 <% item['subQualities'].each do |subQuality| %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
-<% end %>
 
+<% end %>
 ------------------------------
 <% end %>
+</div>
