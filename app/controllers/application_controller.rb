@@ -59,18 +59,23 @@ class ApplicationController < ActionController::Base
 
     case currentLevel
     when 1, 5, 7, 12
-      @qualities = playset[@card]['Backstories'];
+      @qualityType = 'Backstories'
+      @qualities = playset[@card]['Backstories']
       @title = 'Pick a Backstory'
-    when 2, 6, 8, 10, 13, 14
+    when 2, 6, 8, 10, 13, 14\
+      @qualityType = 'Talents'
       @qualities = playset[@card]['Talents']
       @title = 'Pick a Talent'
     when 3, 9
+      @qualityType = 'Flaws'
       @qualities = playset[@card]['Flaws']
       @title = 'Pick a Flaw'
     when 11, 15
+      @qualityType = 'Signature Move'
       @qualities = playset[@card]['Signature Move']
       @title = 'Pick a Signature Move'
     when 4
+      @qualityType = 'Inventory'
       @qualities = playset[@card]['Inventory']
       @title = 'Pick an Item'
     end
@@ -82,7 +87,7 @@ class ApplicationController < ActionController::Base
 
   def quality_post
     character = session[:character].presence || []
-    character.push params[:card] + '-' + params[:quality_id]
+    character.push params[:card] + '-' + params[:quality_type] + "-" + params[:quality_id]
     session[:character] = character
 
     currentLevel = session[:current_level].to_i
@@ -108,10 +113,36 @@ class ApplicationController < ActionController::Base
 
   # Character Sheet
   def character
-    @character = session[:character]
-    @suit = session[:suit]
+    @name = session[:name]
     @level = getCurrentLevel session[:current_level].to_i
+    @suit = session[:suit]
+    
+    @characterChoices = session[:character]
     @playset = loadPlayset session[:playset_name]
+    
+    @character = {}
+    @character['Backstories'] = []
+    @character['Talents'] = []
+    @character['Flaws'] = []
+    @character['Signature Move'] = []
+    @character['Inventory'] = []
+    
+    @characterChoices.each do |choice|
+      selections = choice.split
+      cardName = selections[0]
+      qualityType = selections[1]
+      qualityId = selections[2]
+      
+      qualityPool = @playset[selections[0]][qualityType]
+      
+      qualityPool.each do |qualityOption|
+        if qualityOption['id'] == qualityId
+          quality = qualityOption
+        end
+      end
+      
+      @character[qualityType].push(quality)
+    end
     
     render 'character'
   end
