@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post '/name', to: 'application#name_post'
 
   get '/download', to: 'application#download'
+  get '/reset', to: 'application#reset'
 
   root 'application#start_get'
 end

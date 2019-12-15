@@ -108,6 +108,11 @@ class ApplicationController < ActionController::Base
   def download
     render 'download'
   end
+  
+  def reset
+    reset_session
+    redirect_to :action => 'start'
+  end
 
   private
 
