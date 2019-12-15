@@ -62,7 +62,7 @@ class ApplicationController < ActionController::Base
       @qualityType = 'Backstories'
       @qualities = playset[@card]['Backstories']
       @title = 'Pick a Backstory'
-    when 2, 6, 8, 10, 13, 14\
+    when 2, 6, 8, 10, 13, 14
       @qualityType = 'Talents'
       @qualities = playset[@card]['Talents']
       @title = 'Pick a Talent'
@@ -87,7 +87,7 @@ class ApplicationController < ActionController::Base
 
   def quality_post
     character = session[:character].presence || []
-    character.push params[:card] + '-' + params[:quality_type] + "-" + params[:quality_id]
+    character.push params[:card] + '-' + params[:quality_type] + '-' + params[:quality_id]
     session[:character] = character
 
     currentLevel = session[:current_level].to_i
