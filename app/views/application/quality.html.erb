@@ -1,6 +1,7 @@
 <h1><%= @title %> - Level <%= @level %></h1>
 <%= form_with(url: '/quality', method: 'post', local: true) do %>
   <%= hidden_field_tag(:card, @card) %>
+  <%= hidden_field_tag(:quality_type, @qualityType) %>
   <div class="row">
     <div class="col-sm-11">
       <div class="row">
