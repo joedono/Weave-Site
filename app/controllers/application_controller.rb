@@ -102,11 +102,18 @@ class ApplicationController < ActionController::Base
   end
 
   def name_post
+    session[:name] = params[:name]
+    redirect_to :action => 'character'
   end
 
-  # Print/Download Character Sheet
-  def download
-    render 'download'
+  # Character Sheet
+  def character
+    @character = session[:character]
+    @suit = session[:suit]
+    @level = getCurrentLevel session[:current_level].to_i
+    @playset = loadPlayset session[:playset_name]
+    
+    render 'character'
   end
   
   def reset

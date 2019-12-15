@@ -1,1 +1,14 @@
 <h1>Character Name</h1>
+<%= form_with(url: '/quality', method: 'post', local: true) do %>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= text_field_tag(:name, nil, class: 'form-control') %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      <a href="/reset" class="btn btn-default">Reset</a>
+      <input type="submit" class="btn btn-success" value="Choose">
+    </div>
+  </div>
+<% end %>
