@@ -2,11 +2,11 @@
 <%= form_with(url: '/quality', method: 'post', local: true) do %>
   <div class="row">
     <div class="col-sm-12">
-      <%= text_field_tag(:name, nil, class: 'form-control') %>
+      <%= text_field_tag(:name, nil, class: 'form-control', placeholder: 'Enter your Character Name') %>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-12 text-right">
+    <div class="col-sm-12 text-right" style="margin-top: 10px;">
       <a href="/reset" class="btn btn-default">Reset</a>
       <input type="submit" class="btn btn-success" value="Choose">
     </div>
