@@ -1,4 +1,4 @@
-<h1>Pick a Card</h1>
+<h1>Pick a Card - Level <%= @level %></h1>
 <%= form_with(url: '/card', method: 'post', local: true) do %>
   <div class="row">
     <% @cards.each do |card| %>

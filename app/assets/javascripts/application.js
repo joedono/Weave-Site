@@ -20,6 +20,7 @@
 $(function() {
   $(".selector").change(function() {
     $(".selector-container").removeClass("selected");
+    $(".selector-container-quality").removeClass("selected");
     $(this).parent().addClass("selected");
   });
 });

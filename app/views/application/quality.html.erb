@@ -1,0 +1,24 @@
+<h1><%= @title %> - Level <%= @level %></h1>
+<%= form_with(url: '/quality', method: 'post', local: true) do %>
+  <%= hidden_field_tag(:card, @card) %>
+  <div class="row">
+    <% @qualities.each do |quality| %>
+      <div class="col-sm-6">
+        <label class="selector-container-quality">
+          <%= radio_button_tag(:quality_id, quality['id'], false, class: 'selector', style: 'display: none;') %>
+          <h2><%= quality['title'] %></h2>
+          <p><%= quality['description'] %></p>
+          <% quality['subQualities'].each do |subQuality| %>
+            <h3><%= subQuality['title'] %></h3>
+            <p><%= subQuality['description'] %></p>
+          <% end %>
+        </label>
+      </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-right">
+      <input type="submit" class="btn btn-success" value="Choose">
+    </div>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@ Levels and Elements
 2. 1 Backstory (1 Card)
 3. 1 Talent (1 Card)
 4. 1 Backstory (1 Card)
-5. 1 Talent, 1 Flaw (1 Card) TODO: Is this 1 Card or 2?
+5. 1 Talent, 1 Flaw (1 Card) TODO: Is this 1 Card or 2? A: It's 2
 6. 1 Talent (1 Card)
 7. 1 Signature Move (1 Card)
 8. 1 Backstory (1 Card)

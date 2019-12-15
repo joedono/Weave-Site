@@ -25,7 +25,16 @@ class ApplicationController < ActionController::Base
 
   def suits_post
     session[:suit] = params[:suit]
-    session[:level] = params[:level]
+    desired_level = params[:level].to_i
+
+    if desired_level >= 5
+      # Add 1 to account for picking both a Talent and a Flaw at level 5
+      desired_level += 1
+    end
+
+    # Add 3 to account for picking a Backstory, Talent, Flaw, and Item at level 1
+    session[:desired_level] = desired_level + 3
+
     session[:current_level] = 1;
     redirect_to :action => 'card_get'
   end
@@ -33,6 +42,7 @@ class ApplicationController < ActionController::Base
   # Select Card
   def card_get
     @cards = @@cards
+    @level = getCurrentLevel session[:current_level].to_i
     render 'card'
   end
 
@@ -43,19 +53,47 @@ class ApplicationController < ActionController::Base
 
   # Select Quality from Card
   def quality_get
-    # playset = loadPlayset session[:playset_name]
-    # chosenCard = session[:current_card]
-    # currentLevel = session[:current_level]
-    # render 'quality'
+    playset = loadPlayset session[:playset_name]
+    @card = session[:current_card]
+    currentLevel = session[:current_level].to_i
 
-    playset = loadPlayset('Iron & Salt')
-    chosenCard = 'Stag'
-    currentLevel = session[:current_level]
+    case currentLevel
+    when 1, 5, 7, 12
+      @qualities = playset[@card]['Backstories'];
+      @title = 'Pick a Backstory'
+    when 2, 6, 8, 10, 13, 14
+      @qualities = playset[@card]['Talents']
+      @title = 'Pick a Talent'
+    when 3, 9
+      @qualities = playset[@card]['Flaws']
+      @title = 'Pick a Flaw'
+    when 11, 15
+      @qualities = playset[@card]['Signature Move']
+      @title = 'Pick a Signature Move'
+    when 4
+      @qualities = playset[@card]['Inventory']
+      @title = 'Pick an Item'
+    end
 
-    render html: playset[chosenCard]
+    @level = getCurrentLevel currentLevel
+
+    render 'quality'
   end
 
   def quality_post
+    character = session[:character].presence || []
+    character.push params[:card] + '-' + params[:quality_id]
+    session[:character] = character
+
+    currentLevel = session[:current_level].to_i
+    desiredLevel = session[:desired_level].to_i
+
+    if currentLevel >= desiredLevel
+      redirect_to :action => 'name_get'
+    else
+      session[:current_level] = currentLevel + 1
+      redirect_to :action => 'card_get'
+    end
   end
 
   # Character Name
@@ -84,5 +122,15 @@ class ApplicationController < ActionController::Base
     end
 
     return chosenPlayset
+  end
+
+  def getCurrentLevel level
+    if level <= 4
+      return 1
+    elsif level <= 9
+      return level - 3
+    else
+      return level - 2
+    end
   end
 end
