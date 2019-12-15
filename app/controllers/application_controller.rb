@@ -120,6 +120,30 @@ class ApplicationController < ActionController::Base
     @characterChoices = session[:character]
     @playset = loadPlayset session[:playset_name]
     
+    @character = []
+    @character['Backstories'] = []
+    @character['Talents'] = []
+    @character['Flaws'] = []
+    @character['Signature Move'] = []
+    @character['Inventory'] = []
+    
+    @characterChoices.each do |choice|
+      selections = choice.split
+      cardName = selections[0]
+      qualityType = selections[1]
+      qualityId = selections[2]
+      
+      qualityPool = @playset[selections[0]][qualityType]
+      
+      qualityPool.each do |qualityOption|
+        if qualityOption['id'] == qualityId
+          quality = qualityOption
+        end
+      end
+      
+      @character[qualityType].push(quality)
+    end
+    
     render 'character'
   end
   
