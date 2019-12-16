@@ -473,8 +473,17 @@ Serpent:
       description: Cotton wraps and tape. Enough to stop the bleeding of large gashes or cuts.
       subQualities:
         - title: Mechanic
+          description: Heal 3 Strikes on yourself or another player. Can only be used 3 times unless the player replenishes their supply.
+        - title: Range
           description: MELEE
-  Range: []
+    - id: 14
+      title: EpiPen
+      description: A syringe filled with an adrenaline mixture. Just pull off the cap and stab it into a person's leg or arm. The mixture is enough to bring a person back from unconsciousness and might give them just enough of a kick to escape whatever is chasing them.
+      subQualities:
+        - title: Mechanic
+          description: 'Use on a character who has been removed from a scene due to their wounds. They come back for the remainder of the scene, but will succumb to their wounds and be removed from the next scene unless healed. They are removed from the current scene again if they suffer another wound.'
+        - title: Range
+          description: MELEE
   NPCs:
     - id: 15
       title: 'Riley, the College Student'
