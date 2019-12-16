@@ -23,4 +23,6 @@ $(function() {
     $(".selector-container-quality").removeClass("selected");
     $(this).parent().addClass("selected");
   });
+
+  $(".selector:checked").parent().addClass("selected");
 });

@@ -1,6 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+a, button {
+  width: 100%;
+}
+
+button {
+  margin-bottom: 5px !important;
+}
+
 .selector-container {
   display: block;
   text-align: center;
