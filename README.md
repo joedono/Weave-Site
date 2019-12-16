@@ -20,11 +20,5 @@ Levels and Elements
 11. 1 Signature Move (1 Card)
 
 TODO
-1. Dump character choices to sheet
-2. Use character choices from dump to import existing characters
-3. Level Up existing characters
-4. Fix playset selection issue after Reset
-5. Remove Storyteller text from character sheet
-6. Add space on sheet for strikes and wounds
-7. Calculate suit bonuses when rendering character sheet
-8. Fix layout issues when qualities have vastly different heights
+1. Use character choices from dump to import existing characters
+2. Level Up existing characters
