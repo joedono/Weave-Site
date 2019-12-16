@@ -145,6 +145,38 @@ class ApplicationController < ActionController::Base
       @character[qualityType].push(quality)
     end
 
+    @stonesBonus = 0
+    @galesBonus = 0
+    @flamesBonus = 0
+    @brooksBonus = 0
+
+    case @suit
+    when 'Stones'
+      @stonesBonus = @stonesBonus + 1
+    when 'Gales'
+      @galesBonus = @galesBonus + 1
+    when 'Flames'
+      @flamesBonus = @flamesBonus + 1
+    when 'Brooks'
+      @brooksBonus = @brooksBonus + 1
+    end
+
+    @character['Backstories'].each do |backstory|
+      suits = backstory['subQualities'][0]['description'].split(' ')
+      suits.each do |suit|
+        case suit
+        when 'STONES'
+          @stonesBonus = @stonesBonus + 1
+        when 'GALES'
+          @galesBonus = @galesBonus + 1
+        when 'FLAMES'
+          @flamesBonus = @flamesBonus + 1
+        when 'BROOKS'
+          @brooksBonus = @brooksBonus + 1
+        end
+      end
+    end
+
     render 'character'
   end
 
