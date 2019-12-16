@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def start_post
     session[:playset_name] = params[:playset]
-    redirect_to :action => 'suits_get'
+    redirect_to action: 'suits_get'
   end
 
   # Core Suit and Level
@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
     session[:desired_level] = desired_level + 3
 
     session[:current_level] = 1;
-    redirect_to :action => 'card_get'
+    redirect_to action: 'card_get'
   end
 
   # Select Card
@@ -48,7 +48,7 @@ class ApplicationController < ActionController::Base
 
   def card_post
     session[:current_card] = params[:card]
-    redirect_to :action => 'quality_get'
+    redirect_to action: 'quality_get'
   end
 
   # Select Quality from Card
@@ -94,10 +94,10 @@ class ApplicationController < ActionController::Base
     desiredLevel = session[:desired_level].to_i
 
     if currentLevel >= desiredLevel
-      redirect_to :action => 'name_get'
+      redirect_to action: 'name_get'
     else
       session[:current_level] = currentLevel + 1
-      redirect_to :action => 'card_get'
+      redirect_to action: 'card_get'
     end
   end
 
@@ -108,7 +108,7 @@ class ApplicationController < ActionController::Base
 
   def name_post
     session[:name] = params[:name]
-    redirect_to :action => 'character'
+    redirect_to action: 'character'
   end
 
   # Character Sheet
@@ -150,7 +150,7 @@ class ApplicationController < ActionController::Base
 
   def reset
     reset_session
-    redirect_to :action => 'start_get'
+    redirect_to action: 'start_get'
   end
 
   private
