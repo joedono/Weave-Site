@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+
+ a, button {
+   width: 100%;
+ }
+
+ button {
+   margin-bottom: 5px !important;
+ }
+
+ .selector-container {
+   display: block;
+   text-align: center;
+   border-radius: 10px;
+   padding: 30px;
+   margin-bottom: 20px;
+   border: 3px solid #606060;
+   background-color: #CBCBCB;
+   cursor: pointer;
+ }
+
+ .selector-container-quality {
+   @extend .selector-container;
+   text-align: left;
+   padding: 5px 20px;
+ }
+
+ .selected {
+   border-color: #006000;
+   background-color: #8CF08C;
+ }
+
+ .character-sheet {
+   white-space: pre-wrap;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 0 10px;
+ }

@@ -15,6 +15,7 @@
 //= require_tree .
 
 //= require jquery3
+//= require popper
 //= require bootstrap
 
 $(document).on('turbolinks:load', function() {
