@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/name', to: 'application#name_get'
   post '/name', to: 'application#name_post'
 
-  get '/character', to: 'application#character'
+  get '/character.txt', to: 'application#character'
   get '/reset', to: 'application#reset'
 
   root 'application#start_get'
