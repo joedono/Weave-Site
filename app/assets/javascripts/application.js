@@ -17,7 +17,7 @@
 //= require jquery3
 //= require bootstrap
 
-$(function() {
+$(document).on('turbolinks:load', function() {
   $(".selector").change(function() {
     $(".selector-container").removeClass("selected");
     $(".selector-container-quality").removeClass("selected");
