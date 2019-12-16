@@ -25,6 +25,7 @@ Character Config:
 <%= backstory['description'] %>
 
 <% backstory['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
 
@@ -39,6 +40,7 @@ Character Config:
 <%= talent['description'] %>
 
 <% talent['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
 
@@ -53,6 +55,7 @@ Character Config:
 <%= flaw['description'] %>
 
 <% flaw['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
 
@@ -67,6 +70,7 @@ Character Config:
 <%= sigmove['description'] %>
 
 <% sigmove['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
 
@@ -81,6 +85,7 @@ Character Config:
 <%= item['description'] %>
 
 <% item['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
 ### <%= subQuality['title'] %>
 <%= subQuality['description'] %>
 

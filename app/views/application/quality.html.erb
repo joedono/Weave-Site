@@ -12,6 +12,7 @@
               <h2><%= quality['title'] %></h2>
               <p><%= quality['description'] %></p>
               <% quality['subQualities'].each do |subQuality| %>
+                <% next if subQuality['title'] == 'Storyteller' %>
                 <h3><%= subQuality['title'] %></h3>
                 <p><%= subQuality['description'] %></p>
               <% end %>
