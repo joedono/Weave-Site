@@ -171,10 +171,10 @@ class ApplicationController < ActionController::Base
   def getCurrentLevel level
     if level <= 4
       return 1
-    elsif level <= 9
+    elsif level <= 8
       return level - 3
     else
-      return level - 2
+      return level - 4
     end
   end
 end
