@@ -1605,7 +1605,7 @@ Mask:
       description: 'It is exceedingly rare that any non-humanoid creature would develop the potential for magic. You''re the exception, although you''ve only managed to learn one trick. You''re a wolf, a completely average wolf, with one neat trick: you can turn into a human.'
       subQualities:
         - title: Mechanic
-          description: 'You are actually a wolf. You have human-level intelligence and you can change your shape into that of a human, and speak like a human. Your human appearance is always the same. You cannot use this skill to become other humans. You lose 1 die on all Brooks challenges while human.'
+          description: 'You have human-level intelligence, you can change your shape into that of a human, and speak like a human. Your human appearance is always the same. You cannot use this skill to become other humans. You lose 1 die on all Brooks challenges while interacting with humans.'
   Signature Move:
     - id: 12
       title: Beast Rage
