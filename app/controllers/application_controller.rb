@@ -108,7 +108,7 @@ class ApplicationController < ActionController::Base
 
   def name_post
     session[:name] = params[:name]
-    redirect_to character_url
+    redirect_to action: 'character'
   end
 
   # Character Sheet
