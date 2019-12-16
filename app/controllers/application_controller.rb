@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
   end
 
   def start_post
+    redirect_to start_url and return if params[:playset] == nil
+
     session[:playset_name] = params[:playset]
     redirect_to suits_url
   end
@@ -24,6 +26,8 @@ class ApplicationController < ActionController::Base
   end
 
   def suits_post
+    redirect_to suits_url and return if params[:suit] == nil or params[:level] == nil
+
     session[:suit] = params[:suit]
     desired_level = params[:level].to_i
 
@@ -47,6 +51,8 @@ class ApplicationController < ActionController::Base
   end
 
   def card_post
+    redirect_to card_url and return if params[:card] == nil
+
     session[:current_card] = params[:card]
     redirect_to quality_url
   end
@@ -86,6 +92,8 @@ class ApplicationController < ActionController::Base
   end
 
   def quality_post
+    redirect_to quality_url and return if params[:quality_id] == nil
+
     character = session[:character].presence || []
     character.push params[:card] + '-' + params[:quality_type] + '-' + params[:quality_id]
     session[:character] = character
@@ -107,6 +115,8 @@ class ApplicationController < ActionController::Base
   end
 
   def name_post
+    redirect_to name_url and return if params[:name] == nil
+
     session[:name] = params[:name]
     redirect_to action: 'character'
   end
