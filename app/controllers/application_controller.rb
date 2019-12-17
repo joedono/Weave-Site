@@ -53,6 +53,27 @@ class ApplicationController < ActionController::Base
   end
 
   def existchar_post
+    session[:suit] = params[:suit]
+    current_level = params[:current_level].to_i
+    desired_level = params[:desired_level].to_i
+
+    if current_level >= 5
+      # Add 1 to account for picking both a Talent and a Flaw at level 5
+      current_level += 1
+    end
+
+    if desired_level >= 5
+      # Add 1 to account for picking both a Talent and a Flaw at level 5
+      desired_level += 1
+    end
+
+    # Add 3 to account for picking a Backstory, Talent, Flaw, and Item at level 1
+    session[:current_level] = current_level + 4
+    session[:desired_level] = desired_level + 3
+
+    session[:character] = params[:char_import].split("\n")
+
+    redirect_to card_url
   end
 
   # Select Card
