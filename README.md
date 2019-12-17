@@ -18,7 +18,3 @@ Levels and Elements
 9. 1 Talent (1 Card)
 10. 1 Talent (1 Card)
 11. 1 Signature Move (1 Card)
-
-TODO
-1. Use character choices from dump to import existing characters
-2. Level Up existing characters
