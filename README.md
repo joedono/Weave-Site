@@ -1,20 +1,36 @@
-The home page will have a list of selectable playsets with buttons for Create Character.
+# Weave Character Creator
+*And probably other things, eventually...*
 
-The Create Character wizard will have 4 stages
-1. Core Suit and Level
-2. Cards
-3. Name
-4. Print
+This is the source code for Lord Joe's Weave character creation website. Here for testing purposes only. The site supports creating new characters and leveling up old ones.
 
-Levels and Elements
-1. 1 Backstory, 1 Talent, 1 Flaw, 1 Item (4 Cards)
-2. 1 Backstory (1 Card)
-3. 1 Talent (1 Card)
-4. 1 Backstory (1 Card)
-5. 1 Talent, 1 Flaw (1 Card) TODO: Is this 1 Card or 2? A: It's 2
-6. 1 Talent (1 Card)
-7. 1 Signature Move (1 Card)
-8. 1 Backstory (1 Card)
-9. 1 Talent (1 Card)
-10. 1 Talent (1 Card)
-11. 1 Signature Move (1 Card)
+## Pages
+
+### Start
+Pick your playset.
+
+### Character Creation Type
+Pick whether you want to create a new character or level up an old one.
+
+### New Character
+Pick your core suit and the level of your new character.
+
+### Existing Character
+Pick your core suit, the current level of your character, the new level of your character, and the character dump from your character sheet.
+
+### Pick Cards and Qualities
+Pick the cards you draw and the qualities (backstories, talents, flaws, etc) to make up your character.
+
+### Name
+Name your character.
+
+### Character Sheet
+The final summary of your character, listing all your:
+1. Name
+2. Level
+3. Core Suit
+4. Suit Bonuses
+5. Space for Strikes and Wounds
+6. Character Config, for use when leveling up your existing character (see Existing Character above)
+7. Your character qualities
+
+This page is savable as a `.txt` file and printable.
