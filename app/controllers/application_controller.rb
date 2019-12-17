@@ -17,15 +17,20 @@ class ApplicationController < ActionController::Base
     redirect_to start_url and return if params[:playset] == nil
 
     session[:playset_name] = params[:playset]
-    redirect_to suits_url
+    redirect_to chartype_url
+  end
+
+  # Selecting whether to create a char or level up a char
+  def chartype
+    render 'chartype'
   end
 
   # Core Suit and Level
-  def suits_get
-    render 'suits'
+  def newchar_get
+    render 'newchar'
   end
 
-  def suits_post
+  def newchar_post
     redirect_to suits_url and return if params[:suit] == nil or params[:level] == nil
 
     session[:suit] = params[:suit]
@@ -41,6 +46,13 @@ class ApplicationController < ActionController::Base
 
     session[:current_level] = 1;
     redirect_to card_url
+  end
+
+  def existchar_get
+    render 'existchar'
+  end
+
+  def existchar_post
   end
 
   # Select Card

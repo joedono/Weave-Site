@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   get '/start', to: 'application#start_get'
   post '/start', to: 'application#start_post'
 
-  get '/suits', to: 'application#suits_get'
-  post '/suits', to: 'application#suits_post'
+  get '/chartype', to: 'application#chartype'
+
+  get '/newchar', to: 'application#newchar_get'
+  post '/newchar', to: 'application#newchar_post'
+
+  get '/existchar', to: 'application#existchar_get'
+  post '/existchar', to: 'application#existchar_post'
 
   get '/card', to: 'application#card_get'
   post '/card', to: 'application#card_post'

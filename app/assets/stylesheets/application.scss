@@ -35,6 +35,16 @@
    cursor: pointer;
  }
 
+ a.selector-container {
+   color: black;
+   text-decoration: none;
+ }
+
+ a.selector-container:hover {
+   border-color: #006000;
+   background-color: #8CF08C;
+ }
+
  .selector-container-quality {
    @extend .selector-container;
    text-align: left;
