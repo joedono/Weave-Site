@@ -17,20 +17,19 @@ class ApplicationController < ActionController::Base
     redirect_to start_url and return if params[:playset] == nil
 
     session[:playset_name] = params[:playset]
-    redirect_to chartype_url
+    redirect_to menu_url
   end
 
-  # Selecting whether to create a char or level up a char
-  def chartype
-    render 'chartype'
+  def menu
+    render 'menu'
   end
 
   # Core Suit and Level
-  def newchar_get
-    render 'newchar'
+  def newcharacter_get
+    render 'newcharacter'
   end
 
-  def newchar_post
+  def newcharacter_post
     redirect_to suits_url and return if params[:suit] == nil or params[:level] == nil
 
     session[:suit] = params[:suit]
@@ -48,11 +47,11 @@ class ApplicationController < ActionController::Base
     redirect_to card_url
   end
 
-  def existchar_get
-    render 'existchar'
+  def levelupcharacter_get
+    render 'levelupcharacter'
   end
 
-  def existchar_post
+  def levelupcharacter_post
     session[:suit] = params[:suit]
     current_level = params[:current_level].to_i
     desired_level = params[:desired_level].to_i
@@ -74,6 +73,28 @@ class ApplicationController < ActionController::Base
     session[:character] = params[:char_import].split("\n")
 
     redirect_to card_url
+  end
+
+  def viewcharacter_get
+    render 'viewcharacter'
+  end
+
+  def viewcharacter_post
+    session[:name] = params[:name]
+    session[:suit] = params[:suit]
+    session[:character] = params[:character].split("\n")
+
+    current_level = params[:current_level].to_i
+
+    if current_level >= 5
+      # Add 1 to account for picking both a Talent and a Flaw at level 5
+      current_level += 1
+    end
+
+    # Add 3 to account for picking a Backstory, Talent, Flaw, and Item at level 1
+    session[:current_level] = current_level + 3
+
+    redirect_to action: 'character'
   end
 
   # Select Card

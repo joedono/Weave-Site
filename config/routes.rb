@@ -3,13 +3,16 @@ Rails.application.routes.draw do
   get '/start', to: 'application#start_get'
   post '/start', to: 'application#start_post'
 
-  get '/chartype', to: 'application#chartype'
+  get '/menu', to: 'application#menu'
 
-  get '/newchar', to: 'application#newchar_get'
-  post '/newchar', to: 'application#newchar_post'
+  get '/newcharacter', to: 'application#newcharacter_get'
+  post '/newcharacter', to: 'application#newcharacter_post'
 
-  get '/existchar', to: 'application#existchar_get'
-  post '/existchar', to: 'application#existchar_post'
+  get '/levelupcharacter', to: 'application#levelupcharacter_get'
+  post '/levelupcharacter', to: 'application#levelupcharacter_post'
+
+  get '/viewcharacter', to: 'application#viewcharacter_get'
+  post '/viewcharacter', to: 'application#viewcharacter_post'
 
   get '/card', to: 'application#card_get'
   post '/card', to: 'application#card_post'
