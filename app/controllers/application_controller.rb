@@ -94,7 +94,7 @@ class ApplicationController < ActionController::Base
     # Add 3 to account for picking a Backstory, Talent, Flaw, and Item at level 1
     session[:current_level] = current_level + 3
 
-    redirect_to action: 'character'
+    redirect_to action: 'print_character'
   end
 
   # Select Card
@@ -172,11 +172,11 @@ class ApplicationController < ActionController::Base
     redirect_to name_url and return if params[:name] == nil
 
     session[:name] = params[:name]
-    redirect_to action: 'character'
+    redirect_to action: 'print_character'
   end
 
   # Character Sheet
-  def character
+  def print_character
     @name = session[:name]
     @level = getCurrentLevel session[:current_level].to_i
     @suit = session[:suit]
