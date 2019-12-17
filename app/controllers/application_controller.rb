@@ -75,11 +75,11 @@ class ApplicationController < ActionController::Base
     redirect_to card_url
   end
 
-  def viewcharacter_get
-    render 'viewcharacter'
+  def importcharacter_get
+    render 'importcharacter'
   end
 
-  def viewcharacter_post
+  def importcharacter_post
     session[:name] = params[:name]
     session[:suit] = params[:suit]
     session[:character] = params[:character].split("\n")

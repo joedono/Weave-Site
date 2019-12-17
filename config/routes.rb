@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get '/levelupcharacter', to: 'application#levelupcharacter_get'
   post '/levelupcharacter', to: 'application#levelupcharacter_post'
 
-  get '/viewcharacter', to: 'application#viewcharacter_get'
-  post '/viewcharacter', to: 'application#viewcharacter_post'
+  get '/importcharacter', to: 'application#importcharacter_get'
+  post '/importcharacter', to: 'application#importcharacter_post'
 
   get '/card', to: 'application#card_get'
   post '/card', to: 'application#card_post'
