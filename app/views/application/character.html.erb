@@ -1,0 +1,142 @@
+<div class="row">
+  <div class="col">
+    <h1>Name: <%= @name %></h1>
+    <p>
+      Level: <%= @level %><br>
+      Core Suit: <%= @suit %>
+    </p>
+  </div>
+  <div class="col text-right">
+    <a href="/print_character.txt" class="btn btn-success print-button">Print</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <h2>Bonuses</h2>
+    <p>
+      Stones: +<%= @stonesBonus %><br>
+      Gales: +<%= @galesBonus %><br>
+      Flames: +<%= @flamesBonus %><br>
+      Brooks: +<%= @brooksBonus %><br>
+    </p>
+  </div>
+  <div class="col">
+    <h2>Strikes</h2> [_] [_] [_] [_] [_] [_] [_] [_] [_] [_]
+    <h2>Wounds</h2> [_] [_] [_]
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <h2>Character Config</h2>
+    <pre>
+<% @characterChoices.each do |choice| %>
+<%= choice %>
+<% end %>
+    </pre>
+  </div>
+</div>
+<div class="row">
+  <div class="col"><h2>Backstories</h2></div>
+</div>
+<div class="row">
+  <% @character['Backstories'].each_with_index do |quality, index| %>
+    <div class="col-sm-6">
+      <label class="selector-container-quality">
+        <h2><%= quality['title'] %></h2>
+        <p><%= quality['description'] %></p>
+        <% quality['subQualities'].each do |subQuality| %>
+          <% next if subQuality['title'] == 'Storyteller' %>
+          <h3><%= subQuality['title'] %></h3>
+          <p><%= subQuality['description'] %></p>
+        <% end %>
+      </label>
+    </div>
+    <% if index.modulo(2) == 1 %>
+      </div><div class="row">
+    <% end %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="col"><h2>Talents</h2></div>
+</div>
+<div class="row">
+  <% @character['Talents'].each_with_index do |quality, index| %>
+    <div class="col-sm-6">
+      <label class="selector-container-quality">
+        <h2><%= quality['title'] %></h2>
+        <p><%= quality['description'] %></p>
+        <% quality['subQualities'].each do |subQuality| %>
+          <% next if subQuality['title'] == 'Storyteller' %>
+          <h3><%= subQuality['title'] %></h3>
+          <p><%= subQuality['description'] %></p>
+        <% end %>
+      </label>
+    </div>
+    <% if index.modulo(2) == 1 %>
+      </div><div class="row">
+    <% end %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="col"><h2>Flaws</h2></div>
+</div>
+<div class="row">
+  <% @character['Flaws'].each_with_index do |quality, index| %>
+    <div class="col-sm-6">
+      <label class="selector-container-quality">
+        <h2><%= quality['title'] %></h2>
+        <p><%= quality['description'] %></p>
+        <% quality['subQualities'].each do |subQuality| %>
+          <% next if subQuality['title'] == 'Storyteller' %>
+          <h3><%= subQuality['title'] %></h3>
+          <p><%= subQuality['description'] %></p>
+        <% end %>
+      </label>
+    </div>
+    <% if index.modulo(2) == 1 %>
+      </div><div class="row">
+    <% end %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="col"><h2>Signature Move</h2></div>
+</div>
+<div class="row">
+  <% @character['Signature Move'].each_with_index do |quality, index| %>
+    <div class="col-sm-6">
+      <label class="selector-container-quality">
+        <h2><%= quality['title'] %></h2>
+        <p><%= quality['description'] %></p>
+        <% quality['subQualities'].each do |subQuality| %>
+          <% next if subQuality['title'] == 'Storyteller' %>
+          <h3><%= subQuality['title'] %></h3>
+          <p><%= subQuality['description'] %></p>
+        <% end %>
+      </label>
+    </div>
+    <% if index.modulo(2) == 1 %>
+      </div><div class="row">
+    <% end %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="col"><h2>Inventory</h2></div>
+</div>
+<div class="row">
+  <% @character['Inventory'].each_with_index do |quality, index| %>
+    <div class="col-sm-6">
+      <label class="selector-container-quality">
+        <h2><%= quality['title'] %></h2>
+        <p><%= quality['description'] %></p>
+        <% quality['subQualities'].each do |subQuality| %>
+          <% next if subQuality['title'] == 'Storyteller' %>
+          <h3><%= subQuality['title'] %></h3>
+          <p><%= subQuality['description'] %></p>
+        <% end %>
+      </label>
+    </div>
+    <% if index.modulo(2) == 1 %>
+      </div><div class="row">
+    <% end %>
+  <% end %>
+</div>

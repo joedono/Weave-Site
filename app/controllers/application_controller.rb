@@ -94,7 +94,13 @@ class ApplicationController < ActionController::Base
     # Add 3 to account for picking a Backstory, Talent, Flaw, and Item at level 1
     session[:current_level] = current_level + 3
 
-    redirect_to action: 'print_character'
+    playset = session[:playset_name]
+    name = session[:name]
+    level = session[:current_level]
+    suit = session[:suit]
+    character = session[:character]
+
+    redirect_to action: 'view_character', :playset => playset, :name => name, :level => level, :suit => suit, :character => character
   end
 
   # Select Card
@@ -172,11 +178,64 @@ class ApplicationController < ActionController::Base
     redirect_to name_url and return if params[:name] == nil
 
     session[:name] = params[:name]
-    redirect_to action: 'print_character'
+
+    playset = session[:playset_name]
+    name = session[:name]
+    level = session[:current_level]
+    suit = session[:suit]
+    character = session[:character]
+
+    redirect_to action: 'view_character', :playset => playset, :name => name, :level => level, :suit => suit, :character => character
+  end
+
+  def view_character
+    session[:playset_name] = params[:playset]
+    session[:name] = params[:name]
+    session[:current_level] = params[:current_level]
+    session[:suit] = params[:suit]
+    session[:character] = params[:character]
+
+    loadCharacterSheetValues
+    render 'character'
   end
 
   # Character Sheet
   def print_character
+    loadCharacterSheetValues
+    render 'character'
+  end
+
+  def reset
+    reset_session
+    redirect_to start_url
+  end
+
+  private
+
+  def loadPlayset playsetName
+    chosenPlayset = ''
+    playsets = YAML.load_file 'data/playsets.yml'
+    playsets.each do |playset|
+      if playset['name'] == playsetName
+        chosenPlayset = YAML.load_file('data/' + playset['file'])
+        break
+      end
+    end
+
+    return chosenPlayset
+  end
+
+  def getCurrentLevel level
+    if level <= 4
+      return 1
+    elsif level <= 8
+      return level - 3
+    else
+      return level - 4
+    end
+  end
+
+  def loadCharacterSheetValues
     @name = session[:name]
     @level = getCurrentLevel session[:current_level].to_i
     @suit = session[:suit]
@@ -239,38 +298,6 @@ class ApplicationController < ActionController::Base
           @brooksBonus = @brooksBonus + 1
         end
       end
-    end
-
-    render 'character'
-  end
-
-  def reset
-    reset_session
-    redirect_to start_url
-  end
-
-  private
-
-  def loadPlayset playsetName
-    chosenPlayset = ''
-    playsets = YAML.load_file 'data/playsets.yml'
-    playsets.each do |playset|
-      if playset['name'] == playsetName
-        chosenPlayset = YAML.load_file('data/' + playset['file'])
-        break
-      end
-    end
-
-    return chosenPlayset
-  end
-
-  def getCurrentLevel level
-    if level <= 4
-      return 1
-    elsif level <= 8
-      return level - 3
-    else
-      return level - 4
     end
   end
 end
