@@ -98,38 +98,6 @@ Dawn:
       subQualities:
         - title: Mechanic
           description: The credit card is a fraud and will only be good for a few transactions before the bank catches on and deactivates it.
-  NPCs:
-    - id: 15
-      title: 'David, the EMT'
-      description: David is very good at his job. Some see him as a bit of a guardian angel. He's seen a lot of weird injuries and deaths on the job. They're causing him to have suspicions that there's more going on in the world than most other people think.
-      subQualities: []
-    - id: 16
-      title: 'Elizabeth, the Musician'
-      description: 'Elizabeth is the lead singer and guitarist of the local band. They''re not famous yet, but Elizabeth''s singing voice might be enough to carry them to the top.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Recognized
-      description: One of the NPCs recognizes the players as wanted criminals in a previous case and is about to alert the authorities.
-      subQualities: []
-    - id: 18
-      title: Bystander Help
-      description: One of the normal bystanders the players met earlier has followed them and just burst onto the scene trying to help. The wannabe hero is far more likely to get themselves killed.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Cafe
-      description: A simple breakfast cafe. It has a decent-sized local crowd and always attracts travelers. The specials are clearly advertised and usually feature a pun or turn of phrase that's trying way too hard to be witty.
-      subQualities: []
-    - id: 20
-      title: Heaven
-      description: 'The kingdom of the angels where the souls of the good are sent after death to live happily for eternity. There are portals on Earth that can take living mortals to Heaven, but they are hard to find and under heavy guard.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Living Faerie Tale
-      description: 'Faerie tales, or maybe just one tale, are coming to life. Whether through a ritual or accident, the players must now contend with storybook villains in the real world. The biggest problem is that it’s normally difficult to kill monsters, but it’s nearly impossible to kill a story.'
-      subQualities: []
 Stag:
   Backstories:
     - id: 1
@@ -218,38 +186,6 @@ Stag:
       subQualities:
         - title: Mechanic
           description: 'Once per episode, you can heal 1 Wound between scenes.'
-  NPCs:
-    - id: 15
-      title: 'Charlie, the Mischievous Child'
-      description: 'Charlie likes to play pranks and lie for the laughs. Take what he says with a few pounds of salt, since he''s almost certainly exaggerating or outright lying. He''s never been properly scared before.'
-      subQualities: []
-    - id: 16
-      title: 'Amanda, the Librarian'
-      description: 'Amanda has loved books forever. She prefers the settings and characters in her stories to those of real life. Secretly, she wishes that some of the stories she reads would come true. The world is awfully dull without dragons, princesses, knights, evil witches, and grand castles.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Old Friend
-      description: 'One of the players recognizes the name of the next person they have to talk to and get information from. It''s someone from that player''s past who they saved. This person is grateful to the player who saved them, but might insist that they come along on the current hunt.'
-      subQualities: []
-    - id: 18
-      title: Vengeance
-      description: The players encounter a person seeking vengeance against them. This person won't be cooperating with the investigation anytime soon. They might even be helping the monster the players are hunting.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Suburbs
-      description: 'A typical suburban neighborhood. The houses are all close together, but not too close. The yards are neatly trimmed and each one looks greener than the last. There might be kids playing ball in the street. It''s a very safe looking neighborhood. *wink*'
-      subQualities: []
-    - id: 20
-      title: Cave
-      description: A dank dark wet cave of dirt and stone. It's big enough to make a snug home for a bear or tiger. It could also be the lair of something more sinister.
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Misunderstood Monster
-      description: 'Some monsters are peaceful. Not all of them want to kill humans for the fun of it. A lot of them try to integrate into society, even contribute. Maybe the monster was forced to defend itself and kill a human. Maybe it''s being framed by someone.'
-      subQualities: []
 Owl:
   Backstories:
     - id: 1
@@ -354,38 +290,6 @@ Owl:
           description: 'Make a Stones challenge. On success, you may view the memories of anyone you can see. On failure, take 3 Strikes of damage.'
         - title: Range
           description: MELEE
-  NPCs:
-    - id: 15
-      title: 'Joseph, the Police Officer'
-      description: 'Despite his profession, Joseph is a big bundle of friendliness. He''s more likely to be at the elementary school talking to kids or volunteering at the soup kitchen than chasing down criminals.'
-      subQualities: []
-    - id: 16
-      title: 'Emily, the Photographer'
-      description: 'Emily is always out and about with her camera, snapping photos of everything. She has her own darkroom at home. There''s a good chance she took a photo of whatever is going around killing people.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: You Scratch My Back
-      description: 'The person who has something the players need wants something in return. Maybe the person is lonely and wants to play a simple game with the players, or maybe the person has a more elaborate and deadly task for them, such as retrieving a stolen object or avenging a friend.'
-      subQualities: []
-    - id: 18
-      title: Cursed Object
-      description: An object in one of the players' inventory turns out to be cursed. It is making the player weaker and weaker until it completely drains their life away.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Office Building
-      description: An office building with many floors and too many windows. This place is mostly occupied by corporate drones who just want to get paid. The executives are cozy where they are and don't like competition. You need an appointment or an ID to get past the lobby to the elevators.
-      subQualities: []
-    - id: 20
-      title: Graveyard
-      description: 'A town graveyard where the dead are put to rest. It mostly has cheap tombstones, but there are a couple mausoleums where particularly rich folks are buried. So many corpses in one place tends to attract monsters and spirits.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Stolen Artifacts
-      description: 'Someone is stealing artifacts from museums and vaults. Individually, the artifacts only have value as collector''s items, but the players know that, when used together, the artifacts form the basis for a powerful, and likely evil, ritual.'
-      subQualities: []
 Serpent:
   Backstories:
     - id: 1
@@ -484,38 +388,6 @@ Serpent:
           description: 'Use on a character who has been removed from a scene due to their wounds. They come back for the remainder of the scene, but will succumb to their wounds and be removed from the next scene unless healed. They are removed from the current scene again if they suffer another wound.'
         - title: Range
           description: MELEE
-  NPCs:
-    - id: 15
-      title: 'Riley, the College Student'
-      description: Riley is a complete know-it-all. He claims that there's nothing else the world can teach him. He's just sleeping his way through school so he can go out and become a movie star. No one has had the guts to tell him it will probably never happen.
-      subQualities: []
-    - id: 16
-      title: 'Beth, the Nurse'
-      description: Beth is a good nurse. She's always there with words of comfort to the sick or injured. She is the light that balances out her boss's terrible bedside manner.
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Bad Preparation
-      description: 'Once the players learn what they need to collect in order to defeat their enemy, they either find some pieces missing, broken, or fake.'
-      subQualities: []
-    - id: 18
-      title: Separated
-      description: 'The players become separated from each other. It could be caused by a cave-in, a series of magically locking doors, a floor collapse, or some sort of teleportation spell.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Police Station
-      description: 'Office of local law enforcement. You might find files on previous violent incidents. Most of the officers don''t believe in the supernatural, but there''s always a few open-minded people on the force that could be convinced. Good luck getting them to cooperate with an outsider.'
-      subQualities: []
-    - id: 20
-      title: Sewer
-      description: 'A network of pipes, ladders, grates, and sudden drops that move waste and water around the city to keep the streets clean. The darkness and foul atmosphere make this place a favorite hiding place or lair of many supernatural creatures.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Monster Child
-      description: 'A long time ago, a child was kidnapped by a monster. Rather than eat them, the monster decided to raise the child as their own and teach them how to be monstrous. Maybe the child was physically transformed, or maybe they''re still human. They''re definitely dangerous.'
-      subQualities: []
 Tortoise:
   Backstories:
     - id: 1
@@ -618,38 +490,6 @@ Tortoise:
           description: 'Make a Flames core challenge. On success, you find the correct passage. On failure, you find a generic passage. Make a followup Brooks challenge. On success, if you found the correct passage, exorcise the spirit. If you found a generic passage, deal 3 Strikes of damage.'
         - title: Range
           description: SHORT
-  NPCs:
-    - id: 15
-      title: 'Carl, the Gas Station Worker'
-      description: 'Carl is unusually cheery for a guy who always winds up working fourth shift. He doesn''t seem to have any other marketable skills or motivation to get a different, better paying job. His pleasant personality means he has a lot of friends in the neighborhood.'
-      subQualities: []
-    - id: 16
-      title: 'Janet, the Lawyer'
-      description: Janet is a fierce and independent woman who has taken the lawyering business by storm. She's a professional prosecutor and has never lost a case.
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Devil's Bargain
-      description: 'A black hole opens up and sucks the players into it. They find themselves face-to-face with Lucifer himself. He makes the players an offer. In exchange for helping them on their current case, he wants them to do something for him. Their lives just got much more complicated.'
-      subQualities: []
-    - id: 18
-      title: The Feds
-      description: 'Federal law enforcement has just shown up. They might be after the players or after the monster. If they are after the monster, it''s likely that they don''t know that it''s a monster.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Hospital
-      description: 'Normally a pretty safe place, as most monsters don''t like anything clean. Sometimes, a monster will discover the buffet of sick and weakened humans and start killing. A hospital keeps records of deaths and autopsies, so it''s a great source of information about victims.'
-      subQualities: []
-    - id: 20
-      title: Swamp
-      description: 'A wet, dirty, and disgusting mire of stagnant water. Smells terrible, has too many insects, and who knows what could be lurking in those depths.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Apprentice Hunter
-      description: 'A young and inexperienced hunter has insisted on accompanying the players on their next case. They''re very eager, but inexperienced. The players will have to try to keep this young hunter safe while also letting him or her gain experience on the hunt.'
-      subQualities: []
 Mountain:
   Backstories:
     - id: 1
@@ -750,38 +590,6 @@ Mountain:
           description: Deals 4 Strikes of damage to all creatures within range.
         - title: Range
           description: SHORT
-  NPCs:
-    - id: 15
-      title: 'John, the Mechanic'
-      description: 'John was never book-smart, but he loved working on cars. Sometimes, he''ll do your repairs for free if it''s an interesting enough problem. He''s a good kid and everyone in the neighborhood comes to his garage for their tune-ups.'
-      subQualities: []
-    - id: 16
-      title: 'Stephanie, the Personal Trainer'
-      description: 'Stephanie works at the gym downtown. She''s their most sought-after trainer. She practically lives at the gym, has the most toned body of anyone there, and could beat any of the guys. She doesn''t let it get to her head. She''s tough enough that she doesn''t take crap from anyone.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Locked Door
-      description: 'The players encounter a locked door. It could be mundane or it could be magically sealed, but it''s between the players and where they want to go.'
-      subQualities: []
-    - id: 18
-      title: Reanimated
-      description: One of the enemies the players killed earlier has been brought back to life and has come back to take revenge on the players.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Bar
-      description: 'A favorite neighborhood hangout. Many hunters frequent local bars to get a cold one and forget about life. Can be a good source of information if you know how to talk to the bartender, but can also be a good hunting ground for things that prey on the lonely or the drunk.'
-      subQualities: []
-    - id: 20
-      title: Mine
-      description: 'Full of shafts, carts, rock-breaking equipment, and the occasional elevator. Mines make excellent hiding places and the fact that some are still used by humans also makes them passable feeding grounds.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Military Revival
-      description: 'H.U.N.T.E.R. is back. They think they can crush the supernatural menace with force, but they usually misunderstand the monsters'' weaknesses. They''ve bumbled their way into a conflict that they are not prepared for, and they''ve made something very angry.'
-      subQualities: []
 Storm:
   Backstories:
     - id: 1
@@ -874,38 +682,6 @@ Storm:
           description: You may reroll 1 Strike on Flames challenges made to cast spells.
         - title: Range
           description: SHORT
-  NPCs:
-    - id: 15
-      title: 'Alfred, the Medium'
-      description: 'Alfred has been tormented by voices his whole life. Some time ago, he learned that they were the voices of the dead. Now, he''s better able to control them and is almost able to lead a normal life. His mind tends to wander when one of the voices says something interesting.'
-      subQualities: []
-    - id: 16
-      title: 'Sarah, the Lying Child'
-      description: 'Sarah never tells the truth. She''s prone to exaggeration and fantastic tales of monsters 25 feet tall with glowing claws and blood pouring from their eyes. Or was it the other way around? All of the adults know not to trust Sarah, but there might be some truth hidden in her words.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Impostor
-      description: 'At some point during this case, one of the players was kidnapped and replaced with a shapeshifter. The other players have discovered the impostor and now have to track down the original.'
-      subQualities: []
-    - id: 18
-      title: Friendly Minion
-      description: Some monsters are so cruel that they will take out their hatred and frustration on their minions. One of these minions is sick of living like this. They see an opportunity with the players and elect to side with the newly arrived hunters against their master.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Apartment Building
-      description: 'A large number of living spaces stacked all in one building. Your average apartment building can house hundreds of people. They usually keep to themselves, but there''s always someone keeping track of all the strange noises and submitting complaints to the building security.'
-      subQualities: []
-    - id: 20
-      title: Warehouse
-      description: 'A storage facility for some company. Could be in use or abandoned. Either way, it''s impossible to keep track of every nook and cranny in most large warehouses. The secrets these shadows hide could turn your stomach.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Vengeful Magician
-      description: 'A witch or wizard is wrecking havoc within a community. The attacks seem to be random, there is intelligence behind them. Maybe they''re targeting someone specific, like a rival witch, or maybe they''re after the whole town. They could be summoning monsters to help too.'
-      subQualities: []
 Inferno:
   Backstories:
     - id: 1
@@ -998,38 +774,6 @@ Inferno:
       subQualities:
         - title: Storyteller
           description: The stone used to be a jewel from Lucifer's throne. Demons can sense where it is and might be drawn to it. It can be used as a magical focus to lend the power of hellfire to fire-based spells and rituals.
-  NPCs:
-    - id: 15
-      title: 'William, the Grave Tender'
-      description: William is an old man who has been tending the graves for most of his life. He prefers the company of the dead. They aren't as noisy as the living.
-      subQualities: []
-    - id: 16
-      title: 'Andrea, the Janitor'
-      description: 'Andrea hates her job. Every night, she walks the halls of her building, cleaning up the filth left over from the day. She doesn''t have any friends. She does her work, then goes home to watch TV until her next shift.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Fire!!
-      description: Whatever location the players are in is suddenly set on fire. It could also be the players' home base or vehicle. They'll have to act fast if they want to save anything inside.
-      subQualities: []
-    - id: 18
-      title: Portal
-      description: 'A portal suddenly opens in front of the players. It might lead to Hell, Heaven, or Purgatory. It could suck the players in or something might come out.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Restaurant
-      description: 'More high-class than a cafe or a bar, this place doesn''t attract the same sort of regulars those places do. Could be your average fast-food place, or a more expensive establishment that requires a reservation.'
-      subQualities: []
-    - id: 20
-      title: Hell
-      description: 'The kingdom of demons where the souls of the corrupt and evil go when they die. There are portals on Earth that can take a living mortal to Hell, but they are hard to find and under heavy guard. Living mortals who stumble across such portals are sometimes dragged in and tortured.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Freeing the Devil
-      description: 'Lucifer is trapped in a prison in the lowest circle of Hell. He can exert a little influence on the world, but not much. It''s just enough to communicate with his loyal followers. He has commanded them to set about breaking the seals keeping him imprisoned.'
-      subQualities: []
 River:
   Backstories:
     - id: 1
@@ -1124,38 +868,6 @@ River:
           description: 'Make a Gales challenge. On success, your scanner is able to identify and highlight important features about a crime scene.'
         - title: Range
           description: MELEE SHORT
-  NPCs:
-    - id: 15
-      title: 'Richard, the Priest'
-      description: 'Richard is a friend to all. Everyone is welcome to take shelter in his church. He is always ready with a cup of tea, a friendly ear, and a forgiving heart. Being a priest also gives Richard a detailed perspective on the death toll in his town. He might know something.'
-      subQualities: []
-    - id: 16
-      title: 'Candy, the Stripper'
-      description: 'Candy knows how to work a man (or woman). She''s the best exotic dancer in these parts, and she knows it. She has skated through life on her looks. She''s not terribly bright or skilled at anything else, but she knows how to play people for whatever they have.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Blinding Light
-      description: 'A sudden flash of light appears in front of the players. It may transport the players, it may drop something on the ground, it may knock everyone out, or it may do nothing.'
-      subQualities: []
-    - id: 18
-      title: Love is Blind
-      description: The players discover that one of the humans they've encountered during this case is actually in love with the monster they are hunting. It could be a misguided romantic love or it might be a form of worship. This person will almost certainly attempt to interfere with the hunt.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Appliance Store
-      description: 'Need a new TV or computer? Come to your local appliance store. Like any establishment open late at night, this could be a good hunting spot. There''s always that one patron who stayed too late and is leaving alone. The owner probably knows almost everyone in town.'
-      subQualities: []
-    - id: 20
-      title: Secluded Lake
-      description: A favorite spot for teenagers to skip off to and make out. What they don't know is what could be hiding in the depths of the lake. Might also be the site of some of the town's urban legends.
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Alien Abductions
-      description: 'It’s probably not true. Most hunters don''t believe in aliens. That doesn''t stop people from claiming they had a close encounter, but this time, there are way too many of them for it to be a coincidence. Something supernatural might be happening.'
-      subQualities: []
 Crown:
   Backstories:
     - id: 1
@@ -1252,38 +964,6 @@ Crown:
       subQualities:
         - title: Storyteller
           description: 'Maybe the coins are imbued with magic that can be released by throwing them somewhere, maybe they''re lucky and bring good fortune to their holder, or maybe they''re ordinary coins, but have sentimental value to the boss.'
-  NPCs:
-    - id: 15
-      title: 'Tyler, the Pizza Delivery Boy'
-      description: 'Tyler really knows his pizza. The chef at the pizza place where he works loves to experiment, and Tyler is always willing to sample whatever new concoction the chef puts on the platter. He''s not a smart kid, but he''s earnest.'
-      subQualities: []
-    - id: 16
-      title: 'Joanna, the Cat-Burglar'
-      description: 'No one really knows about Joanna''s night job. They all think she works at a gas station somewhere. She spends her nights sneaking into houses and stealing small valuables. Because she''s out almost every night, she makes quite a lot of money selling this stuff.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Memory Curse
-      description: 'One of the players is hit with a memory curse. They will gradually forget everything they know, including how to talk, swallow, and even breathe. The way to reverse the curse is to have the affected player chant TEGROF ("forget" backwards) three times.'
-      subQualities: []
-    - id: 18
-      title: Poison Gas
-      description: The area the players are currently in floods with poison gas.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Grocery Store
-      description: Serves all manner of food and drink to be taken home and cooked into delicious meals.
-      subQualities: []
-    - id: 20
-      title: Shipyard
-      description: 'Serves as both a parking lot and a repair shop for boats. It could be in use or it could be abandoned. Either way, there are a multitude of hiding places aboard all the moored boats.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Lead on a Missing Family Member
-      description: 'One of the players has a friend or family member they haven''t heard from in a while. Maybe they''re dead, or disappeared under mysterious circumstances. One of the player''s hunting friends just called in. They spotted the missing person, very much alive.'
-      subQualities: []
 Coin:
   Backstories:
     - id: 1
@@ -1376,38 +1056,6 @@ Coin:
           description: Deals 4 Strikes of damage to all creatures within range.
         - title: Range
           description: SHORT
-  NPCs:
-    - id: 15
-      title: 'Chris, the Factory Worker'
-      description: 'Chris is a hardened man with a haunted look in his eyes. Working at the factory should be a dull job, but something has given this unassuming worker the demeanor of a war veteran. What could have happened to him?'
-      subQualities: []
-    - id: 16
-      title: 'Allison, the Honest Child'
-      description: 'Allison is a model girl-scout. She always tells the truth and always wants to help. Sometimes, she wants to help a little too much. Gotta earn those merit badges!'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Robbed
-      description: 'The players enter the next location to find it has been ransacked. It could be the next location they go to during their investigation, or it could be their home base. It''ll be hard to gather information from this mess. Maybe something important has gone missing.'
-      subQualities: []
-    - id: 18
-      title: Hoax
-      description: Turns out that the monster was fake all along. It was all a scheme set up by a human in order to scare other people away from something. They did actually commit those murders though.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Gas Station
-      description: 'Gas stations could be located anywhere, and are a welcome sight to travelers when they need to refuel. The fact that they''re often open late at night means that all manner of violent incidents could take place. It''s convenient that they also have closed circuit security cameras.'
-      subQualities: []
-    - id: 20
-      title: Bridge
-      description: 'Could be a road over a ravine or over a river. Bridges symbolize the joining of separate regions, but the fact that a lot of them have deadly drops off their sides also makes them prone to having people disappear on them. Some even serve as portals to other worlds.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Wish
-      description: 'Wishes are extremely powerful magic, capable of almost anything... with the right wording. To the naïve, they can be extremely dangerous. A careless word can unleash unspeakable horrors and terrible monsters. Monsters that the hunters will have to deal with.'
-      subQualities: []
 Tome:
   Backstories:
     - id: 1
@@ -1502,38 +1150,6 @@ Tome:
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you are able to locate an entry in the journal for whatever monster you are hunting and learn basic hunting information about it.'
-  NPCs:
-    - id: 15
-      title: 'Jefferson, the Doctor'
-      description: 'Jefferson is a very scientific person who believes completely in the power of medicine. If he can''t see and investigate something, then he requires hard evidence of the thing''s existence. The good news is, if you can provide the evidence, he''ll believe almost anything.'
-      subQualities: []
-    - id: 16
-      title: 'Susan, the Real Estate Agent'
-      description: 'Susan is usually late to her appointments, but she knows how to sell a house. She has the floor plan of every house in town memorized and can give a tour that will captivate your senses.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Bad Info
-      description: It turns out that one of the supposedly "friendly" humans that provided information to the players was actually working for the monsters and gave the players bad information.
-      subQualities: []
-    - id: 18
-      title: Cover Up
-      description: 'Someone has erased all the information and records that might have clues for the players. Witnesses have disappeared, written records have been destroyed, security camera footage has been deleted. Someone doesn''t want the players to track down this monster.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Farm
-      description: Might be a vegetable farm or a dairy farm. It produces enough food to sell to the town supermarket and probably enough to send to other states. There might be a barn or a shed and plenty of harvesting equipment around.
-      subQualities: []
-    - id: 20
-      title: Crossroads
-      description: Two roads meet in the middle of nowhere. A crossroads is symbolic of choices and many important deals are sealed at crossroads.
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Ritual Murder
-      description: A murder most foul! This one has ritual markings that suggests this was more than just ending a life. Could be that only a specific organ was taken or that the body was laid out in a unique way. There is clearly much more to this murder than the simple killing.
-      subQualities: []
 Mask:
   Backstories:
     - id: 1
@@ -1630,38 +1246,6 @@ Mask:
           description: 'Make a Brooks challenge. On success, your form changes. You grow fur, your teeth and nails sharpen, your eyesight and sense of smell improve, and you can transform back at will. On failure, you still transform, but your mind also transforms. The storyteller dictates your actions.'
         - title: Enhancement
           description: 'If you failed your Brooks challenge and became a wolf in mind and body, another player can make a Brooks challenge to calm you down and allow you to transform back.'
-  NPCs:
-    - id: 15
-      title: 'Mickey, the Bodybuilder'
-      description: 'If Mickey isn''t at the gym, he''s probably out jogging. The man''s muscles have muscles. He looks like he could bench-press a truck, but his courage has never been tested. It''s likely that a lifetime spent fighting iron weights means he''s a coward when faced with a real monster.'
-      subQualities: []
-    - id: 16
-      title: 'Leslie, the Programmer'
-      description: 'Leslie spends her days working on a boring finance application for a big firm. She''s the only one there who knows how the thing works. She spends her time tinkering away in her basement. She doesn''t consider herself a "hacker," but she''s peeked into a few restricted areas.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Body Swap
-      description: 'A magical curse causes two of the players to swap bodies. The way to reverse the spell is to have the affected players look into each other''s eyes through a reflection, such as a mirror or a pool of water.'
-      subQualities: []
-    - id: 18
-      title: Power Up
-      description: 'Whether through a magical ritual or a surge of adrenaline, the monster evolves and becomes more powerful. It could sprout new limbs, gain a lot of muscle, or manifest magical powers. Whatever the case, it just got much harder to kill.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Hotel
-      description: 'Might not be a four-star resort, but it''s better than the seedy motels most hunters choose to stay at. At least the sheets are probably clean.'
-      subQualities: []
-    - id: 20
-      title: Mystery Spot
-      description: 'The local "haunted" attraction or site of an urban legend. The owner might claim that people disappear here, or that it''s haunted. These places are usually more hoax than haunt, but they attract at least a few tourists. Enough to put food on someone''s table.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Horror Convention
-      description: 'Horror conventions are a surprisingly common place for monster attacks. They''re filled with people who believe in the supernatural, and belief alone can be enough to attract the attention of monsters. A small group might even experiment with demon summoning, and they might succeed.'
-      subQualities: []
 Woods:
   Backstories:
     - id: 1
@@ -1758,38 +1342,6 @@ Woods:
           description: 'Once per episode, heal 2 wounds on any one player.'
         - title: Range
           description: MELEE
-  NPCs:
-    - id: 15
-      title: 'Jack, the Psychic Child'
-      description: 'There was always something strange about Jack. Mysterious things would happen around him. Locked doors would unlock by themselves, lights would flicker, and Jack always seemed to know more about things than he should.'
-      subQualities: []
-    - id: 16
-      title: 'Caroline, the Secretary'
-      description: 'Caroline''s boss is a real hard case who doesn''t appreciate her at all. She manages his meetings, takes his phone calls, writes down everything he says, and remembers everything he doesn''t want to. She really isn''t being paid enough to put up with this, but she does anyway.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Something in the Food
-      description: 'Somehow, one of the players'' meals or drinks was contaminated. It might have been done on purpose by the enemy. The actual contamination is up to the storyteller. It could be poison, some kind of magical curse potion, or something less dangerous, like a love potion.'
-      subQualities: []
-    - id: 18
-      title: Secret Passageway
-      description: The monster flees through a secret door or a passageway that the players had not discovered.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Seedy Motel
-      description: 'The chosen home base of many hunters when they roll into a town. The rooms are cheap, have pay-per-view, free internet, and the owners don''t ask too many questions. The cleanliness, however, leaves a lot to be desired.'
-      subQualities: []
-    - id: 20
-      title: Forest
-      description: 'The local woodland forest can be a mysterious and frightening place. Sometimes children will run off to play in the forest, and they all know it like the backs of their hands. That doesn''t stop the occasional monster from making a home there.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Paradise?
-      description: Everyone is this community is happy.... too happy. There's definitely something amiss here. Perhaps everyone is terrified of what will happen if they act out. Perhaps they're under a spell. Or perhaps they are the real monsters.
-      subQualities: []
 Watchtower:
   Backstories:
     - id: 1
@@ -1884,38 +1436,6 @@ Watchtower:
       subQualities:
         - title: Mechanic
           description: You take 2 fewer Strikes when attacked in the chest by physical attacks.
-  NPCs:
-    - id: 15
-      title: 'Sam, the Appliance Store Owner'
-      description: 'Sam is a pudgy technical guy with a bad case of social anxiety. He can probably fix anything, just don''t talk to him for too long.'
-      subQualities: []
-    - id: 16
-      title: 'Parker, the Waitress'
-      description: 'Parker is only a waitress as a seasonal job. She really wants to move away and become an actress. She''s attractive enough for the big screen, but she has almost zero acting skills.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: New Victim
-      description: A new victim of whatever monster is wrecking havoc in the neighborhood has just been found. It might even be someone the players were just talking to.
-      subQualities: []
-    - id: 18
-      title: Being Watched
-      description: 'Hunters have keen senses. The players sense that someone or something is watching them right now. It might be an enemy, or it might just be a curious bystander.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Nightclub
-      description: 'The perfect place to get your party on and meet someone to spend the night with. The nightclub is a loud and bright place, even at 4:00 am. There''s a bar, a DJ, and a really big dance floor. Sometimes they even have live bands.'
-      subQualities: []
-    - id: 20
-      title: Factory
-      description: 'The local manufacturing plant. They might make anything here, from blankets to candy. There''s tons of machinery here. Maybe it''s abandoned.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Disappearances
-      description: 'Normally, this would be written off as just another missing person, but there''s way too many and there''s something connecting them. Maybe they all disappeared around the same place or at the same time of day. Maybe they have something in common. No one has found any bodies.'
-      subQualities: []
 Gateway:
   Backstories:
     - id: 1
@@ -2014,38 +1534,6 @@ Gateway:
           description: You may reroll 1 Strike on Gales challenges made to sense ghosts or other spiritual entities while using this item.
         - title: Range
           description: MELEE SHORT
-  NPCs:
-    - id: 15
-      title: 'Wesley, the Friendly Werewolf'
-      description: 'Wesley looks like your average guy. Every month, he has to lock himself up and wait out his werewolf transformation. He''s killed a couple of people, but he''s learned how to deal with it. He prefers the company of normal humans... other werewolves are too feral for him.'
-      subQualities: []
-    - id: 16
-      title: 'Rachel, the Radio Host'
-      description: 'Rachel is a bombastic tattooed individual. She''s always the loudest person in the room. Even on the rare occasions when she whispers, she can be heard by everyone. She''s friendly enough. She''ll hook you up with any concert tickets you want if you buy her her favorite lunch.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Ghost in the Walls
-      description: 'You know the old phrase, "If these walls could talk, what secrets they could tell"? Turns out, these walls actually *do* talk. A friendly spirit inhabits the walls of this place. With the right prodding questions, it may even give the players some helpful clues.'
-      subQualities: []
-    - id: 18
-      title: Possession
-      description: One of the players is suddenly possessed by a vengeful spirit intent on killing the other players. The other players must perform an exorcism to get rid of the possession.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Library
-      description: 'Quiet, please! People are trying to read. These havens for truth and knowledge also sometimes store town records and old newspaper clippings.'
-      subQualities: []
-    - id: 20
-      title: Castle
-      description: 'A medieval castle!! Or, more likely, some rich guy''s attempt to bring a little of medieval Europe into the 21st century. Probably only a couple hundred years old, but that might be long enough to have some interesting history.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Somebody Help!
-      description: 'Usually, hunters find their work by watching for suspicious news headlines. It''s rare that a living person actively seeks out their help, and even rarer that they actually find it. This individual has a problem, a dangerous problem. A problem that only the hunters can solve.'
-      subQualities: []
 Gallows:
   Backstories:
     - id: 1
@@ -2138,38 +1626,6 @@ Gallows:
           description: 'This is the ring of Death himself. By speaking the magic word, "Mortem" ("Death" in Latin), the wearer can inflict death on the next creature they touch. However, doing so will alert Death and likely bring him to the players'' location to retrieve his ring.'
         - title: Range
           description: MELEE
-  NPCs:
-    - id: 15
-      title: 'Brian, the Fast-Food Worker'
-      description: 'Brian works a dead-end job at a fast food restaurant. He''s incredibly apathetic and doesn''t think he has any kind of a future. Burgers are life, man.'
-      subQualities: []
-    - id: 16
-      title: 'Sylvia, the Friendly Witch'
-      description: 'Sylvia is a generally helpful person. She prefers to keep to herself, but has a knack for fixing problems people don''t even know they have. Sylvia keeps a witch''s laboratory in her basement. It''s very rare that any magical energy escapes her lab, but it has happened.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Monster Family
-      description: 'Even monsters can experience love and raise a family. The players discover that the monster they''ve been hunting has a family. It might have children, or a mate. Maybe the children are too young to fight. Maybe the monster just got reinforcements.'
-      subQualities: []
-    - id: 18
-      title: False Alarm
-      description: 'The players hear a sudden noise or see a flash of movement. If they go to investigate, it will turn out to be a cat or some other rodent, but the players will have lost precious time and be led off the trail of their target.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Campsite
-      description: 'With a tent, a little wood, and some ingenuity, you could have a real fun trip out into the woods here. That is, assuming there isn''t something here waiting for an unsuspecting person to do just that.'
-      subQualities: []
-    - id: 20
-      title: Crypt
-      description: 'Some graves go far deeper than just 6 feet under. Some rich families will set up family crypts, where everyone in their line will be buried. The tunnels down here can be long, and saturated with death. Such energy often brings unsavory creatures to set up new lairs here.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: The Dead are Rising
-      description: 'Normally, dead things stay dead. Not so in the world of monsters. Something has clawed its way back to the land of the living and it has unfinished business. Maybe it even brought an army of other undead with it.'
-      subQualities: []
 Assassin:
   Backstories:
     - id: 1
@@ -2264,38 +1720,6 @@ Assassin:
           description: 'Once per scene, this device can banish all spiritual entities from the immediate area.'
         - title: Range
           description: MELEE SHORT
-  NPCs:
-    - id: 15
-      title: 'Marcus, the Soldier'
-      description: 'Marcus has seen things. He believes that there is no greater hell on earth than a war zone. He''d be right too, if Hell didn''t send some of its own soldiers to Earth from time to time. Marcus is a hardened warrior, but the memories of the battles he was in torment him constantly.'
-      subQualities: []
-    - id: 16
-      title: 'Jenna, the Bartender'
-      description: 'Jenna grew up in the dive bar, watching the bartenders mix drinks. She learned how to mix a martini before she turned 12. Now, she''s old enough to mix the drinks *and* enjoy them. Most people still see her as a little girl, despite being in her late 20s.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Double Booked
-      description: 'The players encounter another hunter or group of hunters working the same case that they are. Hunters usually do a pretty good job staying out of each other''s way - if hunters do encounter each other, they will usually offer aid or move on to stay out of each other''s way.'
-      subQualities: []
-    - id: 18
-      title: Sneak Attack
-      description: 'Someone or something sneaks up on all the players and knocks them out, or tries to.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Beach
-      description: 'Ah, the sand, the sun, and the soothing sound of the ocean waves. Nothing beats the beach when it comes to relaxing getaways... unless it happens to be where the latest victim washed up on shore or some creature of the deep has awoken.'
-      subQualities: []
-    - id: 20
-      title: Country Road
-      description: Few things are more relaxing than a long drive on a road to nowhere. The road is more likely to be dirt than pavement and there's absolutely nothing around. Sounds great! Unless there's a werewolf chasing after your car.
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Apocalypse
-      description: 'There are many creatures and rituals that are powerful enough to end the world, and someone is trying to do just that. This is some pretty heavy stuff. The hunters are going to have to use all of their resourcefulness and wit to avert this catastrophe.'
-      subQualities: []
 Wanderer:
   Backstories:
     - id: 1
@@ -2388,38 +1812,6 @@ Wanderer:
           description: 'The effect lasts for 1 hour. Vampires appear as winged shadows with glowing red eyes. Werewolves appear to have huge bestial shadows behind them. Others will appear similarly warped and exposed. Looking at an angel, demon, or other higher monster has a chance to drive you insane.'
         - title: Range
           description: MELEE SHORT
-  NPCs:
-    - id: 15
-      title: 'Anthony, the FBI Agent'
-      description: 'Anthony worked hard to climb the ranks at the FBI. He''s a by-the-books investigator and doesn''t believe in the supernatural. He usually sticks his nose where it doesn''t belong, which can be an asset in the investigation world, but can get you killed in the supernatural world.'
-      subQualities: []
-    - id: 16
-      title: 'Cassie, the runaway'
-      description: 'Cassie''s home life was pretty terrible. It got bad enough that Cassie took all the money she had, two changes of clothes, and a granola bar and hopped on a bus heading as far away as she could get. She''s living meal to meal now and is all on her own.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Shared Vision
-      description: 'The players experience a shared vision or nightmare. The vision might be a warning, an attack, or have clues regarding the players'' current hunt.'
-      subQualities: []
-    - id: 18
-      title: Repeat
-      description: 'When the players try to leave their current location, they come back to where they started. The players are trapped in a loop. The only way to get out is to find the reflective object, such as a mirror or shiny jewelry, that is powering the spell and destroy it.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Gym
-      description: 'A haven for testosterone junkies. It''s true that a lot of hunters frequent the gym. After all, it pays to be physically fit when fighting for your life. Gyms also have a close-knit community. All the weight lifters know each other and they''ll notice when someone doesn''t come in.'
-      subQualities: []
-    - id: 20
-      title: Insane Asylum
-      description: A "hospital" for the insane. The treatments do more harm than good. The number of healthy bodies makes this an ideal feeding ground for many supernatural creatures. The fact that no one will believe the patients when they start screaming of vampires makes it extra convenient.
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Out Of Time
-      description: 'The players are taking a break from hunting to relax when there is a flash of light. The players find themselves in another time. Maybe the Old West. Maybe the Roaring 20s when the mafia was in full swing. Maybe the distant future, when Lucifer finally escaped his prison in Hell.'
-      subQualities: []
 Architect:
   Backstories:
     - id: 1
@@ -2510,38 +1902,6 @@ Architect:
           description: 'You may reroll 1 Strike during Flames and Gales challenges to open a lock. For that challenge, Flames and Gales count as successes, but Stones and Brooks count as Strikes.'
         - title: Range
           description: MELEE
-  NPCs:
-    - id: 15
-      title: 'Eddie, the Cab Driver'
-      description: 'Eddie doesn''t care about people. He doesn''t care who you are or what''s going on in your life, just where you''re going and if you have enough money to get there. Almost nothing fazes him.'
-      subQualities: []
-    - id: 16
-      title: 'Jodie, the Psychic'
-      description: Jodie has probably helped the players before - every hunter knows a couple of psychics around the country. Jodie is especially good with clairvoyance. She can hold an item and see the item's past. She occasionally gets visions of possible futures.
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Mechanical Failure
-      description: One of the mechanical tools or vehicles the players are using breaks down and must be repaired before it can be used again.
-      subQualities: []
-    - id: 18
-      title: Trapped
-      description: 'Due to a cave in or a series of doors locking shut, the players are now trapped.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Spa & Salon
-      description: 'Having a rough day and need to be pampered for a while? Come to your local spa & salon for all your superficial needs. The sterile environment keeps out most monsters, and the regulars all know each other. They also tend to gossip more than anyone else.'
-      subQualities: []
-    - id: 20
-      title: Amusement Park
-      description: 'Either a kid''s heaven, or their worst nightmare. Most amusement parks have a decent mix of fun, thrilling, and/or horrifying attractions. What better way to hide as a monster than at a place full of people in clown or mascot costumes?'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Kids Discover a Monster
-      description: A group of kids witnessed a monster attack. The adults don't believe them - they think it's a prank. There are enough warning signs that what the kids are saying might be true. Maybe the kids themselves summoned the monster.
-      subQualities: []
 Herald:
   Backstories:
     - id: 1
@@ -2632,38 +1992,6 @@ Herald:
           description: Deals 1 Strike of damage to ordinary creatures. Deals 3 Strikes of damage to demonic creatures.
         - title: Range
           description: MELEE
-  NPCs:
-    - id: 15
-      title: 'Fred, the Detective'
-      description: 'Fred is probably already on the trail of whatever the players are hunting. He''s a former police officer who was kicked off the force after failing to track down a serial killer. The killer was actually a monster. Fred survived the encounter, but didn''t have the means to kill it.'
-      subQualities: []
-    - id: 16
-      title: 'Jessica, the Retail Worker'
-      description: 'Jessica is always ready with a sigh of resignation, an eyeroll, or an exasperated look to brighten your day. She''s only in this job for the season and she can''t wait to get out and go back to her life.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Promiscuous Witness
-      description: 'Danger can have strange effects on a person. This particular witness takes a liking to one of the players. They''ll say and do anything to keep that player around. It''s going to be tough to get a serious answer out of this person, but maybe the players don''t want that *wink*.'
-      subQualities: []
-    - id: 18
-      title: Fear Curse
-      description: One of the players is cursed with an ever-increasing sense of dread. They will soon be afraid of everything. The way to reverse the curse is to put the affected person in the dark for 20 seconds. The problem is that the thing the victim is most afraid of is the dark.
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Cabin
-      description: 'A log cabin in the middle of the woods. The residents either live off the land, or only come here on vacation to get away from the noise of the big city. There''s almost no communication to the outside world from here, so it can be the perfect hunting ground or hiding place.'
-      subQualities: []
-    - id: 20
-      title: Purgatory
-      description: 'Beings without a soul go to Purgatory when they die. There are a few portals on Earth that can take the living to Purgatory, but the realm naturally repels humans. Some still get sucked in. This can be particularly bad for a hunter, since they put a lot of monsters here...'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Going on Vacation
-      description: Every hunter needs a break from the kill-or-be-killed lifestyle. Too bad a monster happened to choose the players' vacation spot for its next attack. The last thing the hunters wanted was to work a case.
-      subQualities: []
 Dusk:
   Backstories:
     - id: 1
@@ -2760,35 +2088,3 @@ Dusk:
           description: Deals 2 Strikes of damage.
         - title: Range
           description: MELEE
-  NPCs:
-    - id: 15
-      title: 'Matthew, the Postal Worker'
-      description: 'Matthew never seems to get excited about anything. His days consist entirely of waking up, eating, driving his route in the morning, watching TV, driving his route in the evening, and going to bed, but Matthew seems content enough with his life so far.'
-      subQualities: []
-    - id: 16
-      title: 'Brooke, the Hippie'
-      description: 'Brooke can usually be found in the forest getting high or frolicking in the trees. She absolutely loves nature and is a free spirit. Despite how she behaves, she is actually a hardened survivalist. There''s a good chance that the bear attacks she survived were something more.'
-      subQualities: []
-  Plot Twists:
-    - id: 17
-      title: Lights Out
-      description: The place the players currently are exploring suddenly goes completely dark and the players have to navigate without any light.
-      subQualities: []
-    - id: 18
-      title: Hunter Becomes Hunted
-      description: 'The players discover where the monster put its victims. Among the victims is someone the players recognize - it''s another hunter. They might be useful in the fight to come or, considering their injuries, they might just get in the way.'
-      subQualities: []
-  Locations:
-    - id: 19
-      title: Church
-      description: 'A beautiful place of worship. The congregation are nice, the pastor is wholesome and helpful, and the crypt under the altar is probably home to a gruesome monster or two.'
-      subQualities: []
-    - id: 20
-      title: Prison
-      description: 'Where you get sent when you commit crimes. The sheer number of warm bodies in here makes it prime hunting ground for many types of monsters. The inmates tend to exaggerate things and will outright lie, but one of them might be the only witness.'
-      subQualities: []
-  Theme:
-    - id: 21
-      title: Cursed Object
-      description: Unsuspecting civilians have uncovered a cursed object. Maybe this object is the anchor for a vengeful spirit. Maybe it’s from a witch’s lair and whoever holds it wastes away. Maybe it was keeping a monster sealed away and now that monster is loose.
-      subQualities: []
