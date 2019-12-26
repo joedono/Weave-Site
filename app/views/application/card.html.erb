@@ -3,6 +3,12 @@
   <div class="row">
     <div class="col-sm-10">
       <div class="row selector-group">
+        <div class="col-sm-12">
+          <label class="selector-container">
+            <%= radio_button_tag(:card, "Random", false, class: 'selector', style: 'display: none;') %>
+            <strong>Random</strong>
+          </label>
+        </div>
         <% @cards.each do |card| %>
           <div class="col-sm-3">
             <label class="selector-container">

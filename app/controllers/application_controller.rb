@@ -112,8 +112,13 @@ class ApplicationController < ActionController::Base
 
   def card_post
     redirect_to card_url and return if params[:card] == nil
+    card = params[:card]
 
-    session[:current_card] = params[:card]
+    if card == 'Random'
+      card = @@cards[rand(@@cards.count)]
+    end
+
+    session[:current_card] = card
     redirect_to quality_url
   end
 
