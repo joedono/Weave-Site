@@ -11,7 +11,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-sm-6">
     <h2>Bonuses</h2>
     <p>
       Stones: +<%= @stonesBonus %><br>
@@ -20,19 +20,52 @@
       Brooks: +<%= @brooksBonus %><br>
     </p>
   </div>
-  <div class="col">
-    <h2>Strikes</h2> [_] [_] [_] [_] [_] [_] [_] [_] [_] [_]
-    <h2>Wounds</h2> [_] [_] [_]
+  <div class="col-sm-4">
+    <h2>Strikes</h2>
+    <% for i in 0..10 do %>
+      <label class="selector-container-small">
+        <%= radio_button_tag(:strike, i, false, class: 'selector', style: 'display: none;') %>
+        <%= i %>
+      </label>
+    <% end %>
+  </div>
+  <div class="col-sm-2">
+    <h2>Wounds</h2>
+    <% for i in 0..3 do %>
+      <label class="selector-container-small">
+        <%= radio_button_tag(:wound, i, false, class: 'selector', style: 'display: none;') %>
+        <%= i %>
+      </label>
+    <% end %>
+    <button type="button" class="btn btn-primary" onclick="resetStrikes()" style="margin-top: 10px;">Reset</button>
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-sm-6">
     <h2>Character Config</h2>
-    <pre>
+    <textarea class="form-control" rows="<%= @characterChoices.count + 1 %>" style="min-height: 190px; resize: none;">
 <% @characterChoices.each do |choice| %>
 <%= choice %>
 <% end %>
-    </pre>
+    </textarea>
+  </div>
+  <div class="col-sm-6">
+    <h2>Rolling</h2>
+    <%= render 'suits' %>
+    <div class="row">
+      <div class="col-sm-8 form-check text-center">
+        <%= check_box_tag(:iscore, class: 'form-check-input') %>
+        <label class="form-check-label" for="iscore">Core Challenge?</label>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-primary" onclick="rollDice(<%= @stonesBonus %>, <%= @galesBonus %>, <%= @flamesBonus %>, <%= @brooksBonus %>)">Roll</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= text_field_tag(:rollresult, nil, class: 'form-control') %>
+      </div>
+    </div>
   </div>
 </div>
 <div class="row">

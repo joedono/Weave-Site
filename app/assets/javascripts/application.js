@@ -18,10 +18,19 @@
 //= require popper
 //= require bootstrap
 
+function rollDice(stonesBonus, galesBonus, flamesBonus, brooksBonus) {
+
+}
+
+function resetStrikes() {
+  
+}
+
 $(document).on('turbolinks:load', function() {
   $(".selector").change(function() {
-    $(".selector-container").removeClass("selected");
-    $(".selector-container-quality").removeClass("selected");
+    $(this).closest(".row").find(".selector-container").removeClass("selected");
+    $(this).closest(".row").find(".selector-container-small").removeClass("selected");
+    $(this).closest(".row").find(".selector-container-quality").removeClass("selected");
     $(this).parent().addClass("selected");
   });
 
