@@ -50,12 +50,14 @@ function rollDice(stonesBonus, galesBonus, flamesBonus, brooksBonus) {
     }
   }
 
+  numDice = Math.min(numDice, 6);
+
   for(var i = 0; i < numDice; i++) {
     var newDie = rollDie();
     if (newDie == "Weave") {
-      rollResult.push(newDie + " -> ");
+      rollResult.push((i+1) + " - " + newDie + " -> ");
     } else {
-      rollResult.push(newDie + "\n");
+      rollResult.push((i+1) + " - " + newDie + "\n");
     }
 
     if (newDie == challengeType || newDie == "Weave") {
@@ -84,7 +86,8 @@ function rollDice(stonesBonus, galesBonus, flamesBonus, brooksBonus) {
     }
   }
 
-  $("#rollresult").val(successes + " Successes - " + strikes + " Strikes\n" + rollResult.join(""));
+  var rollresult = successes + " Successes - " + strikes + " Strikes\n" + rollResult.join("");
+  $("#rollresult").val(rollresult.trim());
 }
 
 function rollDie() {
