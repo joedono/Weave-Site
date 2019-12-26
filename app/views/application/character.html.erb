@@ -20,19 +20,19 @@
       Brooks: +<%= @brooksBonus %><br>
     </p>
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-4 selector-group">
     <h2>Strikes</h2>
-    <% for i in 0..10 do %>
-      <label class="selector-container-small">
+    <% for i in 0..9 do %>
+      <label class="selector-container-small <%= i == 0 ? 'selected' : '' %>">
         <%= radio_button_tag(:strike, i, false, class: 'selector', style: 'display: none;') %>
         <%= i %>
       </label>
     <% end %>
   </div>
-  <div class="col-sm-2">
+  <div class="col-sm-2 selector-group">
     <h2>Wounds</h2>
     <% for i in 0..3 do %>
-      <label class="selector-container-small">
+      <label class="selector-container-small <%= i == 0 ? 'selected' : '' %>">
         <%= radio_button_tag(:wound, i, false, class: 'selector', style: 'display: none;') %>
         <%= i %>
       </label>

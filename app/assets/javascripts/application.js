@@ -28,9 +28,9 @@ function resetStrikes() {
 
 $(document).on('turbolinks:load', function() {
   $(".selector").change(function() {
-    $(this).closest(".row").find(".selector-container").removeClass("selected");
-    $(this).closest(".row").find(".selector-container-small").removeClass("selected");
-    $(this).closest(".row").find(".selector-container-quality").removeClass("selected");
+    $(this).closest(".selector-group").find(".selector-container").removeClass("selected");
+    $(this).closest(".selector-group").find(".selector-container-small").removeClass("selected");
+    $(this).closest(".selector-group").find(".selector-container-quality").removeClass("selected");
     $(this).parent().addClass("selected");
   });
 

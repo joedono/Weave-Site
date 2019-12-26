@@ -2,7 +2,7 @@
 <%= form_with(url: '/card', method: 'post', local: true) do %>
   <div class="row">
     <div class="col-sm-10">
-      <div class="row">
+      <div class="row selector-group">
         <% @cards.each do |card| %>
           <div class="col-sm-3">
             <label class="selector-container">
