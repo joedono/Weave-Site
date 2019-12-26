@@ -18,12 +18,88 @@
 //= require popper
 //= require bootstrap
 
-function rollDice(stonesBonus, galesBonus, flamesBonus, brooksBonus) {
+var diceMaster = ["Strike", "Stones", "Gales", "Flames", "Brooks", "Weave"];
 
+function rollDice(stonesBonus, galesBonus, flamesBonus, brooksBonus) {
+  var challengeType = $("input[name='suit']:checked").val();
+  var isCoreChallenge = $("#iscore").is(":checked");
+  var coreSuit = $("#coresuit").val();
+  var numDice = 3;
+  var rollResult = [];
+  var strikes = 0;
+  var successes = 0;
+
+  if (isCoreChallenge) {
+    if (challengeType == coreSuit) {
+      numDice++;
+    }
+  } else {
+    switch (challengeType) {
+      case "Stones":
+        numDice += stonesBonus;
+        break;
+      case "Gales":
+        numDice += galesBonus;
+        break;
+      case "Flames":
+        numDice += flamesBonus;
+        break;
+      case "Brooks":
+        numDice += brooksBonus;
+        break;
+    }
+  }
+
+  for(var i = 0; i < numDice; i++) {
+    var newDie = rollDie();
+    if (newDie == "Weave") {
+      rollResult.push(newDie + " -> ");
+    } else {
+      rollResult.push(newDie + "\n");
+    }
+
+    if (newDie == challengeType || newDie == "Weave") {
+      successes++;
+    }
+
+    if (newDie == "Strike" && !isCoreChallenge) {
+      strikes++;
+    }
+
+    while(newDie == "Weave") {
+      newDie = rollDie();
+      if (newDie == "Weave") {
+        rollResult.push(newDie + " -> ");
+      } else {
+        rollResult.push(newDie + "\n");
+      }
+
+      if (newDie == challengeType || newDie == "Weave") {
+        successes++;
+      }
+
+      if (newDie == "Strike" && !isCoreChallenge) {
+        strikes++;
+      }
+    }
+  }
+
+  $("#rollresult").val(successes + " Successes - " + strikes + " Strikes\n" + rollResult.join(""));
 }
 
-function resetStrikes() {
-  
+function rollDie() {
+  return diceMaster[Math.floor(Math.random() * diceMaster.length)];
+}
+
+function newScene() {
+  $("#strike_0").attr('checked', true);
+  $("#strike_0").change();
+}
+
+function resetStrikesAndWounds() {
+  newScene();
+  $("#wound_0").attr('checked', true);
+  $("#wound_0").change();
 }
 
 $(document).on('turbolinks:load', function() {

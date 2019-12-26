@@ -4,6 +4,7 @@
     <p>
       Level: <%= @level %><br>
       Core Suit: <%= @suit %>
+      <%= hidden_field_tag(:coresuit, @suit) %>
     </p>
   </div>
   <div class="col text-right">
@@ -22,12 +23,13 @@
   </div>
   <div class="col-sm-4 selector-group">
     <h2>Strikes</h2>
-    <% for i in 0..9 do %>
+    <% for i in 0..10 do %>
       <label class="selector-container-small <%= i == 0 ? 'selected' : '' %>">
         <%= radio_button_tag(:strike, i, false, class: 'selector', style: 'display: none;') %>
         <%= i %>
       </label>
     <% end %>
+    <button type="button" class="btn btn-success" onclick="newScene()" style="margin-top: 10px;">New Scene</button>
   </div>
   <div class="col-sm-2 selector-group">
     <h2>Wounds</h2>
@@ -37,13 +39,13 @@
         <%= i %>
       </label>
     <% end %>
-    <button type="button" class="btn btn-primary" onclick="resetStrikes()" style="margin-top: 10px;">Reset</button>
+    <button type="button" class="btn btn-primary" onclick="resetStrikesAndWounds()" style="margin-top: 10px;">Reset All</button>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-6">
     <h2>Character Config</h2>
-    <textarea class="form-control" rows="<%= @characterChoices.count + 1 %>" style="min-height: 190px; resize: none;">
+    <textarea class="form-control" rows="<%= @characterChoices.count + 1 %>" style="min-height: 360px; resize: none;">
 <% @characterChoices.each do |choice| %>
 <%= choice %>
 <% end %>
@@ -63,7 +65,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <%= text_field_tag(:rollresult, nil, class: 'form-control') %>
+        <textarea id="rollresult" class="form-control" rows="8" style="resize: none;"></textarea>
       </div>
     </div>
   </div>
