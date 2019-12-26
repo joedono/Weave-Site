@@ -50,7 +50,7 @@
     </textarea>
   </div>
   <div class="col-sm-6">
-    <h2>Rolling</h2>
+    <h2>Challenges</h2>
     <%= render 'suits' %>
     <div class="row">
       <div class="col-sm-8 form-check text-center">
@@ -75,11 +75,11 @@
   <% @character['Backstories'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
-        <h2><%= quality['title'] %></h2>
+        <h3><%= quality['title'] %></h3>
         <p><%= quality['description'] %></p>
         <% quality['subQualities'].each do |subQuality| %>
           <% next if subQuality['title'] == 'Storyteller' %>
-          <h3><%= subQuality['title'] %></h3>
+          <h4><%= subQuality['title'] %></h4>
           <p><%= subQuality['description'] %></p>
         <% end %>
       </label>
@@ -96,18 +96,15 @@
   <% @character['Talents'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
-        <h2><%= quality['title'] %></h2>
+        <h3><%= quality['title'] %></h3>
         <p><%= quality['description'] %></p>
         <% quality['subQualities'].each do |subQuality| %>
           <% next if subQuality['title'] == 'Storyteller' %>
-          <h3><%= subQuality['title'] %></h3>
+          <h4><%= subQuality['title'] %></h4>
           <p><%= subQuality['description'] %></p>
         <% end %>
       </label>
     </div>
-    <% if index.modulo(2) == 1 %>
-      </div><div class="row">
-    <% end %>
   <% end %>
 </div>
 <div class="row">
@@ -117,18 +114,15 @@
   <% @character['Flaws'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
-        <h2><%= quality['title'] %></h2>
+        <h3><%= quality['title'] %></h3>
         <p><%= quality['description'] %></p>
         <% quality['subQualities'].each do |subQuality| %>
           <% next if subQuality['title'] == 'Storyteller' %>
-          <h3><%= subQuality['title'] %></h3>
+          <h4><%= subQuality['title'] %></h4>
           <p><%= subQuality['description'] %></p>
         <% end %>
       </label>
     </div>
-    <% if index.modulo(2) == 1 %>
-      </div><div class="row">
-    <% end %>
   <% end %>
 </div>
 <div class="row">
@@ -138,18 +132,15 @@
   <% @character['Signature Move'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
-        <h2><%= quality['title'] %></h2>
+        <h3><%= quality['title'] %></h3>
         <p><%= quality['description'] %></p>
         <% quality['subQualities'].each do |subQuality| %>
           <% next if subQuality['title'] == 'Storyteller' %>
-          <h3><%= subQuality['title'] %></h3>
+          <h4><%= subQuality['title'] %></h4>
           <p><%= subQuality['description'] %></p>
         <% end %>
       </label>
     </div>
-    <% if index.modulo(2) == 1 %>
-      </div><div class="row">
-    <% end %>
   <% end %>
 </div>
 <div class="row">
@@ -159,17 +150,14 @@
   <% @character['Inventory'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
-        <h2><%= quality['title'] %></h2>
+        <h3><%= quality['title'] %></h3>
         <p><%= quality['description'] %></p>
         <% quality['subQualities'].each do |subQuality| %>
           <% next if subQuality['title'] == 'Storyteller' %>
-          <h3><%= subQuality['title'] %></h3>
+          <h4><%= subQuality['title'] %></h4>
           <p><%= subQuality['description'] %></p>
         <% end %>
       </label>
     </div>
-    <% if index.modulo(2) == 1 %>
-      </div><div class="row">
-    <% end %>
   <% end %>
 </div>
