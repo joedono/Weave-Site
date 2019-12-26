@@ -12,7 +12,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6 character-sheet-section">
     <h2>Bonuses</h2>
     <p>
       Stones: +<%= @stonesBonus %><br>
@@ -21,7 +21,7 @@
       Brooks: +<%= @brooksBonus %><br>
     </p>
   </div>
-  <div class="col-sm-4 selector-group">
+  <div class="col-sm-4 selector-group character-sheet-section">
     <h2>Strikes</h2>
     <% for i in 0..10 do %>
       <label class="selector-container-small <%= i == 0 ? 'selected' : '' %>">
@@ -31,7 +31,7 @@
     <% end %>
     <button type="button" class="btn btn-success" onclick="newScene()" style="margin-top: 10px;">New Scene</button>
   </div>
-  <div class="col-sm-2 selector-group">
+  <div class="col-sm-2 selector-group character-sheet-section">
     <h2>Wounds</h2>
     <% for i in 0..3 do %>
       <label class="selector-container-small <%= i == 0 ? 'selected' : '' %>">
@@ -43,7 +43,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6 character-sheet-section">
     <h2>Character Config</h2>
     <textarea class="form-control" rows="<%= @characterChoices.count + 1 %>" style="min-height: 360px; resize: none;">
 <% @characterChoices.each do |choice| %>
@@ -51,7 +51,7 @@
 <% end %>
     </textarea>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-6 character-sheet-section">
     <h2>Challenges</h2>
     <%= render 'suits' %>
     <div class="row">
@@ -70,10 +70,8 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col"><h2>Backstories</h2></div>
-</div>
-<div class="row">
+<div class="row character-sheet-section">
+  <div class="col-12"><h2>Backstories</h2></div>
   <% @character['Backstories'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
@@ -86,15 +84,10 @@
         <% end %>
       </label>
     </div>
-    <% if index.modulo(2) == 1 %>
-      </div><div class="row">
-    <% end %>
   <% end %>
 </div>
-<div class="row">
-  <div class="col"><h2>Talents</h2></div>
-</div>
-<div class="row">
+<div class="row character-sheet-section">
+  <div class="col-12"><h2>Talents</h2></div>
   <% @character['Talents'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
@@ -109,10 +102,8 @@
     </div>
   <% end %>
 </div>
-<div class="row">
-  <div class="col"><h2>Flaws</h2></div>
-</div>
-<div class="row">
+<div class="row character-sheet-section">
+  <div class="col-12"><h2>Flaws</h2></div>
   <% @character['Flaws'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
@@ -127,10 +118,8 @@
     </div>
   <% end %>
 </div>
-<div class="row">
-  <div class="col"><h2>Signature Move</h2></div>
-</div>
-<div class="row">
+<div class="row character-sheet-section">
+  <div class="col-12"><h2>Signature Move</h2></div>
   <% @character['Signature Move'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
@@ -145,10 +134,8 @@
     </div>
   <% end %>
 </div>
-<div class="row">
-  <div class="col"><h2>Inventory</h2></div>
-</div>
-<div class="row">
+<div class="row character-sheet-section">
+  <div class="col-12"><h2>Inventory</h2></div>
   <% @character['Inventory'].each_with_index do |quality, index| %>
     <div class="col-sm-6">
       <label class="selector-container-quality">
