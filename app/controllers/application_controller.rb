@@ -191,7 +191,7 @@ class ApplicationController < ActionController::Base
   def view_character
     session[:playset_name] = params[:playset]
     session[:name] = params[:name]
-    session[:current_level] = params[:current_level]
+    session[:current_level] = params[:level]
     session[:suit] = params[:suit]
     session[:character] = params[:character]
 
