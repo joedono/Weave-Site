@@ -24,29 +24,34 @@ function rollDice(stonesBonus, galesBonus, flamesBonus, brooksBonus) {
   var challengeType = $("input[name='suit']:checked").val();
   var isCoreChallenge = $("#iscore").is(":checked");
   var coreSuit = $("#coresuit").val();
+  var diceOverride = $("#die_override").val();
   var numDice = 3;
   var rollResult = [];
   var strikes = 0;
   var successes = 0;
 
-  if (isCoreChallenge) {
-    if (challengeType == coreSuit) {
-      numDice++;
-    }
+  if (diceOverride != '') {
+    numDice = parseInt(diceOverride);
   } else {
-    switch (challengeType) {
-      case "Stones":
-        numDice += stonesBonus;
-        break;
-      case "Gales":
-        numDice += galesBonus;
-        break;
-      case "Flames":
-        numDice += flamesBonus;
-        break;
-      case "Brooks":
-        numDice += brooksBonus;
-        break;
+    if (isCoreChallenge) {
+      if (challengeType == coreSuit) {
+        numDice++;
+      }
+    } else {
+      switch (challengeType) {
+        case "Stones":
+          numDice += stonesBonus;
+          break;
+        case "Gales":
+          numDice += galesBonus;
+          break;
+        case "Flames":
+          numDice += flamesBonus;
+          break;
+        case "Brooks":
+          numDice += brooksBonus;
+          break;
+      }
     }
   }
 
@@ -86,8 +91,9 @@ function rollDice(stonesBonus, galesBonus, flamesBonus, brooksBonus) {
     }
   }
 
-  var rollresult = successes + " Successes - " + strikes + " Strikes\n" + rollResult.join("");
+  var rollresult = "Rolling " + numDice + " Dice\n" + successes + " Successes - " + strikes + " Strikes\n" + rollResult.join("");
   $("#rollresult").val(rollresult.trim());
+  $("#die_override").val('');
 }
 
 function rollDie() {

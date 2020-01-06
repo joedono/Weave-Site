@@ -55,9 +55,12 @@
     <h2>Challenges</h2>
     <%= render 'suits' %>
     <div class="row">
-      <div class="col-sm-8 form-check text-center">
+      <div class="col-sm-4 form-check text-center">
         <%= check_box_tag(:iscore, nil, false, class: 'form-check-input') %>
         <label class="form-check-label" for="iscore">Core Challenge?</label>
+      </div>
+      <div class="col-sm-4">
+        <%= text_field_tag(:die_override, nil, class: 'form-control', placeholder: 'Dice Override') %>
       </div>
       <div class="col-sm-4">
         <button type="button" class="btn btn-primary" onclick="rollDice(<%= @stonesBonus %>, <%= @galesBonus %>, <%= @flamesBonus %>, <%= @brooksBonus %>)">Roll</button>
