@@ -46,7 +46,7 @@
   <div class="col-sm-6 character-sheet-section">
     <button type="button" class="btn btn-secondary float-right print-button" onclick="refreshCharacterConfig()">Refresh</button>
     <h2>Character Config</h2>
-<textarea id="characterConfig" class="form-control" rows="<%= @characterChoices.count + 1 %>" style="min-height: 357px; resize: none;">
+<textarea id="characterConfig" class="form-control" rows="<%= @characterChoices.count + 1 %>" style="min-height: 408px; resize: none;">
 <% @characterChoices.each do |choice| %>
 <%= choice %>
 <% end %>
@@ -69,7 +69,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <textarea id="rollresult" class="form-control" rows="8" style="resize: none;"></textarea>
+        <textarea id="rollresult" class="form-control" rows="8" style="min-height: 278px; resize: none;"></textarea>
       </div>
     </div>
   </div>
