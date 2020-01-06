@@ -111,6 +111,19 @@ function resetStrikesAndWounds() {
   $("#wound_0").change();
 }
 
+function refreshCharacterConfig() {
+  var urlParams = new URLSearchParams(location.search);
+  var characterConfig = {
+    character: $("#characterConfig").val().trim().split("\n"),
+    level: urlParams.get("level"),
+    name: urlParams.get("name"),
+    playset: urlParams.get("playset"),
+    suit: urlParams.get("suit")
+  };
+
+  window.location.href = "/character?" + $.param(characterConfig);
+}
+
 $(document).on('turbolinks:load', function() {
   $(".selector").change(function() {
     $(this).closest(".selector-group").find(".selector-container").removeClass("selected");
