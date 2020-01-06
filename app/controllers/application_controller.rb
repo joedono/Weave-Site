@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   def start_post
     redirect_to start_url and return if params[:playset] == nil
 
+    reset_session
     session[:playset_name] = params[:playset]
     redirect_to menu_url
   end
