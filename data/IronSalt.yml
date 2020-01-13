@@ -97,7 +97,7 @@ Dawn:
       description: '**If you''re a player, don''t pick this.** Your storyteller will give it to you when you start the game. The basic equipment every hunter carries with them. Includes a steel knife, a pistol, salt, a lighter, a flashlight, a cell phone, a fake law enforcement ID, and a credit card.'
       subQualities:
         - title: Mechanic
-          description: The credit card is a fraud and will only be good for a few transactions before the bank catches on and deactivates it.
+          description: 'The credit card is a fraud and will only be good for a few transactions before the bank deactivates it. Make a Stones challenge to attack with the knife, a Gales challenge to attack with the gun, a Brooks challenge to use the ID. Check the glossary for how to use the salt.'
 Stag:
   Backstories:
     - id: 1
