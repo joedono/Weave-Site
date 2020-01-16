@@ -26,7 +26,7 @@ Dawn:
         - title: Mechanic
           description: 'Make a Stones challenge. On success, choose one of the following. Lasts 10 seconds: Dragon Flight - You can fly. Dragon Breath - You deal 2 Strikes of damage to all enemies in Melee or Short range. Dragon Armor - You take 1 fewer Strikes of damage from physical attacks.'
         - title: Enhancement
-          description: The enhancement takes a great toll on your body. You suffer 4 Strikes of damage when the effect wears off.
+          description: The enhancement takes a great toll on your body. You take 4 Strikes of damage when the effect wears off.
         - title: Trigger
           description: STONES STONES STONES
     - id: 5
@@ -46,7 +46,7 @@ Dawn:
         - title: Mechanic
           description: Your fists count as silver weapons to monsters that are vulnerable to silver. You can use your blood to coat weapons and give them the properties of silver.
         - title: Enhancement
-          description: 'If you cut yourself to gain access to your blood, make a Stones challenge to avoid cutting too deep. On a failure, you succeed in coating the weapon, but you cannot act for 30 seconds as you recover from the blood loss.'
+          description: 'If you cut yourself to gain access to your blood, make a Stones challenge to avoid cutting too deep. On a failure, you still succeed in coating the weapon, but you cannot act for 30 seconds as you recover from the blood loss.'
     - id: 7
       title: Wyvern Familiar
       description: 'You have a magical bond with a small dragon-like creature. It can fly, you can share its senses, and it will follow your orders. If it''s in danger, it can breath fire in very small blasts and has sharp claws and teeth.'
@@ -97,7 +97,7 @@ Dawn:
       description: '**If you''re a player, don''t pick this.** Your storyteller will give it to you when you start the game. The basic equipment every hunter carries with them. Includes a steel knife, a pistol, salt, a lighter, a flashlight, a cell phone, a fake law enforcement ID, and a credit card.'
       subQualities:
         - title: Mechanic
-          description: 'The credit card is a fraud and will only be good for a few transactions before the bank deactivates it. Make a Stones challenge to attack with the knife, a Gales challenge to attack with the gun, a Brooks challenge to use the ID. Check the glossary for how to use the salt.'
+          description: 'The credit card is a fraud and will only be good for a few transactions before the bank deactivates it. Make a Stones challenge to attack with the knife, a Gales challenge to attack with the gun, and a Brooks challenge to use the ID. Check the glossary for how to use the salt.'
 Stag:
   Backstories:
     - id: 1
@@ -124,7 +124,7 @@ Stag:
       description: Your study in biology has given you insight into how to brew a handful of potions useful for offense during hunts. It takes 1 hour to brew 1 potion and you may only brew up to 3 potions per episode. You may start the episode with potions already brewed.
       subQualities:
         - title: Mechanic
-          description: 'Anyone can drink one of your potions to gain one of these effects: turn invisible 1 minute, heal 5 Strikes, or corrupt your blood for 1 hour, dealing 5 Strikes to any create that drinks it or possesses you. Once brewed, you cannot change the potion''s effects.'
+          description: 'Anyone can drink one of your potions to gain one of these effects: turn invisible 1 minute, heal 5 Strikes, or corrupt your blood for 1 hour. Corrupted blood deals 5 Strikes to any create that drinks it or possesses you. Once brewed, you cannot change the potion''s effects.'
     - id: 5
       title: Intelligent
       description: You spent a little more time in school than your average hunter. This has given you greater intelligence than most. You're at home doing research and reading when you have spare time rather than going out and drinking.
@@ -134,7 +134,9 @@ Stag:
     - id: 6
       title: Hydrokinesis
       description: You can control and manipulate water. You cannot change its temperature. You must make a Flames challenge to use this talent in combat.
-      subQualities: []
+      subQualities:
+        - title: Range
+          description: MELEE SHORT
     - id: 7
       title: Wrestler
       description: You might have wrestled in high school or you might have picked it up while brawling in bars. You're pretty good at grappling and unarmed combat.
@@ -253,11 +255,11 @@ Owl:
         - title: Storyteller
           description: 'At your discretion, have this player make a Brooks or a Gales challenge to avoid being distracted by the ghost during a crucial moment of combat.'
     - id: 10
-      title: Ordered to Kill Someone
-      description: 'You signed a contract with a demon to kill someone. You won''t know who your target is until you see a black cloud around their head. Once you find your target, you are allowed to wait for the perfect moment to strike - just don''t let that moment pass.'
+      title: Ordered to Kill
+      description: 'Whether by choice or by force, you''re a contract killer for a demon. You won''t know who your targets are until you see a black cloud around their heads. Once you''ve acquired a target, you must make every effort to kill them as soon as possible - without getting caught.'
       subQualities:
         - title: Mechanic
-          description: 'If you do let the moment pass, lose 3 dice on every challenge that isn''t made in an effort to kill your target.'
+          description: 'Once you''ve been given a target, lose 3 dice on all challenges (you can still roll a minimum of 1 die) that are not made in an effort to kill your target.'
     - id: 11
       title: Kleptomaniac
       description: You can't help but steal at least one small object in every room you enter.
@@ -370,14 +372,14 @@ Serpent:
       description: 'It will stretch your medical skill to their limits, but you can do it. By channeling the power of the (supposed) god of medicine, you can heal a victim of a monster attack or another player. Or at least get them back into fighting/fleeing shape.'
       subQualities:
         - title: Mechanic
-          description: Heal 1 Wound or up to 9 Strikes on another player.
+          description: Heal 1 Wound or up to 9 Strikes on another player or NPC.
   Inventory:
     - id: 13
       title: Bandages
       description: Cotton wraps and tape. Enough to stop the bleeding of large gashes or cuts.
       subQualities:
         - title: Mechanic
-          description: Heal 3 Strikes on yourself or another player. Can only be used 3 times unless the player replenishes their supply.
+          description: Heal 3 Strikes on yourself or another player. Can only be used 3 times unless you replenishes your supply.
         - title: Range
           description: MELEE
     - id: 14
@@ -385,7 +387,7 @@ Serpent:
       description: A syringe filled with an adrenaline mixture. Just pull off the cap and stab it into a person's leg or arm. The mixture is enough to bring a person back from unconsciousness and might give them just enough of a kick to escape whatever is chasing them.
       subQualities:
         - title: Mechanic
-          description: 'Use on a character who has been removed from a scene due to their wounds. They come back for the remainder of the scene, but will succumb to their wounds and be removed from the next scene unless healed. They are removed from the current scene again if they suffer another wound.'
+          description: 'Use on a character who has been removed from a scene due to their wounds. They come back for the remainder of the scene, but will succumb to their wounds and be removed from the next scene unless healed. They are removed from the current scene again if they take another wound.'
         - title: Range
           description: MELEE
 Tortoise:
@@ -416,7 +418,7 @@ Tortoise:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you exorcise a spirit or demon from the scene.'
         - title: Enhancement
-          description: Your will overpowers the spirit. You may ask it one question that it must answer truthfully.
+          description: 'Your will overpowers the spirit. You may ask it one question that it must answer truthfully. If you succeeded in the Flames challenge **and** activated the trigger, you may ask the question before exorcising the spirit from the scene.'
         - title: Trigger
           description: BROOKS BROOKS
     - id: 5
@@ -430,7 +432,7 @@ Tortoise:
       description: 'Enochian is the language of the divine, and you are fluent in it. You can use the language to construct wards against evil and perform exorcisms or banishments that are much more powerful than if they were spoken in the traditional Latin.'
       subQualities:
         - title: Mechanic
-          description: 'Make a Flames challenge. On a success, choose an effect: Sunlight floods the area for 10 seconds, a player performing an exorcism gains 1 die on the challenge, or one demonic or undead creature loses a turn.'
+          description: 'Make a Flames challenge. On a success, choose an effect: Sunlight floods the area for 1 minute, a player performing an exorcism gains 1 die on the challenge, or one demonic or undead creature loses a turn.'
         - title: Enhancement
           description: 'Your voice booms in the powerful ancient language, attracting the attention of any nearby demons or angels.'
         - title: Trigger
@@ -520,7 +522,9 @@ Mountain:
     - id: 5
       title: Geokinesis
       description: You can control and manipulate earth and soil. Your power doesn't work on rock or stone though. You must make a Flames challenge to use this talent in combat.
-      subQualities: []
+      subQualities:
+        - title: Range
+          description: MELEE SHORT
     - id: 6
       title: Reading the Terrain
       description: 'You possess a sense of the battlefield that has saved you many times. You can examine the terrain and see the best lines of attack to give you and your hunter friends the best chance of success. Even in the middle of a fight, you excel at using the environment to your advantage.'
@@ -553,7 +557,7 @@ Mountain:
       description: 'While you were in the military, you were unknowingly dosed with a performance enhancing drug. You could see farther, run for longer, and didn''t feel pain. Now that you''re out, withdrawal is starting to set in.'
       subQualities:
         - title: Mechanic
-          description: Suffer 1 extra Strike on all Stones challenges.
+          description: Take 1 extra Strike on all Stones challenges.
     - id: 10
       title: Short Temper
       description: 'You are quick to anger and get frustrated easily. This isn''t usually a problem during a fight, but can be very bad if an eyewitness isn''t giving information fast enough.'
@@ -621,14 +625,20 @@ Storm:
           description: You can move an object up to three times your weight.
         - title: Trigger
           description: FLAMES FLAMES
+        - title: Range
+          description: MELEE SHORT
     - id: 5
       title: Pyrokinesis
       description: You can control and manipulate fire. You must make a Flames challenge to use this talent in combat.
-      subQualities: []
+      subQualities:
+        - title: Range
+          description: MELEE SHORT
     - id: 6
       title: Cryokinesis
       description: You possess magical control over cold and ice. You must make a Flames challenge to use this talent in combat.
-      subQualities: []
+      subQualities:
+        - title: Range
+          description: MELEE SHORT
     - id: 7
       title: Hypnosis
       description: 'With an intense stare and the right words, you can take control of a person''s mind. You can''t force them to obey a command that goes against their nature.'
@@ -664,7 +674,9 @@ Storm:
       description: 'By focusing all your energy and emotion, you can generate a devastating blast of magical energy. It is powerful enough to kill lesser monsters and severely wound the more higher level monsters, such as alpha vampires and reapers.'
       subQualities:
         - title: Mechanic
-          description: Deals 8 Strikes of damage to target.
+          description: Deals 8 Strikes of damage to 1 target.
+        - title: Range
+          description: MELEE SHORT LONG
   Inventory:
     - id: 13
       title: Hex Bag
@@ -726,11 +738,13 @@ Inferno:
       description: Your connection with the infernal has given you the ability to cover your body with fire. Your skin is warm to the touch.
       subQualities:
         - title: Mechanic
-          description: 'You may use an action to activate this ability and cause fire to cover your body for 1 minute. During that time, any creature that makes a melee attack against you suffers 2 Strikes of fire damage.'
+          description: 'You may use an action to activate this ability and cause fire to cover your body for 1 minute. During that time, any creature that makes a melee attack against you takes 2 Strikes of fire damage.'
     - id: 7
       title: Umbrakinesis
       description: You can control and manipulate darkness and shadows. You must make a Flames challenge to use this talent in combat.
-      subQualities: []
+      subQualities:
+        - title: Range
+          description: MELEE SHORT
   Flaws:
     - id: 8
       title: Soul Trauma
@@ -857,7 +871,7 @@ River:
       description: 'A gun-like weapon of mysterious origin. When fired, the gun emits a ray of white light that can mimic the sun. Very effective against creatures that hate sunlight. When the power dial is turned to maximum, the gun generates enough heat to set fires.'
       subQualities:
         - title: Mechanic
-          description: 'Make a Gales challenge. On a success, deal 3 Strikes of damage.'
+          description: 'Make a Gales challenge. On a success, deal 3 Strikes of damage to 1 target.'
         - title: Range
           description: SHORT
     - id: 14
@@ -904,7 +918,7 @@ Crown:
         - title: Trigger
           description: BROOKS BROOKS BROOKS
     - id: 6
-      title: Fae Friends
+      title: Tiny Fae Friends
       description: 'Most beings don''t pay any attention to the forest fairies. They are simple-minded and weak. However, you''ve managed to become friends with them after bringing them offerings of greasy pizza, their favorite. Their numbers and tiny size have helped you on many cases.'
       subQualities:
         - title: Mechanic
@@ -914,7 +928,7 @@ Crown:
       description: You've learned a bit about channeling the mystic power of the Fae into physical force.
       subQualities:
         - title: Mechanic
-          description: 'Upon succeeding in a Stones challenge to make a melee attack, your attack deals an additional 2 Strikes of damage.'
+          description: 'Upon succeeding in a Stones challenge to make a melee attack, your attack deals an additional 2 Strikes of damage to 1 target.'
         - title: Enhancement
           description: Monsters who witness your attack and are intelligent enough to recognize Fae magic become intimidated and cannot take actions for 10 seconds.
         - title: Trigger
@@ -996,7 +1010,7 @@ Coin:
       description: 'You have hired a large and scary-looking mercenary to act as your bodyguard and to help you on cases. He''s very good in a fight, but not very good at talking.'
       subQualities:
         - title: Mechanic
-          description: 'On a Stones challenge, you may opt to have your hired muscle do the challenge for you. They have a base die pool of 5 and gain no bonuses from your innate talents. They can use any items you carry that do not require Flames or Brooks challenges to use.'
+          description: 'On a Stones challenge, you may opt to have your hired muscle do the challenge for you. They have a +2 bonus to Stones, and gain no bonuses from your backgrounds or talents. They can use any items you carry that do not require Flames or Brooks challenges to use.'
     - id: 6
       title: Iron Will
       description: You possess a very strong will. It enables you to resist many forms of mind control and gives you a measure of charisma that makes people admire you. You never break under torture.
@@ -1120,7 +1134,7 @@ Tome:
           description: 'You are afraid of the dark. After you finish reading something in a physical book, make a Brooks challenge. On failure, you become evil for the remainder of the scene.'
     - id: 10
       title: Can't Read
-      description: 'You can''t read. Maybe you used to be able to, but you can''t anymore.'
+      description: 'You can''t read. Maybe you used to be able to, but you can''t anymore. This does **not** cancel out the Corrupted by Reading Flaw if you have that.'
       subQualities: []
     - id: 11
       title: Blood Curse
@@ -1134,14 +1148,14 @@ Tome:
       description: Your private collection of case files happens to include a case identical to the one you're working on right now. You can recall it word-for-word and can remember vital information that helped you solve the previous case.
       subQualities:
         - title: Mechanic
-          description: Instantly succeed on a Flames challenge made to learn information about a case.
+          description: Instantly cause any player to automatically succeed on a Flames challenge made to learn information about a case.
   Inventory:
     - id: 13
       title: Spirit Bullets
       description: 'It takes a lot of time to paint a Pentacle to trap a spirit. It takes even more luck to draw the demon into it to trap it. These special bullets eliminate the need for most of that. With a special sigil carved into the bullet, all it takes is good aim and a steady hand.'
       subQualities:
         - title: Mechanic
-          description: 'Any demon, angel, or ghost currently possessing someone who is hit by this bullet cannot leave their vessel and has their power and strength greatly reduced. All their Suit bonuses drop to 0.'
+          description: 'Any demon, angel, or ghost currently possessing someone who is hit by this bullet cannot leave their vessel and have their power and strength greatly reduced. All their Suit bonuses drop to 0.'
         - title: Range
           description: SHORT
     - id: 14
@@ -1279,7 +1293,7 @@ Woods:
           description: BROOKS
     - id: 5
       title: Voice of the Forest
-      description: 'You once saved a forest dryad from a plague demon. In return, the dryad gave you her blessing. You are able to "hear" the voice of the trees and the leaves and communicate with the wilderness and most animals.'
+      description: 'You once saved a forest dryad from a plague demon. In return, the dryad gave you her blessing. You are able to "hear" the voice of the trees and leaves and communicate with most animals.'
       subQualities:
         - title: Mechanic
           description: You can communicate with plants and natural animals.
@@ -1311,7 +1325,7 @@ Woods:
       description: 'One of your hunts led you to a witch of the forest. With her dying breath, she placed a curse of nature on you. Bark gradually grows over your skin. It''s easy to break off and doesn''t cause pain, but it grows back eventually and makes it hard for you to move normally or quietly.'
       subQualities:
         - title: Mechanic
-          description: You are completely unable to sneak. Normal humans are unlikely to trust you. You can be set on fire **very** easily.
+          description: 'You are completely unable to sneak, normal humans are unlikely to trust you, and you can be set on fire **very** easily.'
     - id: 11
       title: Recluse
       description: 'You''ve shunned the company of other people, preferring to keep to yourself and nature. You''re only out here because one of the other players is an old friend. You''re annoyed by people and can''t stand the scent of their.... cleanliness.'
@@ -1324,7 +1338,9 @@ Woods:
       description: 'With a piercing whistle, you summon all nearby natural birds and beasts to come to your aid. In most cases, their frenzy will be good enough for one attack before the monster you are hunting scares them off. Which animals come will depend on your current environment.'
       subQualities:
         - title: Mechanic
-          description: Summon an army of natural animals to do your bidding for one turn.
+          description: 'Summon an army of natural animals to do your bidding for one turn. They can deal 6 Strikes to all enemies in range, perform reconnaissance, create a distraction, and many other things. The animals flee the scene after one turn.'
+        - title: Range
+          description: MELEE SHORT
   Inventory:
     - id: 13
       title: Sharpened Branch of an Ancient Tree
@@ -1390,7 +1406,9 @@ Watchtower:
     - id: 7
       title: Photokinesis
       description: You can control and manipulate light. You must make a Flames challenge to use this talent in combat.
-      subQualities: []
+      subQualities:
+        - title: Range
+          description: MELEE SHORT
   Flaws:
     - id: 8
       title: Lost Too Many
@@ -1482,7 +1500,7 @@ Gateway:
       description: You can temporarily leave your body in astral form and move around like a ghost.
       subQualities:
         - title: Mechanic
-          description: 'You can leave your body behind and travel as a ghost temporarily. You can slip through walls, eavesdrop, and are invisible. Psychic creatures can sense you. Some might even be able to attack you. For every 10 continuous minutes you spend away from your body, you suffer a Wound.'
+          description: 'You can leave your body behind and travel as a ghost temporarily. You can slip through walls, eavesdrop, and are invisible. Psychic creatures can sense you. Some might even be able to attack you. For every 10 continuous minutes you spend away from your body, you take 1 Wound.'
   Flaws:
     - id: 8
       title: Voices in your Head
@@ -1523,7 +1541,7 @@ Gateway:
         - title: Mechanic
           description: 'The horn is hollow, but strong. You could fill it with liquid or use it as a stabbing weapon.'
         - title: Storyteller
-          description: 'If a player drinks water from the horn, roll a die. On a Strike, they suffer a Wound. On a Suit, they add 1 die to all challenges for that Suit. On a Weave, they add 1 die to all challenges. Lasts for the remainder of the episode. Can only be used once per episode.'
+          description: 'If a player drinks water from the horn, roll a die. On a Strike, they take 1 Wound. On a Suit, they add 1 die to all challenges for that Suit. On a Weave, they add 1 die to all challenges. Lasts for the remainder of the episode. Can only be used once per episode.'
         - title: Range
           description: MELEE
     - id: 14
@@ -1560,7 +1578,7 @@ Gallows:
       description: You are lucky. This isn't ordinary I-just-found-twenty-dollars lucky. This is the kind of lucky that lets you survive situations by the skin of your teeth. The kind of situations that would end in death for anyone who didn't have Death himself looking out for them.
       subQualities:
         - title: Mechanic
-          description: 'You take 1 fewer Strike of damage from all physical sources, whether they were intended as attacks or not. You ignore the first Strike on Stones and Gales challenges.'
+          description: 'You take 1 fewer Strike of damage from all physical sources, whether they were intended as attacks or not. You ignore the first Strike on Stones and Gales challenges that you make.'
     - id: 5
       title: Reaper Vision
       description: 'You''re able to see Reapers. They appear as men and women in suits. They usually have caring smiles on their faces as they touch the dying person. They show up early, as if they know when someone is about to die. You could warn the person, but Death doesn''t like to be cheated.'
@@ -1578,7 +1596,7 @@ Gallows:
       description: You have an unnatural connection with Death. You are able to call back the memories of the recently deceased into their bodies and ask them questions.
       subQualities:
         - title: Mechanic
-          description: 'Make a Flames challenge. On a success, the corpse of a creature that has died in the past 12 hours comes to life with enough energy to answer 2 questions.'
+          description: 'Make a Flames challenge. On a success, the corpse of a creature that has died within the past 12 hours comes to life with enough energy to answer 2 questions.'
   Flaws:
     - id: 8
       title: Fatal Memories
@@ -1666,7 +1684,7 @@ Assassin:
       description: Your throwing arm is as good as most professional baseball pitchers. You can cause significant damage with your throws.
       subQualities:
         - title: Mechanic
-          description: 'Make a Stones challenge. On a success, you hurl a small projectile at great speed, dealing 2 Strikes of physical damage.'
+          description: 'Make a Stones challenge. On a success, you hurl a small projectile at great speed, dealing 2 Strikes of physical damage to 1 target.'
         - title: Range
           description: SHORT LONG
     - id: 7
@@ -1681,7 +1699,7 @@ Assassin:
       description: 'A mercenary only has one goal: to get paid. If you''re not getting paid, you won''t do the job. You couldn''t care less if people died. Fortunately, the other hunters have agreed to pay you for this job, but that will only get them so far.'
       subQualities:
         - title: Mechanic
-          description: 'If you are asked to do anything requiring substantial effort or that is outside the bounds of your contract with the players, they must succeed in a Brooks challenge or give you more money, or you won''t do it.'
+          description: 'If you are asked to do anything requiring substantial effort or that is outside the bounds of your contract with the players, they must succeed in a Brooks challenge or offer you more money, or you won''t do it.'
     - id: 9
       title: Death Cursed
       description: 'You were hired to kill a wizard. That''s dangerous business, because they can use their dying breath to cast a powerful curse on whoever killed them. You''re not sure what the effect of the curse was, since you couldn''t make out what the wizard said as he died.'
@@ -1758,7 +1776,9 @@ Wanderer:
     - id: 6
       title: Electrokinesis
       description: 'You can control and manipulate electricity. You''re not strong enough to manipulate lightning, but you can control enough to make a rather effective stun gun. You must make a Flames challenge to use this talent in combat.'
-      subQualities: []
+      subQualities:
+        - title: Range
+          description: MELEE SHORT
     - id: 7
       title: All Eyes on Me!
       description: 'Your energetic nature and general... loudness might be annoying to most, but it''s an effective way of getting attention.'
@@ -1816,7 +1836,7 @@ Architect:
   Backstories:
     - id: 1
       title: World Traveler
-      description: You've traveled much more than most hunters. You've solved at least one case in every state in America and even a few overseas.
+      description: 'You''ve traveled much more than most hunters. You''ve solved cases all over the place, and even a few overseas.'
       subQualities:
         - title: Suits
           description: STONES BROOKS
@@ -1844,7 +1864,7 @@ Architect:
       description: Your sense of direction is infallible. You never get lost and are able to find your way out of almost anything.
       subQualities:
         - title: Mechanic
-          description: 'Make a Flames challenge. On success, you are able to perfectly recall the steps that led you to where you are now and can follow them back. You also know which way is North.'
+          description: 'Make a Flames challenge. On success, you are able to perfectly recall the steps that led you to where you are now and can follow them back. You always know which way is North.'
     - id: 6
       title: Robot Companion
       description: You've invented a small remote-controlled robot friend. It's about a foot tall and can navigate most terrain.
@@ -1854,14 +1874,16 @@ Architect:
     - id: 7
       title: Aerokinesis
       description: 'You can control and manipulate air and wind. You''re not strong enough to create a tornado or change the weather, at least not on a huge scale. You can create enough of a gale to blow everything around in a small room. You must make a Flames challenge to use this talent in combat.'
-      subQualities: []
+      subQualities:
+        - title: Range
+          description: MELEE SHORT
   Flaws:
     - id: 8
       title: Prized Vehicle
-      description: 'You love your vehicle more than anything in the world. You will not tolerate any disrespect towards it. Everyone wipes their shoes before getting in, no one throws trash on the floor, and no one else picks the music. If a monster harms your baby, you just might go berserk.'
+      description: 'You love your vehicle more than anything in the world. You will not tolerate any disrespect towards it. Everyone wipes their shoes before getting in, no one throws trash on the floor, and no one else picks the music. If anyone harms your baby, you just might go berserk.'
       subQualities:
         - title: Mechanic
-          description: 'If a monster significantly damages your vehicle, make a Brooks challenge. On failure, lose 1 turn of combat. After returning to combat, you enter a feral rage that doesn''t stop until the monster that hurt your baby is dealt with.'
+          description: 'If a creature significantly damages your vehicle, make a Brooks challenge. On failure, lose 1 turn of combat. After returning to combat, you enter a feral rage that doesn''t stop until the creature that hurt your baby is dealt with.'
     - id: 9
       title: Electronic Breakdown
       description: 'For some reason, electronic devices just do not agree with you. That''s why you only drive classic cars, before they had computers built into them. Just being near you can cause computers to glitch and crash.'
@@ -1885,13 +1907,15 @@ Architect:
       subQualities:
         - title: Mechanic
           description: You stop time for everyone but yourself. You take 1 Strike of damage for every 2 seconds that time is stopped.
+        - title: Range
+          description: MELEE SHORT LONG
   Inventory:
     - id: 13
       title: Wrench
       description: A simple adjustable iron wrench. No carpenter or mechanic should ever be without one.
       subQualities:
         - title: Mechanic
-          description: You may reroll 1 Strike during Flames challenges made to dismantle or construct things made with nuts and bolts. Deals 2 Strikes of damage when used as a melee weapon.
+          description: You may reroll 1 Strike during Flames challenges made to dismantle or construct things made with nuts and bolts. Deals 2 Strikes of damage to 1 target when used as a melee weapon.
         - title: Range
           description: MELEE
     - id: 14
@@ -1981,7 +2005,7 @@ Herald:
       description: 'A two-shot, pump-action shotgun. Can be loaded with standard shotgun cartridges for killing beings made of flesh and blood, or salt cartridges for dispelling ghosts and specters.'
       subQualities:
         - title: Mechanic
-          description: Deals 3 Strikes of damage.
+          description: Deals 3 Strikes of damage to 1 target.
         - title: Range
           description: MELEE SHORT
     - id: 14
@@ -2085,6 +2109,6 @@ Dusk:
       description: A bladed weapon about a foot and a half long. Lightweight and easy to use. Ideal for beheading human-sized monsters such as vampires.
       subQualities:
         - title: Mechanic
-          description: Deals 2 Strikes of damage.
+          description: Deals 2 Strikes of damage to 1 target.
         - title: Range
           description: MELEE
