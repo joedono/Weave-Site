@@ -25,6 +25,8 @@ Dawn:
       subQualities:
         - title: Mechanic
           description: 'Make a Stones challenge. On success, choose one of the following. Lasts 10 seconds: Dragon Flight - You can fly. Dragon Breath - You deal 2 Strikes of damage to all enemies in Melee or Short range. Dragon Armor - You take 1 fewer Strikes of damage from physical attacks.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: The enhancement takes a great toll on your body. You take 4 Strikes of damage when the effect wears off.
         - title: Trigger
@@ -35,6 +37,8 @@ Dawn:
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you may ask one question to the phoenix''s store of knowledge. The question may not pertain to current or future events (ie, you cannot ask "What is killing these people?" but you can ask "What could have caused these wounds?")'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: Accessing the knowledge is dangerous. You take 5 Strikes of damage.
         - title: Trigger
@@ -45,12 +49,16 @@ Dawn:
       subQualities:
         - title: Mechanic
           description: Your fists count as silver weapons to monsters that are vulnerable to silver. You can use your blood to coat weapons and give them the properties of silver.
+        - title: Type
+          description: Lucky
         - title: Enhancement
           description: 'If you cut yourself to gain access to your blood, make a Stones challenge to avoid cutting too deep. On a failure, you still succeed in coating the weapon, but you cannot act for 30 seconds as you recover from the blood loss.'
     - id: 7
       title: Wyvern Familiar
       description: 'You have a magical bond with a small dragon-like creature. It can fly, you can share its senses, and it will follow your orders. If it''s in danger, it can breath fire in very small blasts and has sharp claws and teeth.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Nobody Believes You
@@ -58,22 +66,30 @@ Dawn:
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all Brooks challenges.
+        - title: Type
+          description: Passive
     - id: 9
       title: 'Ooo, Shiny!!'
       description: You are very easily distracted by shiny objects or the promise of treasure. You usually want to explore every inch of a crypt or cave hoping to find gold or jewels.
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'At your discretion, have this player make a Gales challenge. On failure, the character sees something shiny and is distracted for a turn.'
     - id: 10
       title: Primordial Nightmares
       description: 'You have nightmares about chaos and darkness, about creatures that ruled the world before angels and demons. You sometimes see them when you''re awake. You see long, writhing shadows and hear rhythmic chanting. You''re pretty sure you''re slowly going insane.'
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'At your discretion, have this player make a Brooks challenge. On failure, the player is driven insane and behaves unpredictably for the remainder of the scene.'
     - id: 11
       title: Claustrophobic
       description: You are deathly afraid of confined spaces and being trapped.
       subQualities:
+        - title: Type
+          description: Passive
         - title: Mechanic
           description: 'You must make a Brooks challenge before entering a small space or becoming trapped. On a failure, you are too scared to enter.'
   Signature Move:
@@ -89,7 +105,9 @@ Dawn:
       description: 'Bruncvik was an adventuring knight from Prague and one of the first hunters. His sword has slain a great number of creatures of the night. It is a powerful artifact capable of killing many legendary monsters. However, it is little more than a sharp blade to lesser creatures.'
       subQualities:
         - title: Mechanic
-          description: Deals 2 Strikes of damage to ordinary creatures. Deals 6 Strikes of damage to legendary creatures.
+          description: 'Make a Stones challenge. On a success, deal 2 Strikes of damage to 1 ordinary creature, or 6 Strikes of damage to a legendary creature.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
     - id: 14
@@ -98,6 +116,8 @@ Dawn:
       subQualities:
         - title: Mechanic
           description: 'The credit card is a fraud and will only be good for a few transactions before the bank deactivates it. Make a Stones challenge to attack with the knife, a Gales challenge to attack with the gun, and a Brooks challenge to use the ID. Check the glossary for how to use the salt.'
+        - title: Type
+          description: Standard
 Stag:
   Backstories:
     - id: 1
@@ -125,16 +145,22 @@ Stag:
       subQualities:
         - title: Mechanic
           description: 'Anyone can drink one of your potions to gain one of these effects: turn invisible 1 minute, heal 5 Strikes, or corrupt your blood for 1 hour. Corrupted blood deals 5 Strikes to any create that drinks it or possesses you. Once brewed, you cannot change the potion''s effects.'
+        - title: Type
+          description: Passive
     - id: 5
       title: Intelligent
       description: You spent a little more time in school than your average hunter. This has given you greater intelligence than most. You're at home doing research and reading when you have spare time rather than going out and drinking.
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike on Flames challenges.
+        - title: Type
+          description: Passive
     - id: 6
       title: Hydrokinesis
       description: You can control and manipulate water. You cannot change its temperature. You must make a Flames challenge to use this talent in combat.
       subQualities:
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
     - id: 7
@@ -143,25 +169,37 @@ Stag:
       subQualities:
         - title: Mechanic
           description: 'Make a Stones challenge. On a success, you successfully restrain a creature about your size for 10 seconds. You must make the challenge again to continue restraining them.'
+        - title: Type
+          description: Standard
+        - title: Range
+          description: MELEE
   Flaws:
     - id: 8
       title: Soft Heart
       description: 'You believe that anyone can be redeemed, even the worst of the monsters. You just can''t say no when a monster expresses remorse at their actions and begs for mercy and forgiveness. Most of them will be lying, of course, but what if this one isn''t?'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 9
       title: Everyone You Love Dies
       description: 'You have terrible luck with lovers. Some have turned out to be demons or other monsters. Some were eventually killed by the monster you were trying to save them from. Precious few lived for a little while, but were killed by monsters trying to hurt you.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 10
       title: One Eye
       description: This is one of the most crippling injuries a hunter can sustain. The complicated nature of the human eye makes it extremely difficult to heal. You have no depth perception and your accuracy isn't what it used to be.
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all Gales challenges.
+        - title: Type
+          description: Passive
     - id: 11
       title: Devil Hallucinations
       description: 'Lucifer has touched your soul and marked you. You are cursed with visions that try to tempt you down an evil path. They appear as someone you know who has died. You''re able to shut it out if you focus, but focus is something you cannot afford to lose while hunting.'
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'At your discretion, have this player make a Brooks challenge. On failure, the player is distracted by Lucifer and automatically fails their next challenge.'
   Signature Move:
@@ -177,17 +215,21 @@ Stag:
       description: 'This holy gun was manufactured in a divine ritual. The process to forge bullets for the gun lost, a forgotten ritual. Legend says there are only 6 things in the world this gun cannot kill. There is only one bullet left in the chamber, but maybe someone out there knows the ritual.'
       subQualities:
         - title: Mechanic
-          description: 'Make a Gales challenge to aim and fire the gun. On success, deals 3 Wounds to the target. Cannot be used again until the players find someone who can forge new bullets, or learn to do it themselves.'
+          description: 'Make a Gales challenge to aim and fire the gun. On success, deals 3 Wounds to the target. Cannot be used again during the **season** until the players find someone who can forge new bullets, or learn to do it themselves.'
+        - title: Type
+          description: Standard
         - title: Range
           description: SHORT
         - title: Storyteller
-          description: 'The 6 things can be up to you. We suggest making them the 3 Archangels (Michael, Gabriel, and Raphael), Lucifer, Death, and God.'
+          description: 'The 6 things can be up to you. We suggest making them the 3 Archangels (Michael, Gabriel, and Raphael), Lucifer, Death, and God. Making new bullets involves melting and forging metal from a meteorite with blood of a human with no unforgiven sins in a place of worship.'
     - id: 14
       title: Family Picture
       description: A picture of your family. Can be a good source of strength and resolve for a tired hunter who has been out in the field for too long.
       subQualities:
         - title: Mechanic
           description: 'Once per episode, you can heal 1 Wound between scenes.'
+        - title: Type
+          description: Passive
 Owl:
   Backstories:
     - id: 1
@@ -215,6 +257,8 @@ Owl:
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On a success, your target becomes attracted to you and is more likely to answer your questions or help you any way they can.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: Your charms might have worked a little too well. The target is infatuated with you.
         - title: Trigger
@@ -224,13 +268,17 @@ Owl:
       description: 'Every good thief possesses the ability to disappear from sight and sneak towards an objective. You cannot become entirely invisible - that would require magic, but you can avoid being seen or heard until you strike.'
       subQualities:
         - title: Mechanic
-          description: 'Make a Stones challenge. On a success, you can deal 4 Strikes to a target that is either unaware of your presence or is currently occupied with something more threatening than you are.'
+          description: 'Make a Stones challenge. On a success, you can deal 4 Strikes of damage to a target that is either unaware of your presence or is currently occupied with something more threatening than you are.'
+        - title: Type
+          description: Standard
     - id: 6
       title: Phasing
       description: You know a rudimentary spell that makes an object incorporeal so that it can be walked through.
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you can make any object incorporeal. The object must be stationary, such as a window or a wall, and you can only affect a portion of it about the width and height of a door. You cannot see or hear things through the object.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: 'You may also make the object transparent, so you and your friends can see through it.'
         - title: Trigger
@@ -241,6 +289,8 @@ Owl:
       subQualities:
         - title: Mechanic
           description: 'Make a Gales challenge. On a success, you are able to deftly steal an object from a creature; give an object to a creature without them noticing; or cause a small object to disappear.'
+        - title: Type
+          description: Standard
   Flaws:
     - id: 8
       title: Life is Being Drained
@@ -248,10 +298,16 @@ Owl:
       subQualities:
         - title: Mechanic
           description: 'If not cured, you start every scene with 3 Strikes.'
+        - title: Type
+          description: Passive
+        - title: Storyteller
+          description: The curse can be removed by enlisting the help of a powerful wizard or witch and succeeding in a complicated ritual. The storyteller issues level 2 Challenges in every suit. Any player may take up any number of the challenges. All the challenges must succeed to remove the curse.
     - id: 9
       title: Haunted by a Vengeful Ghost
       description: 'You once owned a haunted object. You tried to destroy it, but the ghost bound itself to you instead. He seeks vengeance for disturbing his peaceful rest. He can''t materialize for very long or do much besides talk, but he could prove to be a fatal distraction.'
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'At your discretion, have this player make a Brooks or a Gales challenge to avoid being distracted by the ghost during a crucial moment of combat.'
     - id: 10
@@ -260,10 +316,14 @@ Owl:
       subQualities:
         - title: Mechanic
           description: 'Once you''ve been given a target, lose 3 dice on all challenges (you can still roll a minimum of 1 die) that are not made in an effort to kill your target.'
+        - title: Type
+          description: Passive
     - id: 11
       title: Kleptomaniac
       description: You can't help but steal at least one small object in every room you enter.
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Vanishing Act
@@ -282,6 +342,8 @@ Owl:
       subQualities:
         - title: Mechanic
           description: 'Make a Gales challenge. On a success, you are able to pick a lock and open the door.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
     - id: 14
@@ -290,6 +352,8 @@ Owl:
       subQualities:
         - title: Mechanic
           description: 'Make a Stones challenge. On success, you may view the memories of anyone you can see. On failure, take 3 Strikes of damage.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
 Serpent:
@@ -315,28 +379,36 @@ Serpent:
   Talents:
     - id: 4
       title: Wound Identification
-      description: 'You are skilled at identifying wounds on the living and the dead. Your background as a hunter gives you a unique perspective. Where other doctors would see "claw marks" or "wolf attack," you see "werewolf."'
+      description: 'You are skilled at identifying wounds on the living and the dead. Your background as a hunter gives you a unique perspective. Where other doctors would see "claw marks" or "animal attack," you see "werewolf."'
       subQualities:
         - title: Mechanic
-          description: 'Make a Flames challenge. On a success, you are able to examine a body and determine the basic size and strength of the thing that killed it, as well as what sort of weapons were used.'
+          description: 'Make a Flames challenge. On a success, you are able to examine a wound on a body, either living or dead, and determine the basic size and strength of the thing that hurt it, as well as what sort of weapons were used.'
+        - title: Type
+          description: Standard
     - id: 5
       title: First Aid
       description: 'You are skilled at applying basic first aid and stabilizing critical wounds, even when in extreme danger.'
       subQualities:
         - title: Mechanic
-          description: 'Make a Gales challenge. On success, you apply basic first aid to another player and heal 2 Strikes of damage to them. If they have 2 Strikes or less and 1 Wound or more, you heal 1 Wound on them instead. You can only apply first aid to each player once per scene.'
+          description: 'Make a Gales challenge. On success, you apply basic first aid to another player and heal 2 Strikes of damage to them. If they have 2 Strikes or less, you heal 1 Wound on them instead. You can only apply first aid to each player once per scene.'
+        - title: Type
+          description: Standard
     - id: 6
       title: Circle of Protection
       description: 'A rudimentary spell of protection. You draw a circle on the ground and then drop some blood into it. The circle protects against many supernatural threats. It is especially effective against monsters related to death, such as zombies or ghosts.'
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you draw circle on the ground that prevents most monsters from coming into melee range with you and anyone else in the circle.'
+        - title: Type
+          description: Standard
     - id: 7
       title: Battle Acupuncture
       description: 'You are able to strike at vulnerable spots on the bodies of living things with high accuracy, at least at close range. You know where the major arteries are and can hit them (or avoid them) extremely reliably.'
       subQualities:
         - title: Mechanic
-          description: 'When making attacks against monsters with a physical biology (blood, organs, etc), you may opt to make a Gales challenge instead of Stones to strike at vital organs. If you succeed, deal 4 Strokes to the target.'
+          description: 'When making attacks against monsters with a physical biology (blood, organs, etc), you may opt to make a Gales challenge instead of Stones to strike at vital organs. If you succeed, deal 3 Strikes to the target.'
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE
   Flaws:
@@ -346,10 +418,14 @@ Serpent:
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all Stones challenges.
+        - title: Type
+          description: Passive
     - id: 9
       title: Allergies
       description: You are allergic to dust and pollen. Probably not the greatest quality to have when trying to sneak up on a vampire in an underground crypt that's full of dust.
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'At your discretion, have this player make a Stones challenge. On failure, the character sneezes.'
     - id: 10
@@ -358,12 +434,16 @@ Serpent:
       subQualities:
         - title: Mechanic
           description: You don't believe anything eyewitnesses say. You only trust hard evidence and what you can see with your own eyes.
+        - title: Type
+          description: Passive
     - id: 11
       title: Squeamish
       description: 'You can deal with the sight of blood, so long as it''s from a corpse or a monster. The sight of blood coming from a living human, however, will make you light-headed. You might even faint.'
       subQualities:
         - title: Mechanic
           description: 'You must make a Stones challenge before entering a scene with blood or gore. On a failure, you are too disgusted to enter.'
+        - title: Type
+          description: Passive
         - title: Enhancement
           description: 'If you roll 2 or more Strikes on the challenge, you faint for 1 minute.'
   Signature Move:
@@ -380,6 +460,8 @@ Serpent:
       subQualities:
         - title: Mechanic
           description: Heal 3 Strikes on yourself or another player. Can only be used 3 times unless you replenishes your supply.
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE
     - id: 14
@@ -388,6 +470,8 @@ Serpent:
       subQualities:
         - title: Mechanic
           description: 'Use on a character who has been removed from a scene due to their wounds. They come back for the remainder of the scene, but will succumb to their wounds and be removed from the next scene unless healed. They are removed from the current scene again if they take another wound.'
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE
 Tortoise:
@@ -417,6 +501,8 @@ Tortoise:
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you exorcise a spirit or demon from the scene.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: 'Your will overpowers the spirit. You may ask it one question that it must answer truthfully. If you succeeded in the Flames challenge **and** activated the trigger, you may ask the question before exorcising the spirit from the scene.'
         - title: Trigger
@@ -427,12 +513,16 @@ Tortoise:
       subQualities:
         - title: Mechanic
           description: 'Once per scene, before you roll for a challenge, you may roll 1 die. If it lands on the Weave symbol, your guardian angel will assist you with the challenge. How they assist you is up to the storyteller.'
+        - title: Type
+          description: Passive
     - id: 6
       title: Fluent in Enochian
       description: 'Enochian is the language of the divine, and you are fluent in it. You can use the language to construct wards against evil and perform exorcisms or banishments that are much more powerful than if they were spoken in the traditional Latin.'
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On a success, choose an effect: Sunlight floods the area for 1 minute, a player performing an exorcism gains 1 die on the challenge, or one demonic or undead creature loses a turn.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: 'Your voice booms in the powerful ancient language, attracting the attention of any nearby demons or angels.'
         - title: Trigger
@@ -443,6 +533,8 @@ Tortoise:
       subQualities:
         - title: Mechanic
           description: 'When making a Stone challenge to use a bladed weapon, you can add one of these effects to the attack: target is knocked prone, target takes 1 additional Strike of damage from the attack, or you taunt the target and force it to spend its next turn attacking you.'
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Wavering Faith
@@ -450,24 +542,32 @@ Tortoise:
       subQualities:
         - title: Mechanic
           description: 'Challenges that monsters make to possess you have their challenge level reduced by 1. Monsters you can understand can attempt to test or break your faith, dealing additional Strikes to you.'
+        - title: Type
+          description: Passive
     - id: 9
       title: Uncompromising Morals
       description: You are sworn to eliminate evil in all its forms. There are many hunters out there with shady pasts who sometimes make immoral decisions to get the job done. You are unable to abide by any behavior if it shows any signs of being slightly evil.
       subQualities:
         - title: Mechanic
           description: You will not allow any immoral actions unless they are directly done in the service of good.
+        - title: Type
+          description: Passive
     - id: 10
       title: Blind
       description: You cannot see. You might have been born this way or you might have lost your sight during a hunt.
       subQualities:
         - title: Mechanic
           description: Lose 2 dice on Gales challenges made to see or notice things.
+        - title: Type
+          description: Passive
     - id: 11
       title: Can't take a Joke
       description: 'Humor might be the only thing keeping some hunters sane, but there''s no room for laughter in your world. Hunting is serious business and you must be serious if you are to survive it.'
       subQualities:
         - title: Mechanic
           description: You have no sense of humor.
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Divine Intervention
@@ -482,6 +582,8 @@ Tortoise:
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On success, your faith holds true and the crucifix acts as a ward against monsters associated with death. Brandishing it prevents such monsters from entering melee range with you.'
+        - title: Type
+          description: Standard
         - title: Range
           description: SHORT
     - id: 14
@@ -490,8 +592,10 @@ Tortoise:
       subQualities:
         - title: Mechanic
           description: 'Make a Flames core challenge. On success, you find the correct passage. On failure, you find a generic passage. Make a followup Brooks challenge. On success, if you found the correct passage, exorcise the spirit. If you found a generic passage, deal 3 Strikes of damage.'
+        - title: Type
+          description: Standard
         - title: Range
-          description: SHORT
+          description: MELEE SHORT
 Mountain:
   Backstories:
     - id: 1
@@ -519,10 +623,14 @@ Mountain:
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike on Stones challenges.
+        - title: Type
+          description: Passive
     - id: 5
       title: Geokinesis
-      description: You can control and manipulate earth and soil. Your power doesn't work on rock or stone though. You must make a Flames challenge to use this talent in combat.
+      description: You can control and manipulate earth and soil. Your power doesn't work on rock or stone. You must make a Flames challenge to use this talent in combat.
       subQualities:
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
     - id: 6
@@ -531,6 +639,8 @@ Mountain:
       subQualities:
         - title: Mechanic
           description: 'Make a Gales challenge. On success, you notice a hidden pathway or a unique line of attack that will let you (and only you) get the drop on your foes.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: You notice a second hidden pathway or additional route that will allow you and your hunting buddies to get the drop on your foes from multiple angles.
         - title: Trigger
@@ -541,6 +651,8 @@ Mountain:
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On success, one other player can add 1 die to their next challenge roll.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: All other players within earshot of you can add 1 die to their next challenge roll.
         - title: Trigger
@@ -552,31 +664,39 @@ Mountain:
       subQualities:
         - title: Mechanic
           description: 'If you fail a Flames challenge made to gather information about a monster or an incident, you come to a false conclusion instead of learning nothing.'
+        - title: Type
+          description: Passive
     - id: 9
       title: Military Enhancement Drug Withdrawal
       description: 'While you were in the military, you were unknowingly dosed with a performance enhancing drug. You could see farther, run for longer, and didn''t feel pain. Now that you''re out, withdrawal is starting to set in.'
       subQualities:
         - title: Mechanic
           description: Take 1 extra Strike on all Stones challenges.
+        - title: Type
+          description: Passive
     - id: 10
       title: Short Temper
       description: 'You are quick to anger and get frustrated easily. This isn''t usually a problem during a fight, but can be very bad if an eyewitness isn''t giving information fast enough.'
       subQualities:
         - title: Mechanic
           description: 'After taking damage, make a Brooks challenge. On a failure, you fly into a rage and can only target the creature that insulted or attacked you for the remainder of combat.'
+        - title: Type
+          description: Passive
     - id: 11
       title: Masochist
       description: 'You like pain. Pain reminds you that you''re alive. Pain can also mean that you have been wounded and are in danger, which is something that you sometimes forget.'
       subQualities:
         - title: Mechanic
           description: You actively seek out pain and injury when in a fight.
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Military Tactics
       description: 'With a few quick shouts or hand signals, you communicate to your team exactly what everyone needs to do to work together and turn the tide of battle.'
       subQualities:
         - title: Mechanic
-          description: 'A number of other players can take an additional turn of combat. That number is equal to the total number of players divided by 2, rounded up.'
+          description: Half of the other players (rounded up) can take an additional turn of combat during your turn.
   Inventory:
     - id: 13
       title: Thermal Goggles
@@ -584,6 +704,8 @@ Mountain:
       subQualities:
         - title: Mechanic
           description: 'You can see objects and creatures that emit heat, even in the dark.'
+        - title: Type
+          description: Passive
         - title: Range
           description: SHORT LONG
     - id: 14
@@ -591,7 +713,9 @@ Mountain:
       description: 'Packed with gunpowder and shrapnel of the maker''s choosing (such as silver), a grenade can be just the thing for taking out a werewolf nest or breaking down a wall.'
       subQualities:
         - title: Mechanic
-          description: Deals 4 Strikes of damage to all creatures within range.
+          description: 'Make a Gales challenge. On a success, deal 4 Strikes of damage to all creatures within range.'
+        - title: Type
+          description: Standard
         - title: Range
           description: SHORT
 Storm:
@@ -621,6 +745,8 @@ Storm:
       subQualities:
         - title: Mechanic
           description: You can move physical objects that weigh no more than you do with your mind. You must make a Flames challenge to use this talent in combat or move an object heavier than you are.
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: You can move an object up to three times your weight.
         - title: Trigger
@@ -631,12 +757,16 @@ Storm:
       title: Pyrokinesis
       description: You can control and manipulate fire. You must make a Flames challenge to use this talent in combat.
       subQualities:
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
     - id: 6
       title: Cryokinesis
       description: You possess magical control over cold and ice. You must make a Flames challenge to use this talent in combat.
       subQualities:
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
     - id: 7
@@ -645,6 +775,10 @@ Storm:
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On success, the target will obey most commands you give it for the remainder of the scene. If the creature is openly hostile toward you, they may make a Brooks challenge to break the spell every 10 seconds.'
+        - title: Type
+          description: Standard
+        - title: Range
+          description: MELEE SHORT
   Flaws:
     - id: 8
       title: Soul Draining Magic
@@ -652,22 +786,30 @@ Storm:
       subQualities:
         - title: Mechanic
           description: Take double Strikes on any challenge roll made to cast a spell.
+        - title: Type
+          description: Passive
     - id: 9
       title: Show Off
       description: 'Magic is a wondrous thing. It deserves to be seen and admired by all. You have a dangerous tendency to avoid hiding or sneaking around in favor of showing off your skills in the flashiest way possible. You use magic to solve everything, even trivial things like opening a beer.'
       subQualities:
         - title: Storyteller
           description: Normal humans do not believe in magic. They are likely to react with suspicion and fear if they see magic being practiced openly.
+        - title: Type
+          description: Passive
     - id: 10
       title: Wild Magic
       description: You never fully learned to control your magical abilities. They have a habit of going completely haywire when you use them.
       subQualities:
         - title: Mechanic
           description: 'Whenever you cast a spell, use a supernatural ability, or perform an incantation (such as an exorcism), roll a die. On a Strike or Brooks, the storyteller decides what effect your spell has. On any other roll, the spell has the desired effect.'
+        - title: Type
+          description: Passive
     - id: 11
       title: Amnesia
       description: 'Some accident, either mundane or magical, has left you with amnesia. You don''t remember anything about your life prior to a few weeks or months ago.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Ritual Blast
@@ -684,6 +826,8 @@ Storm:
       subQualities:
         - title: Mechanic
           description: 'Choose what curse to put in the bag, a specific target or a creature type, and a time limit (minimum 5 minutes). If the creature is in the presence of the bag for the time limit, the curse activates and attacks the target.'
+        - title: Type
+          description: Passive
         - title: Range
           description: SHORT LONG
     - id: 14
@@ -692,6 +836,8 @@ Storm:
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike on Flames challenges made to cast spells.
+        - title: Type
+          description: Passive
         - title: Range
           description: SHORT
 Inferno:
@@ -733,12 +879,16 @@ Inferno:
       subQualities:
         - title: Mechanic
           description: 'Make a Gales challenge. On a success, you can sense any demons or undead in the area -OR- Make a Brooks challenge. On success, you can determine if someone is lying or inherently evil.'
+        - title: Range
+          description: MELEE SHORT LONG
     - id: 6
       title: Fire Cowl
       description: Your connection with the infernal has given you the ability to cover your body with fire. Your skin is warm to the touch.
       subQualities:
         - title: Mechanic
           description: 'You may use an action to activate this ability and cause fire to cover your body for 1 minute. During that time, any creature that makes a melee attack against you takes 2 Strikes of fire damage.'
+        - title: Range
+          description: MELEE
     - id: 7
       title: Umbrakinesis
       description: You can control and manipulate darkness and shadows. You must make a Flames challenge to use this talent in combat.
@@ -779,7 +929,7 @@ Inferno:
       description: 'A blessed container of highly-flammable oil. It can be used to lay a trail so that something can be lit from a distance. It can also be used to make a circle that, once lit, will trap almost anything that might normally escape a Spirit Trap, such as an angel.'
       subQualities:
         - title: Mechanic
-          description: 'Can be lit on fire and thrown onto a creature. Deals 2 Strikes to normal creatures, and 5 Strikes to divine creatures. Can also be poured on the ground in a circle and set on fire to trap divine creatures inside. The fire burns for 5 minutes.'
+          description: 'Can be lit on fire and thrown onto a creature. Make a Gales challenge, on a success deal 2 Strikes to 1 normal creature, or 5 Strikes to 1 divine creature. Can also be poured on the ground in a circle and set on fire to trap divine creatures inside. The fire burns for 5 minutes.'
         - title: Range
           description: SHORT
     - id: 14
@@ -815,24 +965,32 @@ River:
       subQualities:
         - title: Mechanic
           description: 'Make a Gales challenge. On success, you learn basic information from the scene of a crime, such as where the victim was, where the assailant was, and which way they went after the crime.'
+        - title: Type
+          description: Standard
     - id: 5
       title: Video Game Reflexes
       description: 'You spent a lot of your childhood in front of a screen, battling the zombies or aliens. All purely virtual, of course. The hours and hours you poured into your gaming habit have increased your spatial awareness and your reflexes about as high as they can go.'
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike on Gales challenges made during combat.
+        - title: Type
+          description: Passive
     - id: 6
       title: True Believer
       description: 'You have an extremely open mind. You willingly accept evidence of monsters you''ve only ever heard about. Most hunters know that certain myths really are just myths, but you believe that anything is out there.'
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike on Brooks challenges made while interviewing witnesses. You may reroll 1 Strike on Flames challenges made while researching monsters.
+        - title: Type
+          description: Passive
     - id: 7
       title: Persistent
       description: You will stop at nothing to get to the truth.
       subQualities:
         - title: Mechanic
           description: You may reroll all dice once on Brooks challenges. You must use the new result.
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Pyrophobia
@@ -840,31 +998,39 @@ River:
       subQualities:
         - title: Mechanic
           description: 'You must make a Brooks challenge before entering a scene with a large fire. On a failure, you are too scared to enter.'
+        - title: Type
+          description: Passive
     - id: 9
       title: Shoddy Equipment
       description: 'Your guns and other weapons are old. Very old. You''ve done your best to keep them in good repair, but you''re going to need new ones soon.'
       subQualities:
         - title: Mechanic
           description: 'Lose 1 die on challenges made to use items. On failure with 2 or more Strikes, the item breaks.'
+        - title: Type
+          description: Passive
     - id: 10
       title: Asthma
       description: You've been an asthmatic since you were a child. It prevented you from ever building up much endurance and continues to limit your abilities as a hunter.
       subQualities:
         - title: Mechanic
-          description: You don't reroll Weaves during Stones challenges. They still count as successes though. You are prone to fits of coughing and wheezing.
+          description: 'You don''t reroll Weaves during Stones challenges, but they still count as successes. You are prone to fits of coughing and wheezing.'
+        - title: Type
+          description: Passive
     - id: 11
       title: It's a Conspiracy
       description: 'You are prone to thinking that everything is related to a grand conspiracy. Every time you think you found evidence that supports the conspiracy, you become even more likely to find further evidence in the future.'
       subQualities:
         - title: Mechanic
           description: 'You lose 1 die on Flames challenges for every Flames challenge you have failed during this episode. You always roll a minimum of 2 dice on Flames challenges, no matter your penalty. Your penalty resets if you succeed on a Flames challenge.'
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Call in the Cavalry
       description: 'You still keep in regular touch with your law-enforcement contacts. They might not be seasoned hunters, but they''re highly trained officers who know how to take care of themselves. They''ve offered to help you out of whatever jam you''re in, provided they can reach you.'
       subQualities:
         - title: Mechanic
-          description: 'Make a phone call. After a bit of time, a squadron of highly-trained and heavily armed human fighters storm your location to aid you. Cannot be used if they cannot physically reach your location.'
+          description: 'Make a phone call. After a little time, a squadron of highly-trained and heavily armed human fighters storm your location to aid you. Cannot be used if they cannot physically reach your location.'
   Inventory:
     - id: 13
       title: Sun Gun
@@ -872,6 +1038,8 @@ River:
       subQualities:
         - title: Mechanic
           description: 'Make a Gales challenge. On a success, deal 3 Strikes of damage to 1 target.'
+        - title: Type
+          description: Standard
         - title: Range
           description: SHORT
     - id: 14
@@ -880,6 +1048,8 @@ River:
       subQualities:
         - title: Mechanic
           description: 'Make a Gales challenge. On success, your scanner is able to identify and highlight important features about a crime scene.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
 Crown:
@@ -906,13 +1076,17 @@ Crown:
     - id: 4
       title: Telepathic Link
       description: 'By touching another mortal human, you can establish a telepathic link. It works over any distance and lasts as long as you like, but cannot cross planes of existence. The link works both ways and allows you to send mental messages to each other.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 5
       title: Knowledge of Monster Royalty
       description: 'You have researched some VERY high ranking monsters or demons, enough to know their names and invoke them when dealing with lesser monsters. The mention of Mab, Queen of the Fairies, or Asmodeus, Prince of Hell, can be enough to stop some monsters in their tracks.'
       subQualities:
         - title: Mechanic
           description: 'By mentioning the name of monster royalty, you may make a Brooks challenge to convince a monster underling to do one task for you. You may reroll 1 Strike on the challenge.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: 'The monster now views your word as the word of royalty itself. Until another of its kind convinces it otherwise, or until you do something out of character for a servant of the monster royalty, it is your loyal subject for the remainder of the scene.'
         - title: Trigger
@@ -923,12 +1097,16 @@ Crown:
       subQualities:
         - title: Mechanic
           description: 'Find a secluded forest area and bring an offering of greasy food. Make a Brooks challenge. On a success, a party of small fairies will come and accept your offering. You can ask them to perform reconnaissance or whether they know anything about recent events in the area.'
+        - title: Type
+          description: Standard
     - id: 7
       title: Strike of the Fae
       description: You've learned a bit about channeling the mystic power of the Fae into physical force.
       subQualities:
         - title: Mechanic
           description: 'Upon succeeding in a Stones challenge to make a melee attack, your attack deals an additional 2 Strikes of damage to 1 target.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: Monsters who witness your attack and are intelligent enough to recognize Fae magic become intimidated and cannot take actions for 10 seconds.
         - title: Trigger
@@ -940,14 +1118,20 @@ Crown:
       subQualities:
         - title: Mechanic
           description: Monsters will tend to target you more than the others.
+        - title: Type
+          description: Passive
     - id: 9
       title: Arrogant
       description: 'Let''s face it, you''re just naturally better than everyone else. You''re stronger, faster, prettier, and better at hunting than anyone. No monster stands a chance against you. Other hunters can just sit back and let you take care of everything.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 10
       title: Clumsy
       description: You have perpetual butterfingers and two left feet. It's a wonder that you've survived as many hunts as you have. You're always tripping during a pursuit or dropping your weapons during a fight.
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'At your discretion, have this player make a Gales challenge. On failure, the character trips, drops their weapon, or does something else clumsy.'
     - id: 11
@@ -956,6 +1140,8 @@ Crown:
       subQualities:
         - title: Mechanic
           description: 'Your contract holder can speak directly into your mind, no matter where you are. They can issue you commands whenever they please. If you disobey, you take 1 Strike of damage every 10 seconds and suffer extreme pain, similar to being burned alive, until you obey.'
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Ancient Magic
@@ -970,12 +1156,16 @@ Crown:
       subQualities:
         - title: Mechanic
           description: 'Once per scene, you cause a Stones or Gales challenge made to attack you physically to automatically fail.'
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE
     - id: 14
       title: Coin Pouch
       description: 'A small cloth pouch full of coins. The coins do not match any currency in use on Earth today. They are likely ancient, possibly from the Roman Empire or even earlier.'
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'Maybe the coins are imbued with magic that can be released by throwing them somewhere, maybe they''re lucky and bring good fortune to their holder, or maybe they''re ordinary coins, but have sentimental value to the boss.'
 Coin:
@@ -1005,24 +1195,32 @@ Coin:
       subQualities:
         - title: Mechanic
           description: You can buy just about anything without worrying about getting caught for fraud.
+        - title: Type
+          description: Passive
     - id: 5
       title: Hired Muscle
       description: 'You have hired a large and scary-looking mercenary to act as your bodyguard and to help you on cases. He''s very good in a fight, but not very good at talking.'
       subQualities:
         - title: Mechanic
           description: 'On a Stones challenge, you may opt to have your hired muscle do the challenge for you. They have a +2 bonus to Stones, and gain no bonuses from your backgrounds or talents. They can use any items you carry that do not require Flames or Brooks challenges to use.'
+        - title: Type
+          description: Passive
     - id: 6
       title: Iron Will
       description: You possess a very strong will. It enables you to resist many forms of mind control and gives you a measure of charisma that makes people admire you. You never break under torture.
       subQualities:
         - title: Mechanic
           description: 'You may make a Brooks challenge to intimidate a creature, preventing it from acting for 10 seconds. Brooks challenges made to charm or possess you, or Flames challenges made to attack you psychically have their challenge level increased by 1.'
+        - title: Type
+          description: Standard
     - id: 7
       title: Super Perception
       description: 'You have an extremely acute awareness of your immediate surroundings. Some think you can see through walls, but it''s more like you can see around them. You always know what cards someone is holding in a poker game and how many fingers someone is holding up behind their back.'
       subQualities:
         - title: Mechanic
           description: 'You are able to see things behind cover or around corners in your immediate vicinity. You can''t see things that are invisible or completely covered, such as under a sheet or inside a box.'
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Vulnerable Friend
@@ -1030,22 +1228,30 @@ Coin:
       subQualities:
         - title: Mechanic
           description: Any monster who knows about this friend can make a Brooks challenge against you to try and blackmail you into obeying them for the remainder of the scene or until your friend is out of danger.
+        - title: Type
+          description: Passive
     - id: 9
       title: It’s Just Business
       description: You possess questionable morals. You care little for the well-being of your fellow hunters and would sell them out once they’re no longer useful.
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 10
       title: In Over Your Head
       description: 'You’re not ready for this. You seriously overestimated your abilities. I mean, you’re out here fighting monsters! Who does that!?'
       subQualities:
         - title: Mechanic
           description: 'Before entering combat, make a Brooks challenge. On success, you roll your initiative normally. On failure, you go last.'
+        - title: Type
+          description: Passive
     - id: 11
       title: Drug Addiction
       description: 'Hunting is stressful work. Sometimes you need something to take the edge off. Maybe cocaine, maybe heroin, maybe something stronger or mystical. You''ve been trying to kick the habit for years but haven''t been able to quit.'
       subQualities:
         - title: Mechanic
           description: 'At the beginning of a scene, roll 1 die. On a Flames or Brooks, you took a dose between scenes. Lose 1 die on all Flames and Brooks challenges. On a Stones or Gales, you were able to resist and are suffering withdrawal. Lose 1 die on all Stones and Gales challenges.'
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Let's Make a Deal
@@ -1060,6 +1266,8 @@ Coin:
       subQualities:
         - title: Mechanic
           description: 'Once per scene, you may make a Stones challenge to punch something. On success, your punch deals triple Strikes damage to your target.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
     - id: 14
@@ -1067,7 +1275,9 @@ Coin:
       description: 'Many creatures of the night are weak against fire. As intimidating as it is destructive, a flamethrower can be an extremely effective weapon.'
       subQualities:
         - title: Mechanic
-          description: Deals 4 Strikes of damage to all creatures within range.
+          description: 'Make a Gales challenge. On a success, deal 4 Strikes of damage to all creatures within range.'
+        - title: Type
+          description: Standard
         - title: Range
           description: SHORT
 Tome:
@@ -1097,26 +1307,34 @@ Tome:
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you gain entry into a secure database or piece of technology.'
+        - title: Type
+          description: Standard
     - id: 5
       title: Witch's Script
       description: Witches and warlocks write their spells in an obscure script derived from an ancient language. You are fluent in this language. Many ancient lore books are written in this script as well.
       subQualities:
         - title: Mechanic
           description: 'You can read and utilize any witch''s spellbook you find. You may make a Flames challenge to cast a spell in the witch''s tongue. On success, and if the spell casting challenge succeeds, the spell grows more powerful and deals an additional 2 Strikes of damage.'
+        - title: Type
+          description: Standard
     - id: 6
       title: Lore Library
       description: 'You (or a hunter you know) has collected a massive store of old books, stories, and legends. Anything you want to know about a monster is probably somewhere in there. Some of the older legends will be more fiction than fact, but every legend has some elements of truth.'
       subQualities:
         - title: Mechanic
           description: 'After you or another hunter fails a Flames challenge to research something, you can make a call to the keeper of your library (or you can do it yourself if you''re there). At the end of the scene, you''ll receive a call back with the information you requested, if it exists.'
+        - title: Type
+          description: Passive
     - id: 7
       title: Charades
       description: 'You are extremely skilled at communicating using gestures, lip reading, and eye contact.'
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On a success, you gesture and express a message of 10 words or less to any number of targets that can see you. Careful though, other creatures who can see you also have a chance to interpret the message.'
+        - title: Type
+          description: Passive
         - title: Enhancement
-          description: Only your intended targets notice you sending the message.
+          description: Only your intended target(s) notice you sending the message.
         - title: Trigger
           description: GALES
   Flaws:
@@ -1126,29 +1344,37 @@ Tome:
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all Stones and Gales challenges.
+        - title: Type
+          description: Passive
     - id: 9
       title: Corrupted by Readings
       description: 'There are books that require special precautions before reading them. Some require a purification ritual or the company of priests. You once neglected to take these precautions. Now, shadows appear to move on their own. There is a darkness within you that''s warping your mind.'
       subQualities:
         - title: Mechanic
           description: 'You are afraid of the dark. After you finish reading something in a physical book, make a Brooks challenge. On failure, you become evil for the remainder of the scene.'
+        - title: Type
+          description: Passive
     - id: 10
       title: Can't Read
-      description: 'You can''t read. Maybe you used to be able to, but you can''t anymore. This does **not** cancel out the Corrupted by Reading Flaw if you have that.'
-      subQualities: []
+      description: 'You can''t read. Maybe you used to be able to, but you can''t anymore. This does **not** cancel out the Corrupted by Readings Flaw if you have that. Looking at letters will still affect you, even if you can''t understand them.'
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 11
       title: Blood Curse
       description: You've been cursed with a blood illness. Any form of exertion will cause your body to break down.
       subQualities:
         - title: Mechanic
           description: 'On Stones and Gales challenges, if you roll 1 or more Strikes, you automatically fail the challenge.'
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Eureka!!
       description: Your private collection of case files happens to include a case identical to the one you're working on right now. You can recall it word-for-word and can remember vital information that helped you solve the previous case.
       subQualities:
         - title: Mechanic
-          description: Instantly cause any player to automatically succeed on a Flames challenge made to learn information about a case.
+          description: Instantly cause any player (including yourself) to automatically succeed on a Flames challenge made to learn information about a case.
   Inventory:
     - id: 13
       title: Spirit Bullets
@@ -1156,6 +1382,8 @@ Tome:
       subQualities:
         - title: Mechanic
           description: 'Any demon, angel, or ghost currently possessing someone who is hit by this bullet cannot leave their vessel and have their power and strength greatly reduced. All their Suit bonuses drop to 0.'
+        - title: Type
+          description: Passive
         - title: Range
           description: SHORT
     - id: 14
@@ -1163,7 +1391,9 @@ Tome:
       description: 'The journal of an experienced hunter. The notes are very badly organized, but there is valuable information on a great many monsters and how to kill them.'
       subQualities:
         - title: Mechanic
-          description: 'Make a Flames challenge. On success, you are able to locate an entry in the journal for whatever monster you are hunting and learn basic hunting information about it.'
+          description: 'Make a Flames challenge. On success, you are able to locate an entry in the journal for whatever monster you are hunting and learn basic information about how to hunt it.'
+        - title: Type
+          description: Standard
 Mask:
   Backstories:
     - id: 1
@@ -1191,24 +1421,32 @@ Mask:
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On success, you disguise yourself as someone else. If you can spend 3 hours or more on the disguise, you automatically succeed the challenge.'
+        - title: Type
+          description: Standard
     - id: 5
       title: Night Vision
       description: 'Your vision has always been very good. Lately, it''s gotten so good that you can see in very low light. You can even see relatively well in the dark, although not as well as true creatures of the night.'
       subQualities:
         - title: Mechanic
-          description: You can see normally even in pitch blackness.
+          description: You can see normally even in very low light. You still have difficulty seeing in pitch darkness.
+        - title: Type
+          description: Passive
     - id: 6
       title: Feral Presence
       description: 'Your animal-like tendencies and imposing physique make you a very intimidating individual. When you threaten someone, they will take you seriously and tell you what you want to know. Or else!'
       subQualities:
         - title: Mechanic
           description: 'Hostile creatures must make a Brooks challenge before attacking you for the first time. On a failure, they must attack a different target. You may reroll 1 Strike on Brooks challenges made to intimidate people into giving you information.'
+        - title: Type
+          description: Passive
     - id: 7
       title: Heightened Senses
       description: 'Like a wolf, you have great senses of smell and hearing, and better-than-average eyesight.'
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike on Gales challenges made for perception.
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Night Owl
@@ -1216,18 +1454,26 @@ Mask:
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all challenges made during the daytime.
+        - title: Type
+          description: Passive
     - id: 9
       title: Actually a Werewolf
       description: 'You''re a werewolf. You''re able to keep it under control through meditation and a special incense, but you have to be locked away for a couple nights every month in case you succumb to the transformation. You''ve been trying to practice changing at will, but it''s been difficult.'
       subQualities:
         - title: Mechanic
-          description: 'Uh oh, it''s your time of the month. Anytime the sun sets, make a Stones challenge. On failure, you will transform into an uncontrollable werewolf during the scene.'
+          description: 'Uh oh, it''s your time of the month. Anytime the sun sets, make a Stones challenge. On failure, you will transform into an uncontrollable werewolf during the scene. Other players can make Brooks challenges to calm you down and force you to act more passively.'
+        - title: Type
+          description: Passive
+        - title: Storyteller
+          description: 'Scan the Werewolf enemy from the Owl card to get this player''s new suit bonuses, talents, and flaws while transformed.'
     - id: 10
       title: Bloodlust
       description: 'Combat makes your blood boil. You might be an efficient killing machine, but you have a hard time stopping once the threat has been dealt with. There have been a couple incidents where you attacked a hunter after the monster is dead, because you were enjoying the fight so much.'
       subQualities:
         - title: Mechanic
-          description: 'If you are in combat and attack a creature, and then you do not attack that same creature on your next turn, make a Brooks challenge. On failure, your storyteller chooses your next target for you. The target could be one of the other players.'
+          description: 'If you are in combat and attack a creature, and then you do not attack that same creature on your next turn, make a Brooks challenge. On failure, your storyteller chooses your next target for you. The target can be one of the other players.'
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'If you don''t want to choose, roll a die instead. On a Weave, the player can still choose. On a Suit, choose a random enemy. On a Strike, choose one of the other players.'
     - id: 11
@@ -1236,6 +1482,8 @@ Mask:
       subQualities:
         - title: Mechanic
           description: 'You have human-level intelligence, you can change your shape into that of a human, and speak like a human. Your human appearance is always the same. You cannot use this skill to become other humans. You lose 1 die on all Brooks challenges while interacting with humans.'
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Beast Rage
@@ -1249,7 +1497,9 @@ Mask:
       description: A simple dagger made of silver. Many creatures of the night are vulnerable to silver.
       subQualities:
         - title: Mechanic
-          description: Deals 1 Strike of damage normally. Deals 3 Strikes of damage to creatures vulnerable to silver.
+          description: 'Make a Stones challenge. On a success, deal 1 Strike of damage to 1 normal creature, or 3 Strikes of damage to 1 creature vulnerable to silver.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
     - id: 14
@@ -1258,8 +1508,10 @@ Mask:
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On success, your form changes. You grow fur, your teeth and nails sharpen, your eyesight and sense of smell improve, and you can transform back at will. On failure, you still transform, but your mind also transforms. The storyteller dictates your actions.'
+        - title: Type
+          description: Standard
         - title: Enhancement
-          description: 'If you failed your Brooks challenge and became a wolf in mind and body, another player can make a Brooks challenge to calm you down and allow you to transform back.'
+          description: 'If you fail your Brooks challenge and become a wolf in mind and body, another player can make a Brooks challenge to calm you down and allow you to transform back.'
 Woods:
   Backstories:
     - id: 1
@@ -1287,6 +1539,8 @@ Woods:
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you are able to fashion mundane offensive weapons from natural resources. Your weapons deal 2 Strikes of damage to creatures that can be hurt by physical attacks. The weapons break at the end of the scene.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: You are able to concoct a natural poison from the environment and coat your weapon in it. Your weapons deal 2 additional Strikes of damage on top of their normal damage.
         - title: Trigger
@@ -1297,18 +1551,24 @@ Woods:
       subQualities:
         - title: Mechanic
           description: You can communicate with plants and natural animals.
+        - title: Type
+          description: Passive
     - id: 6
       title: Alchemy Bombs
       description: Your study in chemistry has given you insight into how to mix a handful of alchemical formulas useful for offense during hunts. It takes 1 hour to mix 1 bomb and you may only mix up to 3 bombs per episode.
       subQualities:
         - title: Mechanic
           description: 'Anyone can throw one of your bombs to cause one of these effects: cover an area in fire, cover an area in concealing fog, or cover an area in tar that may cause creatures trying to walk through it to get stuck.'
+        - title: Type
+          description: Passive
     - id: 7
       title: Explosive Growth
       description: You possess limited control over your size.
       subQualities:
         - title: Mechanic
           description: 'You may double your size for 1 minute. While enlarged, you ignore the first Strike on Stones attacks, and you may reroll 1 Strike on Stones challenges.'
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Hobbled
@@ -1316,22 +1576,30 @@ Woods:
       subQualities:
         - title: Mechanic
           description: You move at half speed.
+        - title: Type
+          description: Passive
     - id: 9
       title: Can't Drive
       description: You never learned how to drive. Maybe you lived in an urban area with good public transportation. Maybe you lived in a forest area or somewhere without roads. Maybe you just hate cars.
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 10
       title: Curse of the Forest
       description: 'One of your hunts led you to a witch of the forest. With her dying breath, she placed a curse of nature on you. Bark gradually grows over your skin. It''s easy to break off and doesn''t cause pain, but it grows back eventually and makes it hard for you to move normally or quietly.'
       subQualities:
         - title: Mechanic
           description: 'You are completely unable to sneak, normal humans are unlikely to trust you, and you can be set on fire **very** easily.'
+        - title: Type
+          description: Passive
     - id: 11
       title: Recluse
       description: 'You''ve shunned the company of other people, preferring to keep to yourself and nature. You''re only out here because one of the other players is an old friend. You''re annoyed by people and can''t stand the scent of their.... cleanliness.'
       subQualities:
         - title: Mechanic
           description: Lose 1 die on Brooks challenges.
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Call of the Wild
@@ -1347,7 +1615,9 @@ Woods:
       description: 'A sharpened stick from a 500 year old tree. Vampires can be killed by driving a wooden stake through their heart. Many other ancient forest demons can be killed if stabbed with ancient wood. I suppose it could also make for good firewood, but that wouldn''t be very smart.'
       subQualities:
         - title: Mechanic
-          description: 'Deals 1 Strike of damage against most monsters. Deals 3 Strikes of damage against monsters native to the woods. Deals 10 Strikes of damage against vampires, but you lose 1 die on the challenge roll to hit them.'
+          description: 'Make a Stones challenge. On a success, deal 1 Strike of damage to 1 monster, 3 Strikes of damage against 1 monster native to the woods, or 10 Strikes of damage against vampires. You lose 1 die on the challenge roll to hit vampires.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
     - id: 14
@@ -1356,6 +1626,8 @@ Woods:
       subQualities:
         - title: Mechanic
           description: 'Once per episode, heal 2 wounds on any one player.'
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE
 Watchtower:
@@ -1368,7 +1640,7 @@ Watchtower:
           description: STONES BROOKS
     - id: 2
       title: Survived a Zombie Attack
-      description: 'You thought it might have just been the flu, but no one ever got better. Then you starting seeing people wandering the street at night, moaning. It was all downhill from there. You managed to survive and escape the town, but a lot of people you knew are dead now.'
+      description: 'You thought it might have just been the flu, but no one ever got better. Then you starting seeing people wandering the street at night, moaning. It was all downhill from there. You managed to survive and escape the town, but a lot of people you knew are (un)dead now.'
       subQualities:
         - title: Suits
           description: STONES GALES
@@ -1385,6 +1657,8 @@ Watchtower:
       subQualities:
         - title: Mechanic
           description: 'If you have to make a Flames check to obtain information about a case, you may make a Brooks check instead to call your FBI contacts and convince them to help you. The challenge level is lowered by 1.'
+        - title: Type
+          description: Passive
         - title: Enhancement
           description: You've let something sensitive slip in your conversation. Your contact will have to cover your mistake and won't be available for the remainder of the episode.
         - title: Trigger
@@ -1395,6 +1669,8 @@ Watchtower:
       subQualities:
         - title: Mechanic
           description: 'You may reroll 1 Strike on Brooks challenges made while brandishing your badge. On success, your faith holds true and the badge acts as a ward against monsters associated with death. Brandishing it prevents such monsters from entering melee range with you.'
+        - title: Type
+          description: Passive
         - title: Range
           description: SHORT
     - id: 6
@@ -1402,28 +1678,38 @@ Watchtower:
       description: 'All hunters know their way around firearms, but you are a cut above. You could disassemble, clean, and reassemble most guns blindfolded. Your guns never jam and you can repair other hunters'' firearms, even in the middle of combat.'
       subQualities:
         - title: Mechanic
-          description: 'You may reroll 1 Strike during Gales challenges made to use small firearms. You may use your action to fire 2 shots instead of 1, making separate challenges for each. The second challenge is 1 level higher than it would normally be.'
+          description: 'You may reroll 1 Strike during Gales challenges made to use small firearms. You may use your action to fire 2 shots instead of 1, making separate challenges for each. The second challenge is 1 level higher than it normally would be.'
+        - title: Type
+          description: Passive
     - id: 7
       title: Photokinesis
       description: You can control and manipulate light. You must make a Flames challenge to use this talent in combat.
       subQualities:
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
   Flaws:
     - id: 8
       title: Lost Too Many
-      description: 'During your hunting career, you''ve failed a lot. You''ve lost a lot of victims. You weren''t fast enough, strong enough, or tough enough to save them, but you won''t let it happen again. You''ll do absolutely anything to protect your current partners, including sacrificing yourself.'
-      subQualities: []
+      description: 'During your hunting career, you''ve failed a lot. You''ve lost a lot of victims. You weren''t fast or strong enough to save them; but you won''t let it happen again. You''ll do absolutely anything to protect your current partners, including sacrificing yourself.'
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 9
       title: Low Self-Esteem
       description: 'You lack confidence in yourself. Despite your success rate on hunts, you view yourself as a below-average hunter. You are prone to letting others make all the decisions. You are very easily insulted and you take it hard.'
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all Brooks challenges.
+        - title: Type
+          description: Passive
     - id: 10
       title: Wanted by the Law
       description: 'Law enforcement officials have noticed that someone with your face and description has been appearing at a lot of violent incidents. You are wanted for questioning in many places. Your face is in gas stations, banks, and train stations. You better be careful talking to police.'
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: Watch for the player to walk into a public area without being sneaky. There's always a possibility that they'll get spotted.
     - id: 11
@@ -1432,10 +1718,12 @@ Watchtower:
       subQualities:
         - title: Mechanic
           description: 'If you received any Strikes in the previous scene, you start the next scene with 3 Strikes.'
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: FREEZE!!!
-      description: 'Whether it''s pacifying a panicking group of people or halting an advancing monster in its tracks, you can yell "Freeze!" with such authority that few beings, supernatural or not, would be unable to disobey.'
+      description: 'Whether it''s calming a panicked group of people or halting an advancing monster in its tracks, you can yell "Freeze!" with such authority that few beings, supernatural or not, would be unable to disobey.'
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On success, a number of enemies equal to the number of successes lose a turn of combat.'
@@ -1446,6 +1734,8 @@ Watchtower:
       subQualities:
         - title: Mechanic
           description: Bind a humanoid creature's arms.
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE
     - id: 14
@@ -1454,6 +1744,8 @@ Watchtower:
       subQualities:
         - title: Mechanic
           description: You take 2 fewer Strikes when attacked in the chest by physical attacks.
+        - title: Type
+          description: Passive
 Gateway:
   Backstories:
     - id: 1
@@ -1481,26 +1773,34 @@ Gateway:
       subQualities:
         - title: Mechanic
           description: You may make a Gales challenge to sense ghosts in the area.
+        - title: Type
+          description: Standard
     - id: 5
       title: Fortune Telling
       description: You possess limited fortune-telling ability. You are able to see vague hints about the immediate future of a person or group. Your fortunes are usually only possibilities though... never set in stone.
       subQualities:
         - title: Mechanic
-          description: 'At the beginning of the session, roll 6 dice. Reroll Strikes and Weaves until all the dice land on Suits. Make note of the final results as your "fortune roll".'
+          description: 'At the beginning of the session, roll 6 dice. Reroll Strikes and Weaves until all the dice land on Suits. Make note of the final results as your *fortune roll*.'
+        - title: Type
+          description: Passive
         - title: Enhancement
-          description: 'You may choose to pull 1 or more dice from your fortune roll to replace the same number of dice on any roll made by any player. Each die in your fortune roll can only be used once. Once you''ve used all 6 dice, you cannot use any more.'
+          description: 'You may choose to pull 1 or more dice from your *fortune roll* to replace the same number of dice on any roll made by any player. Each die in your *fortune roll* can only be used once. Once you''ve used all 6 dice, you cannot use any more.'
     - id: 6
       title: Telepathy
       description: 'You can read minds. You are unable to influence another''s mind, but you can project your own voice into their head. They know the voice is not their own. Comes in handy when you have to communicate with a fellow hunter silently.'
       subQualities:
         - title: Mechanic
           description: You can read the mind of and communicate with any willing creature. You must make a Flames challenge to communicate with or read the mind of an unwilling creature.
+        - title: Type
+          description: Passive
     - id: 7
       title: Astral Projection
       description: You can temporarily leave your body in astral form and move around like a ghost.
       subQualities:
         - title: Mechanic
           description: 'You can leave your body behind and travel as a ghost temporarily. You can slip through walls, eavesdrop, and are invisible. Psychic creatures can sense you. Some might even be able to attack you. For every 10 continuous minutes you spend away from your body, you take 1 Wound.'
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Voices in your Head
@@ -1508,24 +1808,32 @@ Gateway:
       subQualities:
         - title: Mechanic
           description: 'At the beginning of a scene, make a Brooks challenge. On failure, lose 2 dice on all challenges for the scene.'
+        - title: Type
+          description: Passive
     - id: 9
       title: Hemorrhages
       description: 'Utilizing your psychic power puts enormous strain on your brain. Severe headaches and nosebleeds are the least of your worries. If you overexert yourself, it could have deadly consequences.'
       subQualities:
         - title: Mechanic
           description: Take 2 additional Strikes when making any Flames challenge.
+        - title: Type
+          description: Passive
     - id: 10
       title: Out of Body Experience
       description: 'Whether through a curse or your naturally unstable psychic abilities, you sometimes slip out of your body and become a ghost. You''ve tried everything to stop it from happening, but the only thing that works is time. You have to wait until your body pulls your spirit back inside.'
       subQualities:
         - title: Mechanic
           description: 'At the beginning of a scene, roll a Stones core challenge. On failure, your body falls unconscious and you are an invisible ghost for the remainder of the scene. You must make a Flames challenge in order to muster the concentration to be heard or physically interact with objects.'
+        - title: Type
+          description: Passive
     - id: 11
       title: Loony
       description: 'You''re not crazy. You just live in your own little world with its own little rules. You have to put peanut butter out every Thursday to appease the Phabergones, sleep with your pillow under your feet to appease the Barsnips, and many other things. You talk to yourself a lot.'
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all Brooks challenges.
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Vision of the Future
@@ -1540,6 +1848,8 @@ Gateway:
       subQualities:
         - title: Mechanic
           description: 'The horn is hollow, but strong. You could fill it with liquid or use it as a stabbing weapon.'
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'If a player drinks water from the horn, roll a die. On a Strike, they take 1 Wound. On a Suit, they add 1 die to all challenges for that Suit. On a Weave, they add 1 die to all challenges. Lasts for the remainder of the episode. Can only be used once per episode.'
         - title: Range
@@ -1550,6 +1860,8 @@ Gateway:
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike on Gales challenges made to sense ghosts or other spiritual entities while using this item.
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE SHORT
 Gallows:
@@ -1579,24 +1891,32 @@ Gallows:
       subQualities:
         - title: Mechanic
           description: 'You take 1 fewer Strike of damage from all physical sources, whether they were intended as attacks or not. You ignore the first Strike on Stones and Gales challenges that you make.'
+        - title: Type
+          description: Passive
     - id: 5
       title: Reaper Vision
       description: 'You''re able to see Reapers. They appear as men and women in suits. They usually have caring smiles on their faces as they touch the dying person. They show up early, as if they know when someone is about to die. You could warn the person, but Death doesn''t like to be cheated.'
       subQualities:
         - title: Mechanic
           description: You're able to see the normally invisible Reapers. You may also roll a Gales challenge to sense when creatures with lethal intent are nearby.
+        - title: Type
+          description: Passive
     - id: 6
       title: Apportation
       description: You have the magical ability to teleport other creatures closer to you.
       subQualities:
         - title: Mechanic
           description: Immediately move any number of non-hostile creatures you can see into melee range with you.
+        - title: Type
+          description: Passive
     - id: 7
       title: Temporary Resurrection
       description: You have an unnatural connection with Death. You are able to call back the memories of the recently deceased into their bodies and ask them questions.
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On a success, the corpse of a creature that has died within the past 12 hours comes to life with enough energy to answer 2 questions.'
+        - title: Type
+          description: Standard
   Flaws:
     - id: 8
       title: Fatal Memories
@@ -1604,22 +1924,30 @@ Gallows:
       subQualities:
         - title: Mechanic
           description: 'Any reminder of what happened to you has a chance to reduce you to a crying, pitiful mess.'
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'This is ultimately up to you, but the player could have been sent to Hell and been broken and tortured by Lucifer himself. Lucifer would see this player as their pitiful lap dog and the player would revert to that broken persona whenever Lucifer is around.'
     - id: 9
       title: Soulless
       description: 'Many things can happen to make a person lose their soul. Maybe you died and came back without it or had it removed by a curse. A soulless person has no emotions or conscience. You have no empathy or true motivations. This makes you an efficient killer, but you''re like a robot.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 10
       title: Unable to Take a Life
       description: 'You''ve seen too much death in your time. You''ve had enough. You aren''t uncomfortable taking the life of most monsters, especially those that show any human characteristics, such as family ties or guilt. You absolutely refuse to take another human life, even one that deserves it.'
       subQualities:
         - title: Mechanic
           description: You are unable to deliver a fatal blow to anything that can be killed by mortal means.
+        - title: Type
+          description: Passive
     - id: 11
       title: Holds a Grudge
       description: 'You just can''t let it go, from minor insult to serious injury. You stew in your resentment, plotting your revenge. Frankly, it''s unhealthy.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Summon Death
@@ -1633,13 +1961,17 @@ Gallows:
       description: 'Not as useful in tight spaces as a machete or a knife, but the curved blade of a good scythe can make heads roll just as easily. This one might even have belonged to Death himself.'
       subQualities:
         - title: Mechanic
-          description: Deals 1 Strike of damage to enemies that can be killed by mortal means.
+          description: 'Make a Stones challenge. On a success, deal 1 Strike of damage to 1 target that can be killed by mortal means.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
     - id: 14
       title: Ring of the Pale Horseman
       description: A cool-looking ring. It is adorned with a skull with eyes of fire that appears to be laughing. The word "Mortem" is engraved on the inside of the ring.
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'This is the ring of Death himself. By speaking the magic word, "Mortem" ("Death" in Latin), the wearer can inflict death on the next creature they touch. However, doing so will alert Death and likely bring him to the players'' location to retrieve his ring.'
         - title: Range
@@ -1671,12 +2003,16 @@ Assassin:
       subQualities:
         - title: Mechanic
           description: 'You always go first in combat. If another player or enemy has this talent, you roll for initiative normally against them, and both of you go before everyone else.'
+        - title: Type
+          description: Passive
     - id: 5
       title: Weapon Oils
       description: You are able to mix a handful of oils that are harmful to various monsters. It takes 1 hour to mix 1 oil and you may only mix up to 3 oils per episode. You must select a specific species of creature to craft the oil against.
       subQualities:
         - title: Mechanic
           description: Pour the oil onto a weapon to increase the weapon's power against certain creatures. The oil lasts for 30 minutes or for 3 successful attacks. These attacks deal 3 additional Strikes of damage to affected creatures.
+        - title: Type
+          description: Passive
         - title: Enhancement
           description: 'This works best on blades, but can be applied to bullets too. If you apply oil to a bullet, the oil lasts for 10 minutes or 3 attacks, successful or unsuccessful.'
     - id: 6
@@ -1685,6 +2021,8 @@ Assassin:
       subQualities:
         - title: Mechanic
           description: 'Make a Stones challenge. On a success, you hurl a small projectile at great speed, dealing 2 Strikes of physical damage to 1 target.'
+        - title: Type
+          description: Standard
         - title: Range
           description: SHORT LONG
     - id: 7
@@ -1693,6 +2031,8 @@ Assassin:
       subQualities:
         - title: Mechanic
           description: 'Whenever you must make a Gales challenge to shoot a firearm, you may increase the challenge level by 1. If you do and you succeed the challenge, you may cause your shot to ricochet off of the environment to hit targets behind cover.'
+        - title: Type
+          description: Standard
   Flaws:
     - id: 8
       title: True Mercenary
@@ -1700,20 +2040,28 @@ Assassin:
       subQualities:
         - title: Mechanic
           description: 'If you are asked to do anything requiring substantial effort or that is outside the bounds of your contract with the players, they must succeed in a Brooks challenge or offer you more money, or you won''t do it.'
+        - title: Type
+          description: Passive
     - id: 9
       title: Death Cursed
       description: 'You were hired to kill a wizard. That''s dangerous business, because they can use their dying breath to cast a powerful curse on whoever killed them. You''re not sure what the effect of the curse was, since you couldn''t make out what the wizard said as he died.'
       subQualities:
         - title: Storyteller
           description: 'The death curse could be anything, from having horrible luck, to being allergic to a different food every day. Have fun with this one!'
+        - title: Type
+          description: Passive
     - id: 10
       title: Killed Another Player's Parent
       description: 'You tracked a werewolf to a house in the suburbs, then cornered it and finished it off with a silver bullet to the heart. You heard a cry and looked back to see a kid crying over the corpse. You left. They''re older now, but one of the other players was definitely that child.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 11
       title: Deep In Debt
       description: 'You owe a substantial amount of money to someone. It could be a lot of different people, or maybe even demons or other monsters. They''re the persistent kind... the kind that will send collectors after you.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Killshot
@@ -1727,7 +2075,9 @@ Assassin:
       description: A long-range sniper rifle.
       subQualities:
         - title: Mechanic
-          description: Allows the player to attack from Long Range.
+          description: 'Make a Gales challenge. On a success, deal 3 Strikes of damage to 1 target.'
+        - title: Type
+          description: Standard
         - title: Range
           description: SHORT LONG
     - id: 14
@@ -1736,6 +2086,8 @@ Assassin:
       subQualities:
         - title: Mechanic
           description: 'Once per scene, this device can banish all spiritual entities from the immediate area.'
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE SHORT
 Wanderer:
@@ -1765,18 +2117,24 @@ Wanderer:
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you utilize features of your environment and some basic equipment you brought with you to set up a trap that will ensnare and restrain a creature, hit it with a blunt object, or stab it with a blade.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: 'You are able to add one additional feature to the trap: liquid poison, fire, or an alarm (such as light or sound).'
         - title: Trigger
           description: GALES
     - id: 5
       title: Invisibility
-      description: You are able to become invisible for 1 minute.
-      subQualities: []
+      description: 'You are able to become invisible for 1 minute. After you become visible again, you must rest for 1 hour before using this talent again.'
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 6
       title: Electrokinesis
       description: 'You can control and manipulate electricity. You''re not strong enough to manipulate lightning, but you can control enough to make a rather effective stun gun. You must make a Flames challenge to use this talent in combat.'
       subQualities:
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
     - id: 7
@@ -1785,6 +2143,8 @@ Wanderer:
       subQualities:
         - title: Mechanic
           description: 'Make a Brooks challenge. On a success, you grab the attention of one hostile creature or multiple non-hostile creatures. If hostile, that creature must spend its next turn attacking you. If non-hostile, your friends will probably have an easier time sneaking around your targets.'
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Prankster
@@ -1792,22 +2152,30 @@ Wanderer:
       subQualities:
         - title: Mechanic
           description: 'You love to play pranks, even on monsters.'
+        - title: Type
+          description: Passive
     - id: 9
       title: Playboy/girl
       description: 'You''re always thinking about sex. If it moves, breathes, and is mildly attractive, your first thought is how to get them in bed with you. Other hunters usually just put up with you, but this tendency has landed you in trouble with sirens and at least one succubus.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 10
       title: Coward
       description: 'You usually manage to keep your fear under wraps, but hunting is a very dangerous business. Everything that you hunt is higher on the food chain than you are. Sometimes the fear just gets the best of you and you can''t focus. You just have to run away.'
       subQualities:
         - title: Mechanic
           description: 'Before initiating combat, make a Brooks challenge. On failure, you must spend your first turn fleeing.'
+        - title: Type
+          description: Passive
     - id: 11
       title: Can't Contain Your Laughter
       description: Everything is funny to you. That small boy whose parents were eaten? Hilarious. That woman who didn't know she was about to marry a vampire? Hysterical. The wendigo that's about to feast on your organs? Seriously the funniest thing you've ever seen.
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all non-combat challenges. You're still able to focus when your life is in danger.
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Duplicate
@@ -1822,6 +2190,8 @@ Wanderer:
       subQualities:
         - title: Mechanic
           description: 'Make a Stones challenge against **everyone** that has physical ears and can hear you. On success, the targets are stunned for 10 seconds.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
     - id: 14
@@ -1830,6 +2200,8 @@ Wanderer:
       subQualities:
         - title: Mechanic
           description: 'The effect lasts for 1 hour. Vampires appear as winged shadows with glowing red eyes. Werewolves appear to have huge bestial shadows behind them. Others will appear similarly warped and exposed. Looking at an angel, demon, or other higher monster has a chance to drive you insane.'
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE SHORT
 Architect:
@@ -1859,22 +2231,30 @@ Architect:
       subQualities:
         - title: Mechanic
           description: 'A sufficiently powerful demon or magic user might still be able to open the container or door, but it''ll take them a while. You''re the only one who can open it with ease. You can also unlock it from far away by snapping your fingers.'
+        - title: Type
+          description: Passive
     - id: 5
       title: Navigator
       description: Your sense of direction is infallible. You never get lost and are able to find your way out of almost anything.
       subQualities:
         - title: Mechanic
           description: 'Make a Flames challenge. On success, you are able to perfectly recall the steps that led you to where you are now and can follow them back. You always know which way is North.'
+        - title: Type
+          description: Standard
     - id: 6
       title: Robot Companion
       description: You've invented a small remote-controlled robot friend. It's about a foot tall and can navigate most terrain.
       subQualities:
         - title: Mechanic
           description: 'Your robot can deliver painful shocks, hack computers, record what it sees and hears, play back those recordings, and dock in your vehicle, making it "smart".'
+        - title: Type
+          description: Passive
     - id: 7
       title: Aerokinesis
       description: 'You can control and manipulate air and wind. You''re not strong enough to create a tornado or change the weather, at least not on a huge scale. You can create enough of a gale to blow everything around in a small room. You must make a Flames challenge to use this talent in combat.'
       subQualities:
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
   Flaws:
@@ -1884,22 +2264,30 @@ Architect:
       subQualities:
         - title: Mechanic
           description: 'If a creature significantly damages your vehicle, make a Brooks challenge. On failure, lose 1 turn of combat. After returning to combat, you enter a feral rage that doesn''t stop until the creature that hurt your baby is dealt with.'
+        - title: Type
+          description: Passive
     - id: 9
       title: Electronic Breakdown
       description: 'For some reason, electronic devices just do not agree with you. That''s why you only drive classic cars, before they had computers built into them. Just being near you can cause computers to glitch and crash.'
       subQualities:
         - title: Mechanic
           description: 'If you fail a challenge to operate or you attempt to use magic near anything electronic, device breaks.'
+        - title: Type
+          description: Passive
     - id: 10
       title: Pack Rat
       description: You keep everything. That bit of wood you used to kill a vampire? It's in your trunk. The half-empty vial of holy water you used in the exorcism? Also in your trunk. It's getting to the point where you have trouble finding what you need in that mess.
       subQualities:
         - title: Mechanic
           description: 'Before you attempt to use any of your items, make a Flames challenge. On failure, you cannot find the item in your stash.'
+        - title: Type
+          description: Passive
     - id: 11
       title: Limited Vocabulary
       description: 'You don''t speak good. You don''t read good. You still smart, but have trouble talking and making friends understand you. You don''t know big words, only small. But not stupid. Definitely not stupid.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Chronokinesis
@@ -1915,7 +2303,9 @@ Architect:
       description: A simple adjustable iron wrench. No carpenter or mechanic should ever be without one.
       subQualities:
         - title: Mechanic
-          description: You may reroll 1 Strike during Flames challenges made to dismantle or construct things made with nuts and bolts. Deals 2 Strikes of damage to 1 target when used as a melee weapon.
+          description: You may reroll 1 Strike during Flames challenges made to dismantle or construct things made with nuts and bolts. Make a Stones challenge to deal 2 Strikes of damage to 1 target.
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
     - id: 14
@@ -1924,6 +2314,8 @@ Architect:
       subQualities:
         - title: Mechanic
           description: 'You may reroll 1 Strike during Flames and Gales challenges to open a lock. For that challenge, Flames and Gales count as successes, but Stones and Brooks count as Strikes.'
+        - title: Type
+          description: Passive
         - title: Range
           description: MELEE
 Herald:
@@ -1953,45 +2345,61 @@ Herald:
       subQualities:
         - title: Mechanic
           description: 'If you take enough Strikes to give you a Wound, you may make a Stones challenge. On success, you do not take the Wound, and your Strikes are set to 9. The challenge level increases with each use, but resets on a failure.'
+        - title: Type
+          description: Passive
     - id: 5
       title: Knife Expert
       description: 'All hunters know their way around knives and small blades, but your skill borders on magical. Your knife functions like an extension of your body and sometimes seems to dance as you carve your way through enemies.'
       subQualities:
         - title: Mechanic
           description: 'You may reroll 1 Strike during Stones challenges made to use small bladed weapons. You may use your action to make 2 melee attacks with your blade instead of 1, making separate challenges for each. The second challenge is 1 level higher than it would normally be.'
+        - title: Type
+          description: Passive
     - id: 6
       title: Mentalist
       description: You are extremely skilled at reading people. Their body language says more about their inner thoughts than they could ever express with words. This makes it very easy for you to convince them to give you information or do things for you.
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike during Brooks challenges made while interacting with humans.
+        - title: Type
+          description: Passive
     - id: 7
       title: Identification Forgery
       description: Every hunter carries at least one fake id. It helps them bluff their way into places where witnesses are being held. You can make fake identification with astonishing accuracy. They hold up even under the most intense investigation.
       subQualities:
         - title: Mechanic
           description: It takes you 3 hours to create a fake ID and you may only create up to 2 per episode. You may give these IDs to other players. Anyone who uses one of your IDs can reroll 1 Strike during Brooks challenges made while showing their ID.
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Afraid of Heights
       description: High places scare the pants off of you. That's why you drive everywhere.
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 9
       title: Old Fashioned
       description: 'You''re a fan of the classics, like classic cars and classic rock. You don''t really understand what the kids are into nowadays. What''s Tweeter? Instant-Graham? Bookface? You''re clueless when it comes to modern pop culture.'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 10
       title: Forgetful
       description: 'You have trouble remembering things, even things you just learned.'
       subQualities:
         - title: Mechanic
           description: Lose 1 die on all Flames challenges.
+        - title: Type
+          description: Passive
     - id: 11
       title: Depression
       description: 'You have a darkness within you. A darkness that surfaces from time to time and sucks all hope and enjoyment out of your life. Sometimes you can escape it by burying yourself in your hunting, but most times it just takes hold of you and makes you feel like nothing.'
       subQualities:
         - title: Mechanic
           description: 'At the beginning of each scene, make a Brooks challenge. On failure, lose 1 die on all challenges for the remainder of the scene.'
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Hunter’s Instinct
@@ -2005,7 +2413,9 @@ Herald:
       description: 'A two-shot, pump-action shotgun. Can be loaded with standard shotgun cartridges for killing beings made of flesh and blood, or salt cartridges for dispelling ghosts and specters.'
       subQualities:
         - title: Mechanic
-          description: Deals 3 Strikes of damage to 1 target.
+          description: 'Make a Gales challenge. On a success, deal 3 Strikes of damage to 1 target.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE SHORT
     - id: 14
@@ -2013,7 +2423,9 @@ Herald:
       description: A knife blessed by a priest and soaked in the willingly given blood of an innocent soul.
       subQualities:
         - title: Mechanic
-          description: Deals 1 Strike of damage to ordinary creatures. Deals 3 Strikes of damage to demonic creatures.
+          description: 'Make a Stones challenge. On a success, deal 1 Strike of damage to 1 ordinary creature, or 3 Strikes of damage to 1 demonic creature.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
 Dusk:
@@ -2040,19 +2452,25 @@ Dusk:
     - id: 4
       title: Familiar
       description: 'You have a magical attachment to a small furry friend. It could be a bat, cat, dog, hawk, or any other small furry or feathered beast. You are able to give it orders and share in its senses. It''s not strong enough for combat, but can be great for spying. It''s also really cute!'
-      subQualities: []
+      subQualities:
+        - title: Type
+          description: Passive
     - id: 5
       title: Mist Step
       description: 'You can temporarily become mist. You can slip through cracks, dodge physical attacks, and become nearly invisible.'
       subQualities:
         - title: Mechanic
           description: 'When in mist form, magical attacks can still affect you and your presence can still be sensed by creatures attuned to such things. You can''t hide your body odor. You can only remain mist for 1 minute at a time.'
+        - title: Type
+          description: Passive
     - id: 6
       title: Scavenger Weapons
       description: You're good at making a weapon out of anything. That rock. That fire poker. That stick. That barstool. Your skill with improvised weaponry is good enough to keep you alive during most monster hunts.
       subQualities:
         - title: Mechanic
           description: 'Make a Gales challenge. On success, you are able to fashion mundane weapons out of the environment. Your weapons deal 2 Strikes of damage to creatures that can be hurt by physical attacks. The weapons break at the end of the scene.'
+        - title: Type
+          description: Standard
         - title: Enhancement
           description: The weapons do not break at the end of the scene.
         - title: Trigger
@@ -2063,11 +2481,15 @@ Dusk:
       subQualities:
         - title: Mechanic
           description: You may reroll 1 Strike on Stones challenges.
+        - title: Type
+          description: Passive
   Flaws:
     - id: 8
       title: Narcolepsy
       description: 'You are prone to falling asleep at random times. It can happen anytime, anywhere, day or night, no matter how tense or dangerous the situation is.'
       subQualities:
+        - title: Type
+          description: Passive
         - title: Storyteller
           description: 'At your discretion, have this player make a Stones challenge. On failure, the character falls asleep for 10 seconds.'
     - id: 9
@@ -2076,18 +2498,24 @@ Dusk:
       subQualities:
         - title: Mechanic
           description: 'You must make a Brooks challenge before entering a scene with a large amount of water. On a failure, you are too scared to enter. You also can''t swim.'
+        - title: Type
+          description: Passive
     - id: 10
       title: Body of a Child
       description: A spell was cast on you when you were 12 that halted your aging. You have the appearance and physical strength of a young child.
       subQualities:
         - title: Mechanic
           description: You may only roll a maximum of 4 dice on all Stones and Gales challenges.
+        - title: Type
+          description: Passive
     - id: 11
       title: Addicted to Junk Food
       description: 'SUGAR!!! Sugar sugar sugar!!! You have a massive sweet tooth. You can''t resist stopping for donuts, candy, chips, ice cream, you name it! All that junk food is starting to show though...'
       subQualities:
         - title: Mechanic
           description: You're unable to resist any sugary treat. You're also mildly out of shape and get out of breath rather easily.
+        - title: Type
+          description: Passive
   Signature Move:
     - id: 12
       title: Domination
@@ -2101,7 +2529,9 @@ Dusk:
       description: A rapid-fire machine gun.
       subQualities:
         - title: Mechanic
-          description: Deals 3 Strikes of damage to all enemies in range.
+          description: 'Make a Gales challenge. On a success, deal 3 Strikes of damage to all enemies in range.'
+        - title: Type
+          description: Standard
         - title: Range
           description: SHORT
     - id: 14
@@ -2109,6 +2539,8 @@ Dusk:
       description: A bladed weapon about a foot and a half long. Lightweight and easy to use. Ideal for beheading human-sized monsters such as vampires.
       subQualities:
         - title: Mechanic
-          description: Deals 2 Strikes of damage to 1 target.
+          description: 'Make a Stones challenge. On a success, deal 2 Strikes of damage to 1 target.'
+        - title: Type
+          description: Standard
         - title: Range
           description: MELEE
