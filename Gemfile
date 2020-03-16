@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
+gem 'redcarpet'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

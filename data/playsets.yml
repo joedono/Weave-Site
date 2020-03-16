@@ -1,3 +1,4 @@
 - name: Iron & Salt
   file: IronSalt.yml
   img: IronSalt.png
+  glossary: IronSalt.md

@@ -25,7 +25,9 @@ Rails.application.routes.draw do
 
   get '/character', to: 'application#view_character'
   get '/print_character.txt', to: 'application#print_character'
+
   get '/reset', to: 'application#reset'
+  get '/glossary', to: 'application#glossary'
 
   root 'application#start_get'
 end

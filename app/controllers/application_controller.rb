@@ -201,6 +201,8 @@ class ApplicationController < ActionController::Base
     session[:suit] = params[:suit]
     session[:character] = params[:character]
 
+    @playsetName = params[:playset]
+
     loadCharacterSheetValues
     render 'character'
   end
@@ -209,6 +211,27 @@ class ApplicationController < ActionController::Base
   def print_character
     loadCharacterSheetValues
     render 'character'
+  end
+
+  def glossary
+    playsets = YAML.load_file 'data/playsets.yml'
+    playsetName = params[:playset]
+    chosenPlayset = nil
+
+    playsets.each do |playset|
+      if playset['name'] == playsetName
+        chosenPlayset = playset
+        break
+      end
+    end
+
+    glossaryFile = File.open('data/' + chosenPlayset['glossary'])
+    glossaryContent = glossaryFile.read
+
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @glossary = markdown.render(glossaryContent)
+
+    render 'glossary'
   end
 
   def reset
