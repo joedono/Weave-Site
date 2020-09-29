@@ -30,7 +30,7 @@ The final summary of your character, listing all your:
 3. Core Suit
 4. Suit Bonuses
 5. Strikes and Wounds
-6. Character Config, for use when leveling up your existing character (see Existing Character above)
+6. Character Config, for use when leveling up or importing your existing character (see Existing Character above)
 7. Challenge Rolls
 8. Your character qualities
 
