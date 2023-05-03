@@ -14,6 +14,8 @@ import { NameComponent } from './components/name/name.component';
 import { CharacterSheetComponent } from './components/character-sheet/character-sheet.component';
 import { CharacterSheetPrintComponent } from './components/character-sheet-print/character-sheet-print.component';
 import { GlossaryComponent } from './components/glossary/glossary.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ButtonsComponent } from './components/buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +29,13 @@ import { GlossaryComponent } from './components/glossary/glossary.component';
     NameComponent,
     CharacterSheetComponent,
     CharacterSheetPrintComponent,
-    GlossaryComponent
+    GlossaryComponent,
+    ButtonsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
