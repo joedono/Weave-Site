@@ -1,8 +1,16 @@
 import { TitleAndDescriptionModel } from "./title-and-description.model";
 
-export interface FlawModel {
+export class FlawModel {
   id: number;
   title: string;
   description: string;
-  subQualities: TitleAndDescriptionModel[]
+  subQualities: TitleAndDescriptionModel[];
+
+  constructor() {
+    this.id = 0;
+    this.title = '';
+    this.description = '';
+    this.subQualities = [];
+  }
+  
 }

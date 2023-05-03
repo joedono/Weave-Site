@@ -1,6 +1,12 @@
 import { CardModel } from "./card.model";
 
-export interface PlaysetModel {
+export class PlaysetModel {
   name: string;
   cards: CardModel[];
+
+  constructor() {
+    this.name = '';
+    this.cards = [];
+  }
+  
 }
