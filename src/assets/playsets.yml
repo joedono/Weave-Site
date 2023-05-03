@@ -1,4 +1,5 @@
 - name: Iron & Salt
+  folder: IronSalt
   file: IronSalt.yml
   img: IronSalt.png
   glossary: IronSalt.md
