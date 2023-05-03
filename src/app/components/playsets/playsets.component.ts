@@ -31,8 +31,8 @@ export class PlaysetsComponent implements OnInit {
 
   choosePlayset() {
     if(this.selectedPlayset) {
-      this.builderService.setPlayset(this.selectedPlayset);
-      this.router.navigate(['creation']);
+      this.builderService.setPlayset(this.selectedPlayset)
+        .subscribe(_ => this.router.navigate(['creation']));
     } else {
       alert('You must choose a Playset');
     }

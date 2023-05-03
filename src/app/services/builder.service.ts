@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PlaysetMetaModel } from '../models/playset-meta.model';
-import { map, tap } from 'rxjs';
+import { Observable, map, tap } from 'rxjs';
 import { parse } from 'yaml';
 import { PlaysetModel } from '../models/playset.model';
 import { CardModel } from '../models/card.model';
@@ -29,15 +29,15 @@ export class BuilderService {
     return this.cards;
   }
 
-  setPlayset(playsetMeta: PlaysetMetaModel): void {
+  setPlayset(playsetMeta: PlaysetMetaModel): Observable<any> {
     this.playsetMeta = playsetMeta;
     this.playsetDataUrl = 'assets/' + this.playsetMeta.folder + '/' + this.playsetMeta.file;
 
-    this.initPlaysetData();
+    return this.initPlaysetData();
   }
 
-  private initPlaysetData(): void {
-    this.http.get(this.playsetDataUrl, {
+  private initPlaysetData(): Observable<any> {
+    return this.http.get(this.playsetDataUrl, {
       observe: 'body',
       responseType: 'text'
     }).pipe(
