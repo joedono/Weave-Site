@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PlaysetMetaModel } from 'src/app/models/playset-meta.model';
+import { BuilderService } from 'src/app/services/builder.service';
 import { PlaysetsService } from 'src/app/services/playsets.service';
 
 @Component({
@@ -12,7 +14,11 @@ export class PlaysetsComponent implements OnInit {
   playsets: PlaysetMetaModel[] = [];
   selectedPlayset: PlaysetMetaModel | undefined;
 
-  constructor(private playsetsService: PlaysetsService) { }
+  constructor(
+    private router: Router,
+    private playsetsService: PlaysetsService,
+    private builderService: BuilderService
+  ) { }
 
   ngOnInit(): void {
     this.playsetsService.getPlaysets()
@@ -21,7 +27,19 @@ export class PlaysetsComponent implements OnInit {
 
   onPlaysetSelect(playset: PlaysetMetaModel) {
     this.selectedPlayset = playset;
-    console.log(this.selectedPlayset);
+  }
+
+  choosePlayset() {
+    if(this.selectedPlayset) {
+      this.builderService.setPlayset(this.selectedPlayset);
+      this.router.navigate(['creation']);
+    } else {
+      alert('You must choose a Playset');
+    }
+  }
+
+  reset() {
+    this.selectedPlayset = undefined;
   }
 
 }

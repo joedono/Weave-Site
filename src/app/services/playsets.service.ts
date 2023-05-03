@@ -9,7 +9,7 @@ import { PlaysetMetaModel } from '../models/playset-meta.model';
 })
 export class PlaysetsService {
 
-  private playsetsUrl = './assets/playsets.yml';
+  private playsetsUrl: string = './assets/playsets.yml';
   private playsets: PlaysetMetaModel[] = [];
 
   constructor(private http: HttpClient) { }
