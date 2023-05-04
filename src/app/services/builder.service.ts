@@ -5,6 +5,11 @@ import { Observable, map, tap } from 'rxjs';
 import { parse } from 'yaml';
 import { PlaysetModel } from '../models/playset.model';
 import { CardModel } from '../models/card.model';
+import { BackstoryModel } from '../models/backstory.model';
+import { TalentModel } from '../models/talent.model';
+import { FlawModel } from '../models/flaw.model';
+import { SignatureMoveModel } from '../models/signature-move.model';
+import { ItemModel } from '../models/item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +36,7 @@ export class BuilderService {
 
   setPlayset(playsetMeta: PlaysetMetaModel): Observable<any> {
     this.playsetMeta = playsetMeta;
-    this.playsetDataUrl = 'assets/' + this.playsetMeta.folder + '/' + this.playsetMeta.file;
+    this.playsetDataUrl = this.playsetMeta.file;
 
     return this.initPlaysetData();
   }
@@ -50,32 +55,22 @@ export class BuilderService {
     this.playset = new PlaysetModel();
     this.playset.name = this.playsetMeta.name;
 
-    this.playset.cards.push(this.convertCard(yaml.Dawn));
-    this.playset.cards.push(this.convertCard(yaml.Stag));
-    this.playset.cards.push(this.convertCard(yaml.Owl));
-    this.playset.cards.push(this.convertCard(yaml.Serpent));
-    this.playset.cards.push(this.convertCard(yaml.Tortoise));
-    this.playset.cards.push(this.convertCard(yaml.Mountain));
-    this.playset.cards.push(this.convertCard(yaml.Storm));
-    this.playset.cards.push(this.convertCard(yaml.Inferno));
-    this.playset.cards.push(this.convertCard(yaml.River));
-    this.playset.cards.push(this.convertCard(yaml.Crown));
-    this.playset.cards.push(this.convertCard(yaml.Coin));
-    this.playset.cards.push(this.convertCard(yaml.Tome));
-    this.playset.cards.push(this.convertCard(yaml.Mask));
-    this.playset.cards.push(this.convertCard(yaml.Woods));
-    this.playset.cards.push(this.convertCard(yaml.Watchtower));
-    this.playset.cards.push(this.convertCard(yaml.Gateway));
-    this.playset.cards.push(this.convertCard(yaml.Gallows));
-    this.playset.cards.push(this.convertCard(yaml.Assassin));
-    this.playset.cards.push(this.convertCard(yaml.Wanderer));
-    this.playset.cards.push(this.convertCard(yaml.Architect));
-    this.playset.cards.push(this.convertCard(yaml.Herald));
-    this.playset.cards.push(this.convertCard(yaml.Dusk));
+    for (let i in this.cards) {
+      this.playset.cards.push(this.convertCard(this.cards[i], yaml[this.cards[i]]));
+    }
   }
 
-  private convertCard(yaml: any): CardModel {
+  private convertCard(title: string, yaml: any): CardModel {
+    let card = new CardModel();
 
+    card.title = title;
+    card.backstories = yaml.Backstories as BackstoryModel[];
+    card.talents = yaml.Talents as TalentModel[];
+    card.flaws = yaml.Flaws as FlawModel[];
+    card.signatureMoves = yaml["Signature Moves"] as SignatureMoveModel[];
+    card.items = yaml.Inventory as ItemModel[];
+
+    return card;
   }
 
   reset(): void {
