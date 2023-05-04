@@ -1,0 +1,28 @@
+<h1><%= @title %> - Level <%= @level %></h1>
+<%= form_with(url: '/quality', method: 'post', local: true) do %>
+  <%= hidden_field_tag(:card, @card) %>
+  <%= hidden_field_tag(:quality_type, @qualityType) %>
+  <div class="row">
+    <div class="col-sm-10">
+      <div class="row selector-group">
+        <% @qualities.each_with_index do |quality, index| %>
+          <div class="col-sm-6">
+            <label class="selector-container-quality">
+              <%= radio_button_tag(:quality_id, quality['id'], false, class: 'selector', style: 'display: none;') %>
+              <h2><%= quality['title'] %></h2>
+              <p><%= quality['description'] %></p>
+              <% quality['subQualities'].each do |subQuality| %>
+                <% next if subQuality['title'] == 'Storyteller' %>
+                <h3><%= subQuality['title'] %></h3>
+                <p><%= subQuality['description'] %></p>
+              <% end %>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <%= render 'buttons' %>
+    </div>
+  </div>
+<% end %>
