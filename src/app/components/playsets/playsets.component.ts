@@ -25,11 +25,11 @@ export class PlaysetsComponent implements OnInit {
       .subscribe(playsets => this.playsets = playsets);
   }
 
-  onPlaysetSelect(playset: PlaysetMetaModel) {
+  onPlaysetSelect(playset: PlaysetMetaModel): void {
     this.selectedPlayset = playset;
   }
 
-  choosePlayset() {
+  choosePlayset(): void {
     if(this.selectedPlayset) {
       this.builderService.setPlayset(this.selectedPlayset)
         .subscribe(_ => this.router.navigate(['creation']));
@@ -38,7 +38,7 @@ export class PlaysetsComponent implements OnInit {
     }
   }
 
-  reset() {
+  reset(): void {
     this.selectedPlayset = undefined;
   }
 

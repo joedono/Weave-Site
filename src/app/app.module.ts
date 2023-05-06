@@ -17,6 +17,7 @@ import { GlossaryComponent } from './components/glossary/glossary.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { ImportCharacterComponent } from './components/import-character/import-character.component';
+import { SuitsComponent } from './components/suits/suits.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ImportCharacterComponent } from './components/import-character/import-c
     CharacterSheetPrintComponent,
     GlossaryComponent,
     ButtonsComponent,
-    ImportCharacterComponent
+    ImportCharacterComponent,
+    SuitsComponent
   ],
   imports: [
     BrowserModule,
