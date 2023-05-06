@@ -25,11 +25,12 @@ export class BuilderService {
 
   private playsetMeta: PlaysetMetaModel;
   private playsetDataUrl: string = '';
-  private playset: PlaysetModel | undefined;
+  private playset!: PlaysetModel;
   private coreSuit: string | undefined;
   private currentLevel: number = 0;
   private endLevel: number = 0;
   private currentCard: string = '';
+  private qualities: QualityModel[] = [];
 
   constructor(private http: HttpClient) {
     this.playsetMeta = new PlaysetMetaModel();
@@ -79,11 +80,18 @@ export class BuilderService {
   }
 
   setCurrentLevel(level: number): void {
+    // TODO Account for levels beyond 1
     this.currentLevel = level;
   }
 
   getCurrentLevel(): number {
-    return this.currentLevel;
+    if (this.currentLevel <= 4) {
+      return 1;
+    } else if (this.currentLevel <= 8) {
+      return this.currentLevel - 3;
+    } else {
+      return this.currentLevel - 4;
+    }
   }
 
   setEndLevel(level: number): void {
@@ -103,19 +111,70 @@ export class BuilderService {
   }
 
   getCurrentQualityType(): string {
-    // TODO BuilderService.getCurrentQualityType
+    switch(this.currentLevel) {
+      case 1:
+      case 5:
+      case 7:
+      case 12:
+        return "Backstory";
+      case 2:
+      case 6:
+      case 8:
+      case 10:
+      case 13:
+      case 14:
+        return "Talent";
+      case 3:
+      case 9:
+        return "Flaw";
+      case 11:
+      case 15:
+        return "Signature Move";
+      case 4:
+        return "Item";
+    }
+
+    return '';
   }
 
   getCurrentQualities(): QualityModel[] {
-    // TODO BuilderService.getCurrentQualities
+    switch(this.currentLevel) {
+      case 1:
+      case 5:
+      case 7:
+      case 12:
+        return this.playset.cards[this.currentCard].Backstories;
+      case 2:
+      case 6:
+      case 8:
+      case 10:
+      case 13:
+      case 14:
+        return this.playset.cards[this.currentCard].Talents;
+      case 3:
+      case 9:
+        return this.playset.cards[this.currentCard].Flaws;
+      case 11:
+      case 15:
+        return this.playset.cards[this.currentCard]["Signature Moves"];
+      case 4:
+        return this.playset.cards[this.currentCard].Inventory;
+    }
+
+    return [];
   }
 
   addQuality(quality: QualityModel): void {
-    // TODO BuilderService.addQuality
+    this.qualities.push(quality);
+    this.currentLevel++;
   }
 
   getNextCardQualityRoute(): string {
-    // TODO BuilderService.getNextCardQualityRoute
+    if (this.currentLevel == this.endLevel) {
+      return 'name';
+    }
+
+    return 'card';
   }
 
   reset(): void {
