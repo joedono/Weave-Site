@@ -1,1 +1,12 @@
-<p>creation-type works!</p>
+<h1>What do you want to do?</h1>
+<div class="row">
+  <div class="col-sm-4">
+    <a [routerLink]="['/new-character']"class="selector-container">Create a New Character</a>
+  </div>
+  <div class="col-sm-4">
+    <a [routerLink]="['/existing-character']" class="selector-container">Level Up an Existing Character</a>
+  </div>
+  <div class="col-sm-4">
+    <a [routerLink]="['/import-character']" class="selector-container">Import Character</a>
+  </div>
+</div>

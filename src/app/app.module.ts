@@ -16,6 +16,7 @@ import { CharacterSheetPrintComponent } from './components/character-sheet-print
 import { GlossaryComponent } from './components/glossary/glossary.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { ImportCharacterComponent } from './components/import-character/import-character.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
     CharacterSheetComponent,
     CharacterSheetPrintComponent,
     GlossaryComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    ImportCharacterComponent
   ],
   imports: [
     BrowserModule,

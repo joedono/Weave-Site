@@ -5,6 +5,7 @@ import { CreationTypeComponent } from './components/creation-type/creation-type.
 import { NewCharacterComponent } from './components/new-character/new-character.component';
 import { ExistingCharacterComponent } from './components/existing-character/existing-character.component';
 import { CardComponent } from './components/card/card.component';
+import { ImportCharacterComponent } from './components/import-character/import-character.component';
 import { QualityComponent } from './components/quality/quality.component';
 import { NameComponent } from './components/name/name.component';
 import { CharacterSheetComponent } from './components/character-sheet/character-sheet.component';
@@ -18,8 +19,9 @@ const routes: Routes = [
   { path: 'name', component: NameComponent },
   { path: 'quality', component: QualityComponent },
   { path: 'card', component: CardComponent },
-  { path: 'existing-character', component: ExistingCharacterComponent },
   { path: 'new-character', component: NewCharacterComponent },
+  { path: 'existing-character', component: ExistingCharacterComponent },
+  { path: 'import-character', component: ImportCharacterComponent },
   { path: 'creation', component: CreationTypeComponent },
   { path: 'playsets', component: PlaysetsComponent },
   { path: '', component: PlaysetsComponent },
