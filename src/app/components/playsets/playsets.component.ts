@@ -29,7 +29,7 @@ export class PlaysetsComponent implements OnInit {
     this.selectedPlayset = playset;
   }
 
-  choosePlayset(): void {
+  continue(): void {
     if(this.selectedPlayset) {
       this.builderService.setPlayset(this.selectedPlayset)
         .subscribe(_ => this.router.navigate(['creation']));

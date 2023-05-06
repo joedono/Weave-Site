@@ -10,6 +10,7 @@ import { TalentModel } from '../models/talent.model';
 import { FlawModel } from '../models/flaw.model';
 import { SignatureMoveModel } from '../models/signature-move.model';
 import { ItemModel } from '../models/item.model';
+import { QualityModel } from '../models/quality.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,10 @@ export class BuilderService {
   private playsetMeta: PlaysetMetaModel;
   private playsetDataUrl: string = '';
   private playset: PlaysetModel | undefined;
+  private coreSuit: string | undefined;
+  private currentLevel: number = 0;
+  private endLevel: number = 0;
+  private currentCard: string = '';
 
   constructor(private http: HttpClient) {
     this.playsetMeta = new PlaysetMetaModel();
@@ -73,7 +78,47 @@ export class BuilderService {
     return card;
   }
 
-  reset(): void {
+  setCurrentLevel(level: number): void {
+    this.currentLevel = level;
+  }
 
+  getCurrentLevel(): number {
+    return this.currentLevel;
+  }
+
+  setEndLevel(level: number): void {
+    this.endLevel = level;
+  }
+
+  setCoreSuit(suit: string): void {
+    this.coreSuit = suit;
+  }
+
+  getCurrentCard(): string {
+    return this.currentCard;
+  }
+
+  setCurrentCard(card: string): void {
+    this.currentCard = card;
+  }
+
+  getCurrentQualityType(): string {
+    // TODO BuilderService.getCurrentQualityType
+  }
+
+  getCurrentQualities(): QualityModel[] {
+    // TODO BuilderService.getCurrentQualities
+  }
+
+  addQuality(quality: QualityModel): void {
+    // TODO BuilderService.addQuality
+  }
+
+  getNextCardQualityRoute(): string {
+    // TODO BuilderService.getNextCardQualityRoute
+  }
+
+  reset(): void {
+    // TODO BuilderService.reset
   }
 }

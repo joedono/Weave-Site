@@ -1,6 +1,7 @@
+import { QualityModel } from "./quality.model";
 import { TitleAndDescriptionModel } from "./title-and-description.model";
 
-export class FlawModel {
+export class FlawModel implements QualityModel {
   id: number;
   title: string;
   description: string;

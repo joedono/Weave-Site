@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-suits',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./suits.component.less']
 })
 export class SuitsComponent {
+
+  @Output() selectedSuitEvent = new EventEmitter<string>();
+  selectedSuit: string;
+
+  constructor() {
+    this.selectedSuit = "";
+  }
+
+  onSuitSelect(suit: string): void {
+    this.selectedSuit = suit;
+    this.selectedSuitEvent.emit(suit);
+  }
 
 }
