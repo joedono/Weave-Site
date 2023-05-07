@@ -9,15 +9,13 @@ import { BuilderService } from 'src/app/services/builder.service';
 })
 export class NewCharacterComponent {
 
-  suit: string;
-  level: number = 0;
+  suit: string = "";
+  level: number = 1;
 
   constructor(
     private router: Router,
     private builderService: BuilderService
-  ) { 
-    this.suit = "";
-  }
+  ) { }
 
   selectedSuitEvent(suit: string): void {
     this.suit = suit;
@@ -28,7 +26,7 @@ export class NewCharacterComponent {
     this.builderService.setEndLevel(this.level);
     this.builderService.setCoreSuit(this.suit);
 
-    this.router.navigate(['creation']);
+    this.router.navigate(['card']);
   }
 
   reset(): void {

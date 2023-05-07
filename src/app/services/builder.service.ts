@@ -80,7 +80,18 @@ export class BuilderService {
   }
 
   setCurrentLevel(level: number): void {
-    // TODO Account for levels beyond 1
+    let currentLevel: number = level;
+
+    // Add 1 to account for picking both a Talent and a Flaw at level 5
+    if (level >= 5) {
+      currentLevel++;
+    }
+
+    // Add 3 to account for picking a Backstory, Talent, Flaw, and Item at level 1
+    if (level > 1) {
+      currentLevel += 3;
+    }
+    
     this.currentLevel = level;
   }
 
@@ -95,6 +106,13 @@ export class BuilderService {
   }
 
   setEndLevel(level: number): void {
+    // Add 1 to account for picking both a Talent and a Flaw at level 5
+    if (level >= 5) {
+      level += 1;
+    }
+
+    // Add 3 to account for picking a Backstory, Talent, Flaw, and Item at level 1
+    level += 3;
     this.endLevel = level;
   }
 
@@ -138,27 +156,28 @@ export class BuilderService {
   }
 
   getCurrentQualities(): QualityModel[] {
+    let cardIndex = this.cards.indexOf(this.currentCard);
     switch(this.currentLevel) {
       case 1:
       case 5:
       case 7:
       case 12:
-        return this.playset.cards[this.currentCard].Backstories;
+        return this.playset.cards[cardIndex].backstories;
       case 2:
       case 6:
       case 8:
       case 10:
       case 13:
       case 14:
-        return this.playset.cards[this.currentCard].Talents;
+        return this.playset.cards[cardIndex].talents;
       case 3:
       case 9:
-        return this.playset.cards[this.currentCard].Flaws;
+        return this.playset.cards[cardIndex].flaws;
       case 11:
       case 15:
-        return this.playset.cards[this.currentCard]["Signature Moves"];
+        return this.playset.cards[cardIndex].signatureMoves;
       case 4:
-        return this.playset.cards[this.currentCard].Inventory;
+        return this.playset.cards[cardIndex].items;
     }
 
     return [];
