@@ -1,1 +1,9 @@
-<p>name works!</p>
+<h1>Character Name</h1>
+<div class="row">
+  <div class="col-sm-10">
+    <input type="text" class="form-control" [(ngModel)]="name" placeholder="Enter your Character Name"/>
+  </div>
+  <div class="col-sm-2">
+    <app-buttons (chooseEvent)="continue()" (resetEvent)="reset()"></app-buttons>
+  </div>
+</div>
