@@ -1,1 +1,94 @@
-<p>character-sheet-print works!</p>
+Name: <%= @name %>
+Level: <%= @level %>
+Core Suit: <%= @suit %>
+
+Bonuses
+Stones: +<%= @stonesBonus %>
+Gales: +<%= @galesBonus %>
+Flames: +<%= @flamesBonus %>
+Brooks: +<%= @brooksBonus %>
+
+Strikes: [_] [_] [_] [_] [_] [_] [_] [_] [_] [_]
+Wounds: [_] [_] [_]
+
+Character Config
+<% @characterChoices.each do |choice| %>
+<%= choice %>
+<% end %>
+
+------------------------------
+# Backstories
+------------------------------
+<% @character['Backstories'].each do |backstory| %>
+
+## <%= backstory['title'] %>
+<%= backstory['description'] %>
+
+<% backstory['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
+### <%= subQuality['title'] %>
+<%= subQuality['description'] %>
+
+<% end %>
+------------------------------
+<% end %>
+# Talents
+------------------------------
+<% @character['Talents'].each do |talent| %>
+
+## <%= talent['title'] %>
+<%= talent['description'] %>
+
+<% talent['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
+### <%= subQuality['title'] %>
+<%= subQuality['description'] %>
+
+<% end %>
+------------------------------
+<% end %>
+# Flaws
+------------------------------
+<% @character['Flaws'].each do |flaw| %>
+
+## <%= flaw['title'] %>
+<%= flaw['description'] %>
+
+<% flaw['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
+### <%= subQuality['title'] %>
+<%= subQuality['description'] %>
+
+<% end %>
+------------------------------
+<% end %>
+# Signature Move
+------------------------------
+<% @character['Signature Move'].each do |sigmove| %>
+
+## <%= sigmove['title'] %>
+<%= sigmove['description'] %>
+
+<% sigmove['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
+### <%= subQuality['title'] %>
+<%= subQuality['description'] %>
+
+<% end %>
+------------------------------
+<% end %>
+# Inventory
+------------------------------
+<% @character['Inventory'].each do |item| %>
+
+## <%= item['title'] %>
+<%= item['description'] %>
+
+<% item['subQualities'].each do |subQuality| %>
+<% next if subQuality['title'] == 'Storyteller' %>
+### <%= subQuality['title'] %>
+<%= subQuality['description'] %>
+
+<% end %>
+------------------------------
+<% end %>
