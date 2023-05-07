@@ -53,19 +53,20 @@ export class CharacterSheetComponent implements OnInit {
   }
 
   setStrikes(strikes: number): void {
-    // TODO
+    this.strikes = strikes;
   }
 
   newScene(): void {
-    // TODO
+    this.strikes = 0;
   }
 
   setWounds(wounds: number): void {
-    // TODO
+    this.wounds = wounds;
   }
 
   resetStrikesAndWounds(): void {
-    // TODO
+    this.strikes = 0;
+    this.wounds = 0;
   }
 
   refreshCharacterConfig(): void {
