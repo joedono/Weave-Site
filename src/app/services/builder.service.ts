@@ -31,6 +31,7 @@ export class BuilderService {
   private endLevel: number = 0;
   private currentCard: string = '';
   private qualities: QualityModel[] = [];
+  private name: string = '';
 
   constructor(private http: HttpClient) {
     this.playsetMeta = new PlaysetMetaModel();
@@ -73,8 +74,29 @@ export class BuilderService {
     card.backstories = yaml.Backstories as BackstoryModel[];
     card.talents = yaml.Talents as TalentModel[];
     card.flaws = yaml.Flaws as FlawModel[];
-    card.signatureMoves = yaml["Signature Moves"] as SignatureMoveModel[];
+    card.signatureMoves = yaml["Signature Move"] as SignatureMoveModel[];
     card.items = yaml.Inventory as ItemModel[];
+
+    card.backstories.forEach(backstory => {
+      backstory.card = card.title;
+      backstory.type = 'Backstory';
+    });
+    card.talents.forEach(talent => {
+      talent.card = card.title;
+      talent.type = 'Talent';
+    });
+    card.flaws.forEach(flaw => {
+      flaw.card = card.title;
+      flaw.type = 'Flaw';
+    });
+    card.signatureMoves.forEach(signatureMove => {
+      signatureMove.card = card.title;
+      signatureMove.type = 'SignatureMove';
+    });
+    card.items.forEach(item => {
+      item.card = card.title;
+      item.type = 'Item';
+    });
 
     return card;
   }
@@ -91,7 +113,7 @@ export class BuilderService {
     if (level > 1) {
       currentLevel += 3;
     }
-    
+
     this.currentLevel = level;
   }
 
@@ -189,14 +211,47 @@ export class BuilderService {
   }
 
   getNextCardQualityRoute(): string {
-    if (this.currentLevel == this.endLevel) {
+    if (this.currentLevel > this.endLevel) {
       return 'name';
     }
 
     return 'card';
   }
 
+  getName(): string {
+    return this.name;
+  }
+
+  setName(name: string): void {
+    this.name = name;
+  }
+
+  getCharacterQueryString(): any {
+    let queryParams = {
+      playset: this.playset.name,
+      name: this.name,
+      level: this.getCurrentLevel(),
+      suit: this.coreSuit,
+      character: Array<string>()
+    };
+
+    this.qualities.forEach(quality => {
+      let qualityStr = quality.card + "-" + quality.type + "-" + quality.id;
+      queryParams.character.push(qualityStr);
+    });
+
+    return queryParams;
+  }
+
   reset(): void {
-    // TODO BuilderService.reset
+    this.playsetMeta = new PlaysetMetaModel();
+    this.playsetDataUrl = '';
+    this.playset = new PlaysetModel();
+    this.coreSuit = undefined;
+    this.currentLevel = 0;
+    this.endLevel = 0;
+    this.currentCard = '';
+    this.qualities = [];
+    this.name = '';
   }
 }
