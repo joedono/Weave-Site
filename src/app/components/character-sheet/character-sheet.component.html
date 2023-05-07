@@ -42,123 +42,96 @@
     <button type="button" class="btn btn-primary" (click)="resetStrikesAndWounds()" style="margin-top: 10px;">Reset All</button>
   </div>
 </div>
-
-
-
-
-
-
-
-
 <div class="row">
   <div class="col-sm-6 character-sheet-section">
     <button type="button" class="btn btn-secondary float-right print-button" (click)="refreshCharacterConfig()">Refresh</button>
     <h2>Character Config</h2>
-<textarea id="characterConfig" class="form-control" rows="<%= @characterChoices.count + 1 %>" style="min-height: 408px; resize: none;">
-<% @characterChoices.each do |choice| %>
-<%= choice %>
-<% end %>
-</textarea>
+    <textarea id="characterConfig" class="form-control" [(ngModel)]="characterConfigs" rows="10" style="min-height: 408px; resize: none;"></textarea>
   </div>
   <div class="col-sm-6 character-sheet-section">
     <h2>Challenge Rolls</h2>
-    <%= render 'suits' %>
+    <app-suits (selectedSuitEvent)="selectedChallengeSuitEvent($event)"></app-suits>
     <div class="row">
       <div class="col-sm-4 form-check text-center">
-        <%= check_box_tag(:iscore, nil, false, class: 'form-check-input') %>
+        <input type="checkbox" name="iscore" [(ngModel)]="isCoreChallenge" class="form-check-input" />
         <label class="form-check-label" for="iscore">Core Challenge?</label>
       </div>
       <div class="col-sm-4">
-        <%= text_field_tag(:die_override, nil, class: 'form-control', placeholder: 'Dice Override') %>
+        <input type="number" class="form-control" [(ngModel)]="diceOverride" placeholder="Dice Override"/>
       </div>
       <div class="col-sm-4">
-        <button type="button" class="btn btn-primary" onclick="rollDice(<%= @stonesBonus %>, <%= @galesBonus %>, <%= @flamesBonus %>, <%= @brooksBonus %>)">Roll</button>
+        <button type="button" class="btn btn-primary" (click)="rollDice()">Roll</button>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <textarea id="rollresult" class="form-control" rows="8" style="min-height: 278px; resize: none;"></textarea>
+        <textarea id="rollresult" class="form-control" rows="8" style="min-height: 278px; resize: none;" [(ngModel)]="rollResult"></textarea>
       </div>
     </div>
   </div>
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Backstories</h2></div>
-  <% @character['Backstories'].each_with_index do |quality, index| %>
-    <div class="col-sm-6">
-      <label class="selector-container-quality">
-        <h3><%= quality['title'] %></h3>
-        <p><%= quality['description'] %></p>
-        <% quality['subQualities'].each do |subQuality| %>
-          <% next if subQuality['title'] == 'Storyteller' %>
-          <h4><%= subQuality['title'] %></h4>
-          <p><%= subQuality['description'] %></p>
-        <% end %>
-      </label>
-    </div>
-  <% end %>
+  <div class="col-sm-6" *ngFor="let quality of backstories">
+    <label class="selector-container-quality">
+      <h3>{{ quality.title }}</h3>
+      <p>{{ quality.description }}</p>
+      <ng-container *ngFor="let subQuality of quality.subQualities">
+        <h4>{{ subQuality.title }}</h4>
+        <p>{{ subQuality.description }}</p>
+      </ng-container>
+    </label>
+  </div>
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Talents</h2></div>
-  <% @character['Talents'].each_with_index do |quality, index| %>
-    <div class="col-sm-6">
-      <label class="selector-container-quality">
-        <h3><%= quality['title'] %></h3>
-        <p><%= quality['description'] %></p>
-        <% quality['subQualities'].each do |subQuality| %>
-          <% next if subQuality['title'] == 'Storyteller' %>
-          <h4><%= subQuality['title'] %></h4>
-          <p><%= subQuality['description'] %></p>
-        <% end %>
-      </label>
-    </div>
-  <% end %>
+  <div class="col-sm-6" *ngFor="let quality of talents">
+    <label class="selector-container-quality">
+      <h3>{{ quality.title }}</h3>
+      <p>{{ quality.description }}</p>
+      <ng-container *ngFor="let subQuality of quality.subQualities">
+        <h4>{{ subQuality.title }}</h4>
+        <p>{{ subQuality.description }}</p>
+      </ng-container>
+    </label>
+  </div>
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Flaws</h2></div>
-  <% @character['Flaws'].each_with_index do |quality, index| %>
-    <div class="col-sm-6">
-      <label class="selector-container-quality">
-        <h3><%= quality['title'] %></h3>
-        <p><%= quality['description'] %></p>
-        <% quality['subQualities'].each do |subQuality| %>
-          <% next if subQuality['title'] == 'Storyteller' %>
-          <h4><%= subQuality['title'] %></h4>
-          <p><%= subQuality['description'] %></p>
-        <% end %>
-      </label>
-    </div>
-  <% end %>
+  <div class="col-sm-6" *ngFor="let quality of flaws">
+    <label class="selector-container-quality">
+      <h3>{{ quality.title }}</h3>
+      <p>{{ quality.description }}</p>
+      <ng-container *ngFor="let subQuality of quality.subQualities">
+        <h4>{{ subQuality.title }}</h4>
+        <p>{{ subQuality.description }}</p>
+      </ng-container>
+    </label>
+  </div>
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Signature Move</h2></div>
-  <% @character['Signature Move'].each_with_index do |quality, index| %>
-    <div class="col-sm-6">
-      <label class="selector-container-quality">
-        <h3><%= quality['title'] %></h3>
-        <p><%= quality['description'] %></p>
-        <% quality['subQualities'].each do |subQuality| %>
-          <% next if subQuality['title'] == 'Storyteller' %>
-          <h4><%= subQuality['title'] %></h4>
-          <p><%= subQuality['description'] %></p>
-        <% end %>
-      </label>
-    </div>
-  <% end %>
+  <div class="col-sm-6" *ngFor="let quality of signatureMoves">
+    <label class="selector-container-quality">
+      <h3>{{ quality.title }}</h3>
+      <p>{{ quality.description }}</p>
+      <ng-container *ngFor="let subQuality of quality.subQualities">
+        <h4>{{ subQuality.title }}</h4>
+        <p>{{ subQuality.description }}</p>
+      </ng-container>
+    </label>
+  </div>
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Inventory</h2></div>
-  <% @character['Inventory'].each_with_index do |quality, index| %>
-    <div class="col-sm-6">
-      <label class="selector-container-quality">
-        <h3><%= quality['title'] %></h3>
-        <p><%= quality['description'] %></p>
-        <% quality['subQualities'].each do |subQuality| %>
-          <% next if subQuality['title'] == 'Storyteller' %>
-          <h4><%= subQuality['title'] %></h4>
-          <p><%= subQuality['description'] %></p>
-        <% end %>
-      </label>
-    </div>
-  <% end %>
+  <div class="col-sm-6" *ngFor="let quality of items">
+    <label class="selector-container-quality">
+      <h3>{{ quality.title }}</h3>
+      <p>{{ quality.description }}</p>
+      <ng-container *ngFor="let subQuality of quality.subQualities">
+        <h4>{{ subQuality.title }}</h4>
+        <p>{{ subQuality.description }}</p>
+      </ng-container>
+    </label>
+  </div>
 </div>

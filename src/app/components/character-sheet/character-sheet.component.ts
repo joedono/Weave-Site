@@ -76,4 +76,8 @@ export class CharacterSheetComponent implements OnInit {
     this.challengeSuit = suit;
   }
 
+  rollDice(): void {
+    // TODO
+  }
+
 }
