@@ -1,51 +1,58 @@
 <div class="row">
   <div class="col">
-    <h1>Name: <%= @name %></h1>
+    <h1>Name: {{ name }}</h1>
     <p>
-      Level: <%= @level %><br>
-      Core Suit: <%= @suit %>
-      <%= hidden_field_tag(:coresuit, @suit) %>
+      Level: {{ level }}<br>
+      Core Suit: {{ coreSuit }}
     </p>
   </div>
   <div class="col text-right">
-    <%= link_to "Glossary", glossary_path(playset: @playsetName), class: 'btn btn-secondary print-button' %>
-    <a href="/print_character.txt" class="btn btn-success print-button">Print</a>
+    <a [routerLink]="['glossary']" [queryParams]="{playset: playsetName}" class="btn btn-secondary print-button">
+      Glossary
+    </a>
+    <a [routerLink]="['print']" [queryParams]="characterData" class="btn btn-success print-button">
+      Print
+    </a>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-6 character-sheet-section">
     <h2>Bonuses</h2>
     <p>
-      Stones: +<%= @stonesBonus %><br>
-      Gales: +<%= @galesBonus %><br>
-      Flames: +<%= @flamesBonus %><br>
-      Brooks: +<%= @brooksBonus %><br>
+      Stones: +{{ stonesBonus }}<br>
+      Gales: +{{ galesBonus }}<br>
+      Flames: +{{ flamesBonus }}<br>
+      Brooks: +{{ brooksBonus }}<br>
     </p>
   </div>
   <div class="col-sm-4 selector-group character-sheet-section">
     <h2>Strikes</h2>
-    <% for i in 0..10 do %>
-      <label class="selector-container-small <%= i == 0 ? 'selected' : '' %>">
-        <%= radio_button_tag(:strike, i, false, class: 'selector', style: 'display: none;') %>
-        <%= i %>
-      </label>
-    <% end %>
-    <button type="button" class="btn btn-success" onclick="newScene()" style="margin-top: 10px;">New Scene</button>
+    <label *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10]" class="selector-container-small" [ngClass]="{ 'selected': i == 0 }">
+      <input type="radio" name="strike" [value]="i" (change)="setStrikes(i)" style="display: none;"/>
+      {{ i }}
+    </label>
+    <button type="button" class="btn btn-success" (click)="newScene()" style="margin-top: 10px;">New Scene</button>
   </div>
   <div class="col-sm-2 selector-group character-sheet-section">
     <h2>Wounds</h2>
-    <% for i in 0..3 do %>
-      <label class="selector-container-small <%= i == 0 ? 'selected' : '' %>">
-        <%= radio_button_tag(:wound, i, false, class: 'selector', style: 'display: none;') %>
-        <%= i %>
-      </label>
-    <% end %>
-    <button type="button" class="btn btn-primary" onclick="resetStrikesAndWounds()" style="margin-top: 10px;">Reset All</button>
+    <label *ngFor="let i of [0,1,2,3]" class="selector-container-small" [ngClass]="{ 'selected': i == 0 }">
+      <input type="radio" name="wound" [value]="i" (change)="setWounds(i)" style="display: none;"/>
+      {{ i }}
+    </label>
+    <button type="button" class="btn btn-primary" (click)="resetStrikesAndWounds()" style="margin-top: 10px;">Reset All</button>
   </div>
 </div>
+
+
+
+
+
+
+
+
 <div class="row">
   <div class="col-sm-6 character-sheet-section">
-    <button type="button" class="btn btn-secondary float-right print-button" onclick="refreshCharacterConfig()">Refresh</button>
+    <button type="button" class="btn btn-secondary float-right print-button" (click)="refreshCharacterConfig()">Refresh</button>
     <h2>Character Config</h2>
 <textarea id="characterConfig" class="form-control" rows="<%= @characterChoices.count + 1 %>" style="min-height: 408px; resize: none;">
 <% @characterChoices.each do |choice| %>
