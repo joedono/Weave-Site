@@ -14,6 +14,8 @@ import { BuilderService } from 'src/app/services/builder.service';
 })
 export class CharacterSheetComponent implements OnInit {
 
+  private diceMaster: string[] = ["Strike", "Stones", "Gales", "Flames", "Brooks", "Weave"];
+
   characterData: any = {};
 
   name: string = '';
@@ -34,7 +36,7 @@ export class CharacterSheetComponent implements OnInit {
 
   challengeSuit: string = '';
   isCoreChallenge: boolean = false;
-  diceOverride: number = 0;
+  diceOverride: string = '';
   rollResult: string = '';
 
   backstories: BackstoryModel[] = [];
@@ -78,7 +80,81 @@ export class CharacterSheetComponent implements OnInit {
   }
 
   rollDice(): void {
-    // TODO
+    let numDice: number = 3;
+    let rollResult: string[] = [];
+    let strikes: number = 0;
+    let successes: number = 0;
+
+    if (this.diceOverride != '') {
+      numDice = parseInt(this.diceOverride);
+    } else {
+      if (this.isCoreChallenge) {
+        if (this.challengeSuit == this.coreSuit) {
+          numDice++;
+        }
+      } else {
+        switch (this.challengeSuit) {
+          case 'Stones':
+            numDice += this.stonesBonus;
+            break;
+          case 'Gales':
+            numDice += this.galesBonus;
+            break;
+          case 'Flames':
+            numDice += this.flamesBonus;
+            break;
+          case 'Brooks':
+            numDice += this.brooksBonus;
+            break;
+        }
+      }
+    }
+
+    numDice = Math.min(numDice, 6);
+
+    for (var i = 0; i < numDice; i++) {
+      var newDie: string = this.rollDie();
+      if (newDie == 'Weave') {
+        rollResult.push((i+1) + ' - ' + newDie + ' -> ');
+      } else {
+        rollResult.push((i+1) + ' - ' + newDie + '\n');
+      }
+
+      if (newDie == this.challengeSuit || newDie == 'Weave') {
+        successes++;
+      }
+
+      if (newDie == 'Strike' && !this.isCoreChallenge) {
+        strikes++;
+      }
+
+      while (newDie == 'Weave') {
+        newDie = this.rollDie();
+        if (newDie == 'Weave') {
+          rollResult.push(newDie + ' -> ');
+        } else {
+          rollResult.push(newDie + '\n');
+        }
+
+        if (newDie == this.challengeSuit || newDie == 'Weave') {
+          successes++;
+        }
+  
+        if (newDie == 'Strike' && !this.isCoreChallenge) {
+          strikes++;
+        }
+      }
+    }
+
+    this.rollResult = "Rolling " + numDice + " Dice\n" +
+      successes + " Successes - " +
+      strikes + " Strikes\n" +
+      rollResult.join("");
+    this.diceOverride = '';
+  }
+
+  private rollDie(): string {
+    return this.diceMaster[Math.floor(Math.random() * this.diceMaster.length)];
   }
 
 }
