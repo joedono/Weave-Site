@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BackstoryModel } from 'src/app/models/backstory.model';
 import { FlawModel } from 'src/app/models/flaw.model';
 import { ItemModel } from 'src/app/models/item.model';
@@ -22,7 +22,7 @@ export class CharacterSheetComponent implements OnInit {
   level: number = 0;
   coreSuit: string = '';
   glossaryPath: string = '';
-  playsetName: string = '';
+  playsetId: string = '';
 
   stonesBonus: number = 0;
   galesBonus: number = 0;
@@ -47,11 +47,23 @@ export class CharacterSheetComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private builderService: BuilderService
   ) { }
 
   ngOnInit(): void {
-    // TODO
+    this.route.queryParams.subscribe(params => {
+      console.log(params);
+
+      this.playsetId = params['playset'];
+      this.name = params['name'];
+      this.level = params['level'];
+      this.coreSuit = params['suit'];
+
+      // TODO get glossary link
+      // TODO retrieve qualities
+      // TODO assemble suit bonuses
+    });
   }
 
   setStrikes(strikes: number): void {

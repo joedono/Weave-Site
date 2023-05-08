@@ -228,7 +228,7 @@ export class BuilderService {
 
   getCharacterQueryString(): any {
     let queryParams = {
-      playset: this.playset.name,
+      playset: this.playsetMeta.folder,
       name: this.name,
       level: this.getCurrentLevel(),
       suit: this.coreSuit,
