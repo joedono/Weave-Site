@@ -1,24 +1,24 @@
 <div class="row">
-  <div class="col-sm-3">
-    <label class="selector-container" [ngClass]="{ 'selected': 'Stones' == selectedSuit }">
+  <div class="col-sm-6 col-md-3">
+    <label class="selector-container-suit" [ngClass]="{ 'selected': 'Stones' == selectedSuit }">
       <input type="radio" name="suit" value="Stones" (change)="onSuitSelect('Stones')" style="display: none;"/>
       Stones
     </label>
   </div>
-  <div class="col-sm-3">
-    <label class="selector-container" [ngClass]="{ 'selected': 'Gales' == selectedSuit }">
+  <div class="col-sm-6 col-md-3">
+    <label class="selector-container-suit" [ngClass]="{ 'selected': 'Gales' == selectedSuit }">
       <input type="radio" name="suit" value="Gales" (change)="onSuitSelect('Gales')" style="display: none;"/>
       Gales
     </label>
   </div>
-  <div class="col-sm-3">
-    <label class="selector-container" [ngClass]="{ 'selected': 'Flames' == selectedSuit }">
+  <div class="col-sm-6 col-md-3">
+    <label class="selector-container-suit" [ngClass]="{ 'selected': 'Flames' == selectedSuit }">
       <input type="radio" name="suit" value="Flames" (change)="onSuitSelect('Flames')" style="display: none;"/>
       Flames
     </label>
   </div>
-  <div class="col-sm-3">
-    <label class="selector-container" [ngClass]="{ 'selected': 'Brooks' == selectedSuit }">
+  <div class="col-sm-6 col-md-3">
+    <label class="selector-container-suit" [ngClass]="{ 'selected': 'Brooks' == selectedSuit }">
       <input type="radio" name="suit" value="Brooks" (change)="onSuitSelect('Brooks')" style="display: none;"/>
       Brooks
     </label>

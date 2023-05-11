@@ -6,17 +6,17 @@
       Core Suit: {{ coreSuit }}
     </p>
   </div>
-  <div class="col text-right">
-    <a [routerLink]="['glossary']" [queryParams]="{playset: playsetId}" class="btn btn-secondary print-button">
+  <div class="col text-end">
+    <a [routerLink]="['/glossary']" [queryParams]="{playset: playsetId}" class="btn btn-secondary print-button">
       Glossary
     </a>
-    <a [routerLink]="['print']" [queryParams]="characterData" class="btn btn-success print-button">
+    <a [routerLink]="['/print']" [queryParams]="characterData" class="btn btn-success print-button">
       Print
     </a>
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-6 character-sheet-section">
+  <div class="col-md-6 character-sheet-section">
     <h2>Bonuses</h2>
     <p>
       Stones: +{{ stonesBonus }}<br>
@@ -25,17 +25,17 @@
       Brooks: +{{ brooksBonus }}<br>
     </p>
   </div>
-  <div class="col-sm-4 selector-group character-sheet-section">
+  <div class="col-md-4 selector-group character-sheet-section">
     <h2>Strikes</h2>
-    <label *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10]" class="selector-container-small" [ngClass]="{ 'selected': i == 0 }">
+    <label *ngFor="let i of [0,1,2,3,4,5,6,7,8,9,10]" class="selector-container-small" [ngClass]="{ 'selected': i == strikes }">
       <input type="radio" name="strike" [value]="i" (change)="setStrikes(i)" style="display: none;"/>
       {{ i }}
     </label>
     <button type="button" class="btn btn-success" (click)="newScene()" style="margin-top: 10px;">New Scene</button>
   </div>
-  <div class="col-sm-2 selector-group character-sheet-section">
+  <div class="col-md-2 selector-group character-sheet-section">
     <h2>Wounds</h2>
-    <label *ngFor="let i of [0,1,2,3]" class="selector-container-small" [ngClass]="{ 'selected': i == 0 }">
+    <label *ngFor="let i of [0,1,2,3]" class="selector-container-small" [ngClass]="{ 'selected': i == wounds }">
       <input type="radio" name="wound" [value]="i" (change)="setWounds(i)" style="display: none;"/>
       {{ i }}
     </label>
@@ -43,18 +43,20 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-6 character-sheet-section">
+  <div class="col-md-6 character-sheet-section">
     <button type="button" class="btn btn-secondary float-right print-button" (click)="refreshCharacterConfig()">Refresh</button>
     <h2>Character Config</h2>
-    <textarea id="characterConfig" class="form-control" [(ngModel)]="characterConfigs" rows="10" style="min-height: 408px; resize: none;"></textarea>
+    <textarea id="characterConfig" class="form-control" rows="10" [(ngModel)]="characterConfigs" style="margin-bottom: 10px"></textarea>
   </div>
-  <div class="col-sm-6 character-sheet-section">
+  <div class="col-md-6 character-sheet-section">
     <h2>Challenge Rolls</h2>
     <app-suits (selectedSuitEvent)="selectedChallengeSuitEvent($event)"></app-suits>
     <div class="row">
-      <div class="col-sm-4 form-check text-center">
-        <input type="checkbox" name="iscore" [(ngModel)]="isCoreChallenge" class="form-check-input" />
-        <label class="form-check-label" for="iscore">Core Challenge?</label>
+      <div class="col-sm-4">
+        <div class="form-check">
+          <input type="checkbox" id="isCore" [(ngModel)]="isCoreChallenge" class="form-check-input" />
+          <label class="form-check-label" for="isCore">Core Challenge?</label>
+        </div>
       </div>
       <div class="col-sm-4">
         <input type="text" class="form-control" [(ngModel)]="diceOverride" placeholder="Dice Override"/>
@@ -65,14 +67,14 @@
     </div>
     <div class="row">
       <div class="col">
-        <textarea id="rollresult" class="form-control" rows="8" style="min-height: 278px; resize: none;" [(ngModel)]="rollResult"></textarea>
+        <textarea id="rollresult" class="form-control" rows="8" [(ngModel)]="rollResult" style="margin-bottom: 10px"></textarea>
       </div>
     </div>
   </div>
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Backstories</h2></div>
-  <div class="col-sm-6" *ngFor="let quality of backstories">
+  <div class="col-md-6" *ngFor="let quality of backstories">
     <label class="selector-container-quality">
       <h3>{{ quality.title }}</h3>
       <p>{{ quality.description }}</p>
@@ -85,7 +87,7 @@
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Talents</h2></div>
-  <div class="col-sm-6" *ngFor="let quality of talents">
+  <div class="col-md-6" *ngFor="let quality of talents">
     <label class="selector-container-quality">
       <h3>{{ quality.title }}</h3>
       <p>{{ quality.description }}</p>
@@ -98,7 +100,7 @@
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Flaws</h2></div>
-  <div class="col-sm-6" *ngFor="let quality of flaws">
+  <div class="col-md-6" *ngFor="let quality of flaws">
     <label class="selector-container-quality">
       <h3>{{ quality.title }}</h3>
       <p>{{ quality.description }}</p>
@@ -111,7 +113,7 @@
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Signature Move</h2></div>
-  <div class="col-sm-6" *ngFor="let quality of signatureMoves">
+  <div class="col-md-6" *ngFor="let quality of signatureMoves">
     <label class="selector-container-quality">
       <h3>{{ quality.title }}</h3>
       <p>{{ quality.description }}</p>
@@ -124,7 +126,7 @@
 </div>
 <div class="row character-sheet-section">
   <div class="col-12"><h2>Inventory</h2></div>
-  <div class="col-sm-6" *ngFor="let quality of items">
+  <div class="col-md-6" *ngFor="let quality of items">
     <label class="selector-container-quality">
       <h3>{{ quality.title }}</h3>
       <p>{{ quality.description }}</p>

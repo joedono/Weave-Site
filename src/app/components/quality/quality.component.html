@@ -1,8 +1,8 @@
 <h1>{{ title }} - Level {{ currentLevel }}</h1>
 <div class="row">
-  <div class="col-sm-10">
+  <div class="col-sm-8 col-md-10">
     <div class="row">
-      <div class="col-sm-6" *ngFor="let quality of qualities">
+      <div class="col-md-6" *ngFor="let quality of qualities">
         <label class="selector-container-quality" [ngClass]="{ 'selected': quality == selectedQuality }">
           <input type="radio" name="quality" [value]="quality" (change)="selectQuality(quality)" style="display: none;"/>
           <h2>{{ quality.title }}</h2>
@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-2">
+  <div class="col-sm-4 col-md-2">
     <app-buttons (chooseEvent)="continue()" (resetEvent)="reset()"></app-buttons>
   </div>
 </div>

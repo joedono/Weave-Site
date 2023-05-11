@@ -27,7 +27,7 @@ export class BuilderService {
   private playsetDataUrl: string = '';
   private playset!: PlaysetModel;
   private coreSuit: string | undefined;
-  private currentLevel: number = 0;
+  private currentLevel: number = 1;
   private endLevel: number = 0;
   private currentCard: string = '';
   private qualities: QualityModel[] = [];
@@ -227,6 +227,7 @@ export class BuilderService {
   }
 
   getCharacterQueryString(): any {
+    this.currentLevel--;
     let queryParams = {
       playset: this.playsetMeta.folder,
       name: this.name,
@@ -248,7 +249,7 @@ export class BuilderService {
     this.playsetDataUrl = '';
     this.playset = new PlaysetModel();
     this.coreSuit = undefined;
-    this.currentLevel = 0;
+    this.currentLevel = 1;
     this.endLevel = 0;
     this.currentCard = '';
     this.qualities = [];
