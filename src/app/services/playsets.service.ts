@@ -28,6 +28,28 @@ export class PlaysetsService {
     );
   }
 
+  getPlayset(playsetId: string): Observable<PlaysetMetaModel> {
+    if (this.playsets.length > 0) {
+      let result = new PlaysetMetaModel();
+      this.playsets.forEach(playset => {
+        if (playset.folder == playsetId) {
+          result = playset;
+        }
+      });
+
+      return of(result);
+    }
+
+    return this.http.get(this.playsetsUrl, {
+      observe: 'body',
+      responseType: 'text'
+    }).pipe(
+      map(yamlString => parse(yamlString)),
+      map(yaml => this.convertPlaysets(yaml)),
+      map(playsets => this.findPlayset(playsetId, playsets))
+    );
+  }
+
   private convertPlaysets(yaml: any): PlaysetMetaModel[] {
     this.playsets = [];
     yaml.forEach((element: PlaysetMetaModel) => {
@@ -39,5 +61,16 @@ export class PlaysetsService {
     });
 
     return this.playsets;
+  }
+
+  private findPlayset(playsetId: string, playsets: PlaysetMetaModel[]): PlaysetMetaModel {
+    let result = new PlaysetMetaModel();
+      this.playsets.forEach(playset => {
+        if (playset.folder == playsetId) {
+          result = playset;
+        }
+      });
+
+      return result;
   }
 }

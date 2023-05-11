@@ -3,9 +3,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BackstoryModel } from 'src/app/models/backstory.model';
 import { FlawModel } from 'src/app/models/flaw.model';
 import { ItemModel } from 'src/app/models/item.model';
+import { PlaysetMetaModel } from 'src/app/models/playset-meta.model';
+import { PlaysetModel } from 'src/app/models/playset.model';
+import { QualityModel } from 'src/app/models/quality.model';
 import { SignatureMoveModel } from 'src/app/models/signature-move.model';
 import { TalentModel } from 'src/app/models/talent.model';
 import { BuilderService } from 'src/app/services/builder.service';
+import { PlaysetsService } from 'src/app/services/playsets.service';
 
 @Component({
   selector: 'app-character-sheet',
@@ -16,7 +20,9 @@ export class CharacterSheetComponent implements OnInit {
 
   private diceMaster: string[] = ["Strike", "Stones", "Gales", "Flames", "Brooks", "Weave"];
 
-  characterData: any = {};
+  characterData: string[] = [];
+  playsetMeta: PlaysetMetaModel = new PlaysetMetaModel();
+  playset: PlaysetModel = new PlaysetModel();
 
   name: string = '';
   level: number = 0;
@@ -48,6 +54,7 @@ export class CharacterSheetComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
+    private playsetService: PlaysetsService,
     private builderService: BuilderService
   ) { }
 
@@ -59,10 +66,49 @@ export class CharacterSheetComponent implements OnInit {
       this.name = params['name'];
       this.level = params['level'];
       this.coreSuit = params['suit'];
+      this.characterData = params['character'];
 
-      // TODO get glossary link
-      // TODO retrieve qualities
-      // TODO assemble suit bonuses
+      this.characterData.forEach(data => {
+        this.characterConfigs += data + '\r\n';
+      });
+
+      this.playsetService.getPlayset(this.playsetId).subscribe(playsetMeta => {
+        this.playsetMeta = playsetMeta;
+        this.builderService.setPlayset(this.playsetMeta).subscribe(_ =>{
+          this.characterData.forEach(data => {
+            let quality = this.builderService.getQuality(data);
+            switch(quality.type) {
+              case 'Backstory':
+                this.backstories.push(quality);
+                this.addSuitBonus(quality);
+                break;
+              case 'Talent':
+                this.talents.push(quality);
+                break;
+              case 'Flaw':
+                this.flaws.push(quality);
+                break;
+              case 'Signature Move':
+                this.signatureMoves.push(quality);
+                break;
+              case 'Item':
+                this.items.push(quality);
+                break;
+            }
+            
+            // TODO retrieve qualities
+            // TODO assemble suit bonuses
+          });
+        });
+      });
+    });
+  }
+
+  private addSuitBonus(backstory: QualityModel): void {
+    backstory.subQualities.forEach(subQuality => {
+      if (subQuality.title == 'Suits'){
+        
+      }
     });
   }
 
