@@ -80,22 +80,37 @@ export class BuilderService {
     card.backstories.forEach(backstory => {
       backstory.card = card.title;
       backstory.type = 'Backstory';
+      backstory.subQualities = backstory.subQualities.filter(q => {
+        return q.title != "Storyteller";
+      });
     });
     card.talents.forEach(talent => {
       talent.card = card.title;
       talent.type = 'Talent';
+      talent.subQualities = talent.subQualities.filter(q => {
+        return q.title != "Storyteller";
+      });
     });
     card.flaws.forEach(flaw => {
       flaw.card = card.title;
       flaw.type = 'Flaw';
+      flaw.subQualities = flaw.subQualities.filter(q => {
+        return q.title != "Storyteller";
+      });
     });
     card.signatureMoves.forEach(signatureMove => {
       signatureMove.card = card.title;
-      signatureMove.type = 'SignatureMove';
+      signatureMove.type = 'Signature Move';
+      signatureMove.subQualities = signatureMove.subQualities.filter(q => {
+        return q.title != "Storyteller";
+      });
     });
     card.items.forEach(item => {
       item.card = card.title;
       item.type = 'Item';
+      item.subQualities = item.subQualities.filter(q => {
+        return q.title != "Storyteller";
+      });
     });
 
     return card;
