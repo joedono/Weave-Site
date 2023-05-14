@@ -59,57 +59,71 @@ export class CharacterSheetComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      console.log(params);
-
       this.playsetId = params['playset'];
       this.name = params['name'];
       this.level = params['level'];
       this.coreSuit = params['suit'];
       this.characterData = params['character'];
 
-      switch (this.coreSuit) {
-        case 'Stones':
-          this.stonesBonus++;
-          break;
-        case 'Gales':
-          this.galesBonus++;
-          break;
-        case 'Flames':
-          this.flamesBonus++;
-          break;
-        case 'Brooks':
-          this.brooksBonus++;
-          break;
-      }
+      this.parseCharacterData();
+    });
+  }
 
-      this.characterData.forEach(data => {
-        this.characterConfigs += data + '\r\n';
-      });
+  private parseCharacterData(): void {
+    this.stonesBonus = 0;
+    this.galesBonus = 0;
+    this.flamesBonus = 0;
+    this.brooksBonus = 0;
 
-      this.playsetService.getPlayset(this.playsetId).subscribe(playsetMeta => {
-        this.playsetMeta = playsetMeta;
-        this.builderService.setPlayset(this.playsetMeta).subscribe(_ =>{
-          this.characterData.forEach(data => {
-            let quality = this.builderService.getQuality(data);
-            switch(quality.type) {
-              case 'Backstory':
-                this.backstories.push(quality);
-                this.addSuitBonus(quality);
-                break;
-              case 'Talent':
-                this.talents.push(quality);
-                break;
-              case 'Flaw':
-                this.flaws.push(quality);
-                break;
-              case 'Signature Move':
-                this.signatureMoves.push(quality);
-                break;
-              case 'Item':
-                this.items.push(quality);
-                break;
-            }
-          });
+    this.characterConfigs = '';
+    this.backstories = [];
+    this.talents = [];
+    this.flaws = [];
+    this.signatureMoves = [];
+    this.items = [];
+
+    switch (this.coreSuit) {
+      case 'Stones':
+        this.stonesBonus++;
+        break;
+      case 'Gales':
+        this.galesBonus++;
+        break;
+      case 'Flames':
+        this.flamesBonus++;
+        break;
+      case 'Brooks':
+        this.brooksBonus++;
+        break;
+    }
+
+    this.characterData.forEach(data => {
+      this.characterConfigs += data + '\n';
+    });
+
+    this.playsetService.getPlayset(this.playsetId).subscribe(playsetMeta => {
+      this.playsetMeta = playsetMeta;
+      this.builderService.setPlayset(this.playsetMeta).subscribe(_ =>{
+        this.characterData.forEach(data => {
+          let quality = this.builderService.getQuality(data);
+          switch(quality.type) {
+            case 'Backstory':
+              this.backstories.push(quality);
+              this.addSuitBonus(quality);
+              break;
+            case 'Talent':
+              this.talents.push(quality);
+              break;
+            case 'Flaw':
+              this.flaws.push(quality);
+              break;
+            case 'Signature Move':
+              this.signatureMoves.push(quality);
+              break;
+            case 'Item':
+              this.items.push(quality);
+              break;
+          }
         });
       });
     });
@@ -157,7 +171,10 @@ export class CharacterSheetComponent implements OnInit {
   }
 
   refreshCharacterConfig(): void {
-    // TODO
+    let characterConfigs = this.characterConfigs.split('\n').filter(str => str);
+    this.characterData = characterConfigs;
+
+    this.parseCharacterData();
   }
 
   selectedChallengeSuitEvent(suit: string): void {
