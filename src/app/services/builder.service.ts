@@ -114,7 +114,7 @@ export class BuilderService {
       currentLevel += 3;
     }
 
-    this.currentLevel = level;
+    this.currentLevel = currentLevel;
   }
 
   getCurrentLevel(): number {
@@ -208,6 +208,62 @@ export class BuilderService {
   addQuality(quality: QualityModel): void {
     this.qualities.push(quality);
     this.currentLevel++;
+  }
+
+  getQuality(key: string): QualityModel {
+    let splitKey = key.split('-');
+    let qualityCardTitle = splitKey[0];
+    let qualityType = splitKey[1];
+    let qualityId = parseInt(splitKey[2]);
+    let card: CardModel = new CardModel();
+
+    this.playset.cards.forEach(cardLocal => {
+      if (cardLocal.title == qualityCardTitle) {
+        card = cardLocal;
+      }
+    });
+
+    let qualityResult: QualityModel = new BackstoryModel();
+
+    switch(qualityType) {
+      case 'Backstory':
+        card.backstories.forEach(quality => {
+          if (quality.id == qualityId){
+            qualityResult = quality;
+          }
+        });
+        break;
+      case 'Talent':
+        card.talents.forEach(quality => {
+          if (quality.id == qualityId){
+            qualityResult = quality;
+          }
+        });
+        break;
+      case 'Flaw':
+        card.flaws.forEach(quality => {
+          if (quality.id == qualityId){
+            qualityResult = quality;
+          }
+        });
+        break;
+      case 'Signature Move':
+        card.signatureMoves.forEach(quality => {
+          if (quality.id == qualityId){
+            qualityResult = quality;
+          }
+        });
+        break;
+      case 'Item':
+        card.items.forEach(quality => {
+          if (quality.id == qualityId){
+            qualityResult = quality;
+          }
+        });
+        break;
+    }
+
+    return qualityResult;
   }
 
   getNextCardQualityRoute(): string {

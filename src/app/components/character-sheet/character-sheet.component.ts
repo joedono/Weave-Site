@@ -95,9 +95,6 @@ export class CharacterSheetComponent implements OnInit {
                 this.items.push(quality);
                 break;
             }
-            
-            // TODO retrieve qualities
-            // TODO assemble suit bonuses
           });
         });
       });
@@ -107,7 +104,7 @@ export class CharacterSheetComponent implements OnInit {
   private addSuitBonus(backstory: QualityModel): void {
     backstory.subQualities.forEach(subQuality => {
       if (subQuality.title == 'Suits'){
-        
+        // TODO assemble suit bonuses
       }
     });
   }
