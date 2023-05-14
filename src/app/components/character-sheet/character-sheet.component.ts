@@ -52,7 +52,6 @@ export class CharacterSheetComponent implements OnInit {
   items: ItemModel[] = [];
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
     private playsetService: PlaysetsService,
     private builderService: BuilderService
@@ -67,6 +66,21 @@ export class CharacterSheetComponent implements OnInit {
       this.level = params['level'];
       this.coreSuit = params['suit'];
       this.characterData = params['character'];
+
+      switch (this.coreSuit) {
+        case 'Stones':
+          this.stonesBonus++;
+          break;
+        case 'Gales':
+          this.galesBonus++;
+          break;
+        case 'Flames':
+          this.flamesBonus++;
+          break;
+        case 'Brooks':
+          this.brooksBonus++;
+          break;
+      }
 
       this.characterData.forEach(data => {
         this.characterConfigs += data + '\r\n';
@@ -103,8 +117,24 @@ export class CharacterSheetComponent implements OnInit {
 
   private addSuitBonus(backstory: QualityModel): void {
     backstory.subQualities.forEach(subQuality => {
-      if (subQuality.title == 'Suits'){
-        // TODO assemble suit bonuses
+      if (subQuality.title == 'Suits') {
+        let suits = subQuality.description.split(' ');
+        suits.forEach(suit => {
+          switch (suit) {
+            case 'STONES':
+              this.stonesBonus++;
+              break;
+            case 'GALES':
+              this.galesBonus++;
+              break;
+            case 'FLAMES':
+              this.flamesBonus++;
+              break;
+            case 'BROOKS':
+              this.brooksBonus++;
+              break;
+          }
+        });
       }
     });
   }
@@ -199,6 +229,12 @@ export class CharacterSheetComponent implements OnInit {
           strikes++;
         }
       }
+    }
+
+    this.strikes += strikes;
+    while (this.strikes >= 10) {
+      this.wounds++;
+      this.strikes -= 10;
     }
 
     this.rollResult = "Rolling " + numDice + " Dice\n" +
