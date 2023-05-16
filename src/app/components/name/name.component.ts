@@ -17,10 +17,13 @@ export class NameComponent {
   ) { }
 
   continue(): void {
-    this.builderService.setName(this.name);
-    let queryParams = this.builderService.getCharacterQueryString();
-
-    this.router.navigate(['character-sheet'], { queryParams: queryParams });
+    if (this.name == ''){
+      alert('You need a Name');
+    } else {
+      this.builderService.setName(this.name);
+      let queryParams = this.builderService.getCharacterQueryString();
+      this.router.navigate(['character-sheet'], { queryParams: queryParams });
+    }
   }
 
   reset(): void {

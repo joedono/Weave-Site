@@ -35,9 +35,13 @@ export class QualityComponent implements OnInit {
   }
 
   continue(): void {
-    this.builderService.addQuality(this.selectedQuality);
-    let next = this.builderService.getNextCardQualityRoute();
-    this.router.navigate([next]);
+    if (this.selectedQuality) {
+      this.builderService.addQuality(this.selectedQuality);
+      let next = this.builderService.getNextCardQualityRoute();
+      this.router.navigate([next]);
+    } else {
+      alert('You must select a Quality');
+    }
   }
 
   reset(): void {

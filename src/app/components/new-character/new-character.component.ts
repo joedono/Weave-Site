@@ -9,7 +9,7 @@ import { BuilderService } from 'src/app/services/builder.service';
 })
 export class NewCharacterComponent {
 
-  suit: string = "";
+  suit: string = '';
   level: number = 1;
 
   constructor(
@@ -22,11 +22,16 @@ export class NewCharacterComponent {
   }
 
   continue(): void {
-    this.builderService.setCurrentLevel(1);
-    this.builderService.setEndLevel(this.level);
-    this.builderService.setCoreSuit(this.suit);
-
-    this.router.navigate(['card']);
+    if (this.suit == '') {
+      alert('You must select a Core Suit');
+    } else if (this.level <= 0 || this.level > 10) {
+      alert('Starting Level must be between 1 and 10');
+    } else {
+      this.builderService.setCurrentLevel(1);
+      this.builderService.setEndLevel(this.level);
+      this.builderService.setCoreSuit(this.suit);
+      this.router.navigate(['card']);
+    }
   }
 
   reset(): void {

@@ -33,12 +33,16 @@ export class CardComponent implements OnInit {
 
   continue(): void {
     let card: string = this.selectedCard;
-    if (card == 'Random') {
-      card = this.selectRandomCard();
+    if (card == '') {
+      alert('You must select a Card');
+    } else {
+      if (card == 'Random') {
+        card = this.selectRandomCard();
+      }
+  
+      this.builderService.setCurrentCard(card);
+      this.router.navigate(['quality']);
     }
-
-    this.builderService.setCurrentCard(card);
-    this.router.navigate(['quality']);
   }
 
   reset(): void {
