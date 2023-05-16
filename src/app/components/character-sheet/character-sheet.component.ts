@@ -20,6 +20,7 @@ export class CharacterSheetComponent implements OnInit {
 
   private diceMaster: string[] = ["Strike", "Stones", "Gales", "Flames", "Brooks", "Weave"];
 
+  printParams: any;
   characterData: string[] = [];
   playsetMeta: PlaysetMetaModel = new PlaysetMetaModel();
   playset: PlaysetModel = new PlaysetModel();
@@ -52,6 +53,7 @@ export class CharacterSheetComponent implements OnInit {
   items: ItemModel[] = [];
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private playsetService: PlaysetsService,
     private builderService: BuilderService
@@ -65,6 +67,9 @@ export class CharacterSheetComponent implements OnInit {
       this.coreSuit = params['suit'];
       this.characterData = params['character'];
 
+      this.builderService.setCoreSuit(this.coreSuit);
+      this.builderService.setName(this.name);
+      
       this.parseCharacterData();
     });
   }
@@ -172,9 +177,10 @@ export class CharacterSheetComponent implements OnInit {
 
   refreshCharacterConfig(): void {
     let characterConfigs = this.characterConfigs.split('\n').filter(str => str);
-    this.characterData = characterConfigs;
+    let queryParams = this.builderService.getCharacterQueryString();
+    queryParams['character'] = characterConfigs;
 
-    this.parseCharacterData();
+    this.router.navigate(['character-sheet'], { queryParams: queryParams });
   }
 
   selectedChallengeSuitEvent(suit: string): void {
