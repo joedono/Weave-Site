@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +16,7 @@ import { NameComponent } from './components/name/name.component';
 import { CharacterSheetComponent } from './components/character-sheet/character-sheet.component';
 import { CharacterSheetPrintComponent } from './components/character-sheet-print/character-sheet-print.component';
 import { GlossaryComponent } from './components/glossary/glossary.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ButtonsComponent } from './components/_buttons/buttons.component';
 import { ImportCharacterComponent } from './components/import-character/import-character.component';
 import { SuitsComponent } from './components/_suits/suits.component';
@@ -41,7 +42,8 @@ import { SuitsComponent } from './components/_suits/suits.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MarkdownModule.forRoot({ loader: HttpClient })
   ],
   providers: [],
   bootstrap: [AppComponent]

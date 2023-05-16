@@ -4,7 +4,6 @@
 This is the source code for Lord Joe's Weave character creation website. Here for testing purposes only. The site supports creating new characters and leveling up old ones.
 
 ## TODO
-* Glossary view
 * Level-up existing character
 
 ## Pages
