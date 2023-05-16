@@ -72,7 +72,7 @@
     </div>
   </div>
 </div>
-<div class="row character-sheet-section">
+<div class="row character-sheet-section" *ngIf="backstories.length > 0">
   <div class="col-12"><h2>Backstories</h2></div>
   <div class="col-md-6" *ngFor="let quality of backstories">
     <label class="selector-container-quality">
@@ -85,7 +85,7 @@
     </label>
   </div>
 </div>
-<div class="row character-sheet-section">
+<div class="row character-sheet-section" *ngIf="talents.length > 0">
   <div class="col-12"><h2>Talents</h2></div>
   <div class="col-md-6" *ngFor="let quality of talents">
     <label class="selector-container-quality">
@@ -98,7 +98,7 @@
     </label>
   </div>
 </div>
-<div class="row character-sheet-section">
+<div class="row character-sheet-section" *ngIf="flaws.length > 0">
   <div class="col-12"><h2>Flaws</h2></div>
   <div class="col-md-6" *ngFor="let quality of flaws">
     <label class="selector-container-quality">
@@ -111,7 +111,7 @@
     </label>
   </div>
 </div>
-<div class="row character-sheet-section">
+<div class="row character-sheet-section" *ngIf="signatureMoves.length > 0">
   <div class="col-12"><h2>Signature Move</h2></div>
   <div class="col-md-6" *ngFor="let quality of signatureMoves">
     <label class="selector-container-quality">
@@ -124,7 +124,7 @@
     </label>
   </div>
 </div>
-<div class="row character-sheet-section">
+<div class="row character-sheet-section" *ngIf="items.length > 0">
   <div class="col-12"><h2>Inventory</h2></div>
   <div class="col-md-6" *ngFor="let quality of items">
     <label class="selector-container-quality">
