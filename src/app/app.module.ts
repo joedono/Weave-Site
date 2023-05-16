@@ -16,9 +16,9 @@ import { CharacterSheetComponent } from './components/character-sheet/character-
 import { CharacterSheetPrintComponent } from './components/character-sheet-print/character-sheet-print.component';
 import { GlossaryComponent } from './components/glossary/glossary.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ButtonsComponent } from './components/buttons/buttons.component';
+import { ButtonsComponent } from './components/_buttons/buttons.component';
 import { ImportCharacterComponent } from './components/import-character/import-character.component';
-import { SuitsComponent } from './components/suits/suits.component';
+import { SuitsComponent } from './components/_suits/suits.component';
 
 @NgModule({
   declarations: [
