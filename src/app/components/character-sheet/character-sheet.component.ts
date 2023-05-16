@@ -25,11 +25,11 @@ export class CharacterSheetComponent implements OnInit {
   playsetMeta: PlaysetMetaModel = new PlaysetMetaModel();
   playset: PlaysetModel = new PlaysetModel();
 
+  playsetId: string = '';
   name: string = '';
   level: number = 0;
   coreSuit: string = '';
   glossaryPath: string = '';
-  playsetId: string = '';
 
   stonesBonus: number = 0;
   galesBonus: number = 0;
@@ -61,6 +61,7 @@ export class CharacterSheetComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
+      this.printParams = params;
       this.playsetId = params['playset'];
       this.name = params['name'];
       this.level = params['level'];

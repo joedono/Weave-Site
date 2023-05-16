@@ -1,94 +1,92 @@
-Name: <%= @name %>
-Level: <%= @level %>
-Core Suit: <%= @suit %>
+<h1>Character</h1>
+<p>
+  <b>Name:</b> {{ name }}<br>
+  <b>Level:</b> {{ level }}<br>
+  <b>Core Suit:</b> {{ coreSuit }}
+</p>
 
-Bonuses
-Stones: +<%= @stonesBonus %>
-Gales: +<%= @galesBonus %>
-Flames: +<%= @flamesBonus %>
-Brooks: +<%= @brooksBonus %>
+<h2>Bonuses</h2>
+<ul>
+  <li><b>Stones</b> +{{ stonesBonus }}</li>
+  <li><b>Gales</b> +{{ galesBonus }}</li>
+  <li><b>Flames</b> +{{ flamesBonus }}</li>
+  <li><b>Brooks</b> +{{ brooksBonus }}</li>
+</ul>
 
-Strikes: [_] [_] [_] [_] [_] [_] [_] [_] [_] [_]
-Wounds: [_] [_] [_]
+<p>
+  <b>Strikes:</b>&nbsp;<code>[_] [_] [_] [_] [_] [_] [_] [_] [_] [_]</code><br>
+  <b>Wounds:</b>&nbsp;<code>[_] [_] [_]</code>
+</p>
 
-Character Config
-<% @characterChoices.each do |choice| %>
-<%= choice %>
-<% end %>
+<h2>Character Config</h2>
+<pre>{{ characterConfigs }}</pre>
 
-------------------------------
-# Backstories
-------------------------------
-<% @character['Backstories'].each do |backstory| %>
+<div class="quality-container" *ngIf="backstories.length > 0">
+  <hr>
+  <h2>Backstories</h2>
+  <div *ngFor="let quality of backstories">
+    <hr>
+    <h3>{{ quality.title }}</h3>
+    <p>{{ quality.description }}</p>
+    <div *ngFor="let subQuality of quality.subQualities">
+      <h4>{{ subQuality.title }}</h4>
+      <p>{{ subQuality.description }}</p>
+    </div>
+  </div>
+</div>
 
-## <%= backstory['title'] %>
-<%= backstory['description'] %>
+<div class="quality-container" *ngIf="talents.length > 0">
+  <hr>
+  <h2>Talents</h2>
+  <div *ngFor="let quality of talents">
+    <hr>
+    <h3>{{ quality.title }}</h3>
+    <p>{{ quality.description }}</p>
+    <div *ngFor="let subQuality of quality.subQualities">
+      <h4>{{ subQuality.title }}</h4>
+      <p>{{ subQuality.description }}</p>
+    </div>
+  </div>
+</div>
 
-<% backstory['subQualities'].each do |subQuality| %>
-<% next if subQuality['title'] == 'Storyteller' %>
-### <%= subQuality['title'] %>
-<%= subQuality['description'] %>
+<div class="quality-container" *ngIf="flaws.length > 0">
+  <hr>
+  <h2>Flaws</h2>
+  <div *ngFor="let quality of flaws">
+    <hr>
+    <h3>{{ quality.title }}</h3>
+    <p>{{ quality.description }}</p>
+    <div *ngFor="let subQuality of quality.subQualities">
+      <h4>{{ subQuality.title }}</h4>
+      <p>{{ subQuality.description }}</p>
+    </div>
+  </div>
+</div>
 
-<% end %>
-------------------------------
-<% end %>
-# Talents
-------------------------------
-<% @character['Talents'].each do |talent| %>
+<div class="quality-container" *ngIf="signatureMoves.length > 0">
+  <hr>
+  <h2>Signature Moves</h2>
+  <div *ngFor="let quality of signatureMoves">
+    <hr>
+    <h3>{{ quality.title }}</h3>
+    <p>{{ quality.description }}</p>
+    <div *ngFor="let subQuality of quality.subQualities">
+      <h4>{{ subQuality.title }}</h4>
+      <p>{{ subQuality.description }}</p>
+    </div>
+  </div>
+</div>
 
-## <%= talent['title'] %>
-<%= talent['description'] %>
-
-<% talent['subQualities'].each do |subQuality| %>
-<% next if subQuality['title'] == 'Storyteller' %>
-### <%= subQuality['title'] %>
-<%= subQuality['description'] %>
-
-<% end %>
-------------------------------
-<% end %>
-# Flaws
-------------------------------
-<% @character['Flaws'].each do |flaw| %>
-
-## <%= flaw['title'] %>
-<%= flaw['description'] %>
-
-<% flaw['subQualities'].each do |subQuality| %>
-<% next if subQuality['title'] == 'Storyteller' %>
-### <%= subQuality['title'] %>
-<%= subQuality['description'] %>
-
-<% end %>
-------------------------------
-<% end %>
-# Signature Move
-------------------------------
-<% @character['Signature Move'].each do |sigmove| %>
-
-## <%= sigmove['title'] %>
-<%= sigmove['description'] %>
-
-<% sigmove['subQualities'].each do |subQuality| %>
-<% next if subQuality['title'] == 'Storyteller' %>
-### <%= subQuality['title'] %>
-<%= subQuality['description'] %>
-
-<% end %>
-------------------------------
-<% end %>
-# Inventory
-------------------------------
-<% @character['Inventory'].each do |item| %>
-
-## <%= item['title'] %>
-<%= item['description'] %>
-
-<% item['subQualities'].each do |subQuality| %>
-<% next if subQuality['title'] == 'Storyteller' %>
-### <%= subQuality['title'] %>
-<%= subQuality['description'] %>
-
-<% end %>
-------------------------------
-<% end %>
+<div class="quality-container" *ngIf="items.length > 0">
+  <hr>
+  <h2>Items</h2>
+  <div *ngFor="let quality of items">
+    <hr>
+    <h3>{{ quality.title }}</h3>
+    <p>{{ quality.description }}</p>
+    <div *ngFor="let subQuality of quality.subQualities">
+      <h4>{{ subQuality.title }}</h4>
+      <p>{{ subQuality.description }}</p>
+    </div>
+  </div>
+</div>
