@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col">
-    <h1>Name: {{ name }}</h1>
+    <h1>{{ name }}</h1>
     <p>
-      Level: {{ level }}<br>
-      Core Suit: {{ coreSuit }}
+      <label class="label">Level</label> {{ level }}<br>
+      <label class="label">Core Suit</label> {{ coreSuit }}
     </p>
   </div>
   <div class="col text-end">
@@ -18,12 +18,12 @@
 <div class="row">
   <div class="col-md-6 character-sheet-section">
     <h2>Bonuses</h2>
-    <p>
-      Stones: +{{ stonesBonus }}<br>
-      Gales: +{{ galesBonus }}<br>
-      Flames: +{{ flamesBonus }}<br>
-      Brooks: +{{ brooksBonus }}<br>
-    </p>
+    <ul>
+      <li><label class="label">Stones</label> +{{ stonesBonus }}</li>
+      <li><label class="label">Gales</label> +{{ galesBonus }}</li>
+      <li><label class="label">Flames</label> +{{ flamesBonus }}</li>
+      <li><label class="label">Brooks</label> +{{ brooksBonus }}</li>
+    </ul>
   </div>
   <div class="col-md-4 selector-group character-sheet-section">
     <h2>Strikes</h2>
