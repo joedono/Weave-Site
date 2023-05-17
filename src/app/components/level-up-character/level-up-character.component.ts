@@ -35,7 +35,7 @@ export class LevelUpCharacterComponent {
     } else if (this.characterConfigs == '') {
       alert('You must import character config');
     } else {
-      this.builderService.setCurrentLevel(this.currentLevel);
+      this.builderService.setCurrentLevel(this.currentLevel + 1);
       this.builderService.setEndLevel(this.desiredLevel);
       this.builderService.setCoreSuit(this.suit);
 

@@ -226,7 +226,9 @@ export class BuilderService {
   }
 
   addQualities(qualityKeys: string[]): void {
-    // TODO addQualities
+    qualityKeys.forEach(key => {
+      this.qualities.push(this.getQuality(key));
+    });
   }
 
   getQuality(key: string): QualityModel {
