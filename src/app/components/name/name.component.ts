@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BuilderService } from 'src/app/services/builder.service';
 
@@ -7,7 +7,7 @@ import { BuilderService } from 'src/app/services/builder.service';
   templateUrl: './name.component.html',
   styleUrls: ['./name.component.less']
 })
-export class NameComponent {
+export class NameComponent implements OnInit {
 
   name: string = '';
 
@@ -15,6 +15,12 @@ export class NameComponent {
     private router: Router,
     private builderService: BuilderService
   ) { }
+
+  ngOnInit(): void {
+    if (!this.builderService.hasPlayset()) {
+      this.router.navigate(['']);
+    }
+  }
 
   continue(): void {
     if (this.name == ''){

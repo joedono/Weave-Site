@@ -19,6 +19,11 @@ export class CardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if (!this.builderService.hasPlayset()) {
+      this.router.navigate(['']);
+      return;
+    }
+    
     this.cards = this.builderService.getCards();
     this.level = this.builderService.getCurrentLevel();
   }

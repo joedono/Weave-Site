@@ -48,6 +48,10 @@ export class BuilderService {
     return this.initPlaysetData();
   }
 
+  hasPlayset(): boolean {
+    return this.playsetMeta.name != '';
+  }
+
   private initPlaysetData(): Observable<any> {
     return this.http.get(this.playsetDataUrl, {
       observe: 'body',

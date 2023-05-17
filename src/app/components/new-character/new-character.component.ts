@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BuilderService } from 'src/app/services/builder.service';
 
@@ -7,7 +7,7 @@ import { BuilderService } from 'src/app/services/builder.service';
   templateUrl: './new-character.component.html',
   styleUrls: ['./new-character.component.less']
 })
-export class NewCharacterComponent {
+export class NewCharacterComponent implements OnInit {
 
   suit: string = '';
   level: number = 1;
@@ -16,6 +16,12 @@ export class NewCharacterComponent {
     private router: Router,
     private builderService: BuilderService
   ) { }
+
+  ngOnInit(): void {
+    if (!this.builderService.hasPlayset()) {
+      this.router.navigate(['']);
+    }
+  }
 
   selectedSuitEvent(suit: string): void {
     this.suit = suit;

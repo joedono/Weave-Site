@@ -23,6 +23,11 @@ export class QualityComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if (!this.builderService.hasPlayset()) {
+      this.router.navigate(['']);
+      return;
+    }
+
     this.currentCard = this.builderService.getCurrentCard();
     this.currentLevel = this.builderService.getCurrentLevel();
     this.currentQualityType = this.builderService.getCurrentQualityType();
