@@ -3,15 +3,15 @@ import { Router } from '@angular/router';
 import { BuilderService } from 'src/app/services/builder.service';
 
 @Component({
-  selector: 'app-import-character',
-  templateUrl: './import-character.component.html',
-  styleUrls: ['./import-character.component.less']
+  selector: 'app-level-up-character',
+  templateUrl: './level-up-character.component.html',
+  styleUrls: ['./level-up-character.component.less']
 })
-export class ImportCharacterComponent {
+export class LevelUpCharacterComponent {
 
-  name: string = '';
+  currentLevel: number = 1;
+  desiredLevel: number = 10;
   suit: string = '';
-  level: number = 1;
   characterConfigs: string = '';
 
   constructor(
@@ -24,24 +24,25 @@ export class ImportCharacterComponent {
   }
 
   continue(): void {
-    if (this.name == ''){
-      alert('You need a Name');
-    } else if (this.level <= 0 || this.level > 11) {
-      alert('Starting Level must be between 1 and 11');
+    if (this.currentLevel <= 0 || this.currentLevel > 11) {
+      alert('Current Level must be between 1 and 11');
+    } else if (this.desiredLevel <= 0 || this.desiredLevel > 11) {
+      alert('Desired Level must be between 1 and 11');
+    } else if (this.currentLevel >= this.desiredLevel) {
+      alert('Desired Level must be greater than Current Level');
     } else if (this.suit == '') {
       alert('You must select a Core Suit');
     } else if (this.characterConfigs == '') {
       alert('You must import character config');
     } else {
-      this.builderService.setName(this.name);
+      this.builderService.setCurrentLevel(this.currentLevel);
+      this.builderService.setEndLevel(this.desiredLevel);
       this.builderService.setCoreSuit(this.suit);
-      this.builderService.setCurrentLevel(this.level);
 
       let characterConfigs = this.characterConfigs.split('\n').filter(str => str);
-      let queryParams = this.builderService.getCharacterQueryString();
-      queryParams['character'] = characterConfigs;
+      this.builderService.addQualities(characterConfigs);
 
-      this.router.navigate(['character-sheet'], { queryParams: queryParams });
+      this.router.navigate(['card']);
     }
   }
 

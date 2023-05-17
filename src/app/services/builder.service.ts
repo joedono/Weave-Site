@@ -225,6 +225,10 @@ export class BuilderService {
     this.currentLevel++;
   }
 
+  addQualities(qualityKeys: string[]): void {
+    // TODO addQualities
+  }
+
   getQuality(key: string): QualityModel {
     let splitKey = key.split('-');
     let qualityCardTitle = splitKey[0];

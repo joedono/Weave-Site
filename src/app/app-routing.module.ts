@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PlaysetsComponent } from './components/playsets/playsets.component';
 import { CreationTypeComponent } from './components/creation-type/creation-type.component';
 import { NewCharacterComponent } from './components/new-character/new-character.component';
-import { ExistingCharacterComponent } from './components/existing-character/existing-character.component';
+import { LevelUpCharacterComponent } from './components/level-up-character/level-up-character.component';
 import { CardComponent } from './components/card/card.component';
 import { ImportCharacterComponent } from './components/import-character/import-character.component';
 import { QualityComponent } from './components/quality/quality.component';
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'quality', component: QualityComponent },
   { path: 'card', component: CardComponent },
   { path: 'new-character', component: NewCharacterComponent },
-  { path: 'existing-character', component: ExistingCharacterComponent },
+  { path: 'level-up-character', component: LevelUpCharacterComponent },
   { path: 'import-character', component: ImportCharacterComponent },
   { path: 'creation', component: CreationTypeComponent },
   { path: 'playsets', component: PlaysetsComponent },

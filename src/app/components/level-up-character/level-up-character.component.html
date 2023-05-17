@@ -1,0 +1,30 @@
+<h1>Leveling Up</h1>
+<div class="row">
+  <div class="col-sm-8 col-md-10">
+    <div class="row mb-3">
+      <div class="col-sm-6 col-12">
+        <label for="characterLevel">Current Level</label>
+        <input type="number" [(ngModel)]="currentLevel" class="form-control" min="1" max="11" />
+      </div>
+      <div class="col-sm-6 col-12">
+        <label for="characterLevel">Current Level</label>
+        <input type="number" [(ngModel)]="desiredLevel" class="form-control" min="1" max="11" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <label>Core Suit</label>
+      </div>
+    </div>
+    <app-suits (selectedSuitEvent)="selectedSuitEvent($event)"></app-suits>
+    <div class="row">
+      <div class="col-12">
+        <label>Character Import</label>
+        <textarea id="characterConfig" class="form-control" rows="10" [(ngModel)]="characterConfigs" style="margin-bottom: 10px"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-2">
+    <app-buttons (chooseEvent)="continue()" (resetEvent)="reset()"></app-buttons>
+  </div>
+</div>

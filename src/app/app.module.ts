@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { PlaysetsComponent } from './components/playsets/playsets.component';
 import { CreationTypeComponent } from './components/creation-type/creation-type.component';
 import { NewCharacterComponent } from './components/new-character/new-character.component';
-import { ExistingCharacterComponent } from './components/existing-character/existing-character.component';
+import { LevelUpCharacterComponent } from './components/level-up-character/level-up-character.component';
 import { CardComponent } from './components/card/card.component';
 import { QualityComponent } from './components/quality/quality.component';
 import { NameComponent } from './components/name/name.component';
@@ -27,7 +27,7 @@ import { SuitsComponent } from './components/_suits/suits.component';
     PlaysetsComponent,
     CreationTypeComponent,
     NewCharacterComponent,
-    ExistingCharacterComponent,
+    LevelUpCharacterComponent,
     CardComponent,
     QualityComponent,
     NameComponent,
@@ -36,7 +36,7 @@ import { SuitsComponent } from './components/_suits/suits.component';
     GlossaryComponent,
     ButtonsComponent,
     ImportCharacterComponent,
-    SuitsComponent
+    SuitsComponent,
   ],
   imports: [
     BrowserModule,

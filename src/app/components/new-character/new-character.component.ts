@@ -24,8 +24,8 @@ export class NewCharacterComponent {
   continue(): void {
     if (this.suit == '') {
       alert('You must select a Core Suit');
-    } else if (this.level <= 0 || this.level > 10) {
-      alert('Starting Level must be between 1 and 10');
+    } else if (this.level <= 0 || this.level > 11) {
+      alert('Starting Level must be between 1 and 11');
     } else {
       this.builderService.setCurrentLevel(1);
       this.builderService.setEndLevel(this.level);
