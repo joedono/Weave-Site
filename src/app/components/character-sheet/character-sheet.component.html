@@ -10,8 +10,11 @@
     <a [routerLink]="['/glossary']" [queryParams]="{playset: playsetId}" class="btn btn-secondary print-button" style="margin-right:5px;">
       Glossary
     </a>
-    <a [routerLink]="['/print']" [queryParams]="printParams" class="btn btn-success print-button">
+    <a [routerLink]="['/print']" [queryParams]="printParams" class="btn btn-success print-button" style="margin-right:5px;">
       Print
+    </a>
+    <a [routerLink]="['/']" class="btn btn-warning print-button">
+      Home
     </a>
   </div>
 </div>
