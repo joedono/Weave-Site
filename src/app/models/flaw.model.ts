@@ -11,7 +11,7 @@ export class FlawModel implements QualityModel {
 
   constructor() {
     this.id = 0;
-    this.type = 'Flaw';
+    this.type = 'F';
     this.card = '';
     this.title = '';
     this.description = '';

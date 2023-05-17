@@ -11,7 +11,7 @@ export class TalentModel implements QualityModel {
 
   constructor() {
     this.id = 0;
-    this.type = 'Talent';
+    this.type = 'T';
     this.card = '';
     this.title = '';
     this.description = '';

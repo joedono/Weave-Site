@@ -11,7 +11,7 @@ export class SignatureMoveModel implements QualityModel {
 
   constructor() {
     this.id = 0;
-    this.type = 'Signature Move';
+    this.type = 'SM';
     this.card = '';
     this.title = '';
     this.description = '';

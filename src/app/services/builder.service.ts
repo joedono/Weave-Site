@@ -83,35 +83,35 @@ export class BuilderService {
 
     card.backstories.forEach(backstory => {
       backstory.card = card.title;
-      backstory.type = 'Backstory';
+      backstory.type = 'B';
       backstory.subQualities = backstory.subQualities.filter(q => {
         return q.title != "Storyteller";
       });
     });
     card.talents.forEach(talent => {
       talent.card = card.title;
-      talent.type = 'Talent';
+      talent.type = 'T';
       talent.subQualities = talent.subQualities.filter(q => {
         return q.title != "Storyteller";
       });
     });
     card.flaws.forEach(flaw => {
       flaw.card = card.title;
-      flaw.type = 'Flaw';
+      flaw.type = 'F';
       flaw.subQualities = flaw.subQualities.filter(q => {
         return q.title != "Storyteller";
       });
     });
     card.signatureMoves.forEach(signatureMove => {
       signatureMove.card = card.title;
-      signatureMove.type = 'Signature Move';
+      signatureMove.type = 'SM';
       signatureMove.subQualities = signatureMove.subQualities.filter(q => {
         return q.title != "Storyteller";
       });
     });
     card.items.forEach(item => {
       item.card = card.title;
-      item.type = 'Item';
+      item.type = 'I';
       item.subQualities = item.subQualities.filter(q => {
         return q.title != "Storyteller";
       });
@@ -251,35 +251,35 @@ export class BuilderService {
     let qualityResult: QualityModel = new BackstoryModel();
 
     switch(qualityType) {
-      case 'Backstory':
+      case 'B':
         card.backstories.forEach(quality => {
           if (quality.id == qualityId){
             qualityResult = quality;
           }
         });
         break;
-      case 'Talent':
+      case 'T':
         card.talents.forEach(quality => {
           if (quality.id == qualityId){
             qualityResult = quality;
           }
         });
         break;
-      case 'Flaw':
+      case 'F':
         card.flaws.forEach(quality => {
           if (quality.id == qualityId){
             qualityResult = quality;
           }
         });
         break;
-      case 'Signature Move':
+      case 'SM':
         card.signatureMoves.forEach(quality => {
           if (quality.id == qualityId){
             qualityResult = quality;
           }
         });
         break;
-      case 'Item':
+      case 'I':
         card.items.forEach(quality => {
           if (quality.id == qualityId){
             qualityResult = quality;

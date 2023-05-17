@@ -10,7 +10,7 @@ export class BackstoryModel {
 
   constructor() {
     this.id = 0;
-    this.type = 'Backstory';
+    this.type = 'B';
     this.card = '';
     this.title = '',
     this.description = '';

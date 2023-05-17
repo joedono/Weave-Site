@@ -11,7 +11,7 @@ export class ItemModel implements QualityModel {
 
   constructor() {
     this.id = 0;
-    this.type = 'Item';
+    this.type = 'I';
     this.card = '';
     this.title = '';
     this.description = '';

@@ -98,20 +98,20 @@ export class CharacterSheetPrintComponent implements OnInit {
         this.characterData.forEach(data => {
           let quality = this.builderService.getQuality(data);
           switch(quality.type) {
-            case 'Backstory':
+            case 'B':
               this.backstories.push(quality);
               this.addSuitBonus(quality);
               break;
-            case 'Talent':
+            case 'T':
               this.talents.push(quality);
               break;
-            case 'Flaw':
+            case 'F':
               this.flaws.push(quality);
               break;
-            case 'Signature Move':
+            case 'SM':
               this.signatureMoves.push(quality);
               break;
-            case 'Item':
+            case 'I':
               this.items.push(quality);
               break;
           }
